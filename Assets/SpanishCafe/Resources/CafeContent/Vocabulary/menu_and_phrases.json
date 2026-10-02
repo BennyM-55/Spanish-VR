@@ -1,0 +1,31 @@
+{
+  "cafeName": "Café La Esquina",
+  "currency": "MXN",
+  "menu": [
+    { "id": "taco_pastor",    "es": "Taco al pastor",   "en": "Marinated pork taco",                 "price": 30 },
+    { "id": "taco_pollo",     "es": "Taco de pollo",    "en": "Chicken taco",                        "price": 28 },
+    { "id": "taco_nopales",   "es": "Taco de nopales",  "en": "Cactus paddle taco",                  "price": 25 },
+    { "id": "cafe_americano", "es": "Café americano",   "en": "Americano coffee",                    "price": 35 },
+    { "id": "cafe_olla",      "es": "Café de olla",     "en": "Coffee with cinnamon and piloncillo", "price": 40 },
+    { "id": "agua_jamaica",   "es": "Agua de jamaica",  "en": "Hibiscus drink",                      "price": 30 },
+    { "id": "pan_dulce",      "es": "Pan dulce",        "en": "Mexican sweet bread",                 "price": 25 }
+  ],
+  "phrases": [
+    { "es": "¿Me trae el menú, por favor?",      "en": "Could you bring me the menu, please?" },
+    { "es": "¿Qué me recomienda?",               "en": "What do you recommend?" },
+    { "es": "¿Qué lleva?",                       "en": "What is in it?" },
+    { "es": "¿Pica mucho?",                      "en": "Is it very spicy?" },
+    { "es": "¿Puede repetir más despacio?",      "en": "Could you repeat that more slowly?" },
+    { "es": "¿Cómo se dice ___ en español?",     "en": "How do you say ___ in Spanish?" },
+    { "es": "La cuenta, por favor.",             "en": "The bill, please." },
+    { "es": "¿Me cobra, por favor?",             "en": "Can I pay, please?" },
+    { "es": "¿Aceptan tarjeta o solo efectivo?", "en": "Do you take cards, or only cash?" }
+  ],
+  "distinctions": [
+    { "es": "la cuenta",       "en": "the bill" },
+    { "es": "el cambio",       "en": "the change" },
+    { "es": "la propina",      "en": "the tip" },
+    { "es": "para comer aquí", "en": "dine-in" },
+    { "es": "para llevar",     "en": "takeout" }
+  ]
+}
