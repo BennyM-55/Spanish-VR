@@ -1,0 +1,31 @@
+{
+  "scenarioId": "CAF-02",
+  "level": "A2",
+  "staffName": "Lupita",
+  "titleEs": "Tacos, ingredientes y comida para llevar",
+  "goalEs": "Indicar cantidades, cambiar ingredientes y pedir que repitan.",
+  "turns": [
+    { "id": "CAF-02.01", "speaker": "staff", "es": "Hola. ¿Qué le gustaría pedir?", "repeatEs": "Hola. ¿Qué va a querer?", "next": "CAF-02.02" },
+    { "id": "CAF-02.02", "speaker": "student", "choices": [
+      { "id": "CAF-02.02a", "es": "Me da dos tacos al pastor y un agua de jamaica, por favor.", "result": "correct", "next": "CAF-02.03", "adds": [ { "item": "taco_pastor", "qty": 2 }, { "item": "agua_jamaica", "qty": 1 } ] },
+      { "id": "CAF-02.02b", "es": "Dos tacos al pastor. Una agua de jamaica.",                "result": "awkward", "next": "CAF-02.03", "adds": [ { "item": "taco_pastor", "qty": 2 }, { "item": "agua_jamaica", "qty": 1 } ] },
+      { "id": "CAF-02.02c", "es": "Me da la cuenta, por favor.",                              "result": "wrong" },
+      { "id": "CAF-02.02r", "es": "¿Puede repetir más despacio?",                             "result": "repeat" }
+    ]},
+    { "id": "CAF-02.03", "speaker": "staff", "es": "Claro. ¿Con cebolla y cilantro?", "repeatEs": "¿Los quiere con cebolla y con cilantro?", "next": "CAF-02.04" },
+    { "id": "CAF-02.04", "speaker": "student", "choices": [
+      { "id": "CAF-02.04a", "es": "Con cebolla, pero sin cilantro. ¿La salsa pica mucho?", "result": "correct", "next": "CAF-02.05" },
+      { "id": "CAF-02.04b", "es": "Sin cilantro.",                                          "result": "awkward", "next": "CAF-02.05" },
+      { "id": "CAF-02.04c", "es": "Mucho gusto.",                                           "result": "wrong" },
+      { "id": "CAF-02.04r", "es": "¿Puede repetir más despacio?",                           "result": "repeat" }
+    ]},
+    { "id": "CAF-02.05", "speaker": "staff", "es": "La roja sí. ¿Quiere la verde aparte?", "repeatEs": "La salsa roja pica. ¿Le pongo la salsa verde en otro recipiente?", "next": "CAF-02.06" },
+    { "id": "CAF-02.06", "speaker": "student", "choices": [
+      { "id": "CAF-02.06a", "es": "Sí, aparte, por favor. Todo para llevar.", "result": "correct", "next": "CAF-02.07" },
+      { "id": "CAF-02.06b", "es": "Sí. Para llevar.",                         "result": "awkward", "next": "CAF-02.07" },
+      { "id": "CAF-02.06c", "es": "Sí, por favor. Una mesa para dos.",        "result": "wrong" },
+      { "id": "CAF-02.06r", "es": "¿Puede repetir más despacio?",             "result": "repeat" }
+    ]},
+    { "id": "CAF-02.07", "speaker": "staff", "es": "Perfecto. Dos al pastor sin cilantro, un agua de jamaica y la salsa verde aparte. Son noventa pesos.", "end": true }
+  ]
+}

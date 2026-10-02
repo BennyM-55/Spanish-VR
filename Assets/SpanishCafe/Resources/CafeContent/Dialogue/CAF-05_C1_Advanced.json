@@ -1,0 +1,38 @@
+{
+  "scenarioId": "CAF-05",
+  "level": "C1",
+  "staffName": "Lupita",
+  "titleEs": "Acordar una solución para el grupo",
+  "goalEs": "Conciliar necesidades, proponer alternativas y confirmar lo acordado.",
+  "turns": [
+    { "id": "CAF-05.01", "speaker": "staff", "es": "Buenas tardes, bienvenidos a Café La Esquina. ¿En qué les puedo ayudar?", "repeatEs": "Bienvenidos. ¿Qué necesitan?", "next": "CAF-05.02" },
+    { "id": "CAF-05.02", "speaker": "student", "choices": [
+      { "id": "CAF-05.02a", "es": "Somos cuatro estudiantes de la Universidad de Florida. Tenemos treinta minutos antes de salir. ¿Sería posible comer aquí sin que se nos haga tarde?", "result": "correct", "next": "CAF-05.03" },
+      { "id": "CAF-05.02b", "es": "Somos cuatro. Tenemos prisa. Queremos comer rápido aquí.",                                                                                        "result": "awkward", "next": "CAF-05.03" },
+      { "id": "CAF-05.02c", "es": "Somos cuatro estudiantes de la Universidad de Florida. ¿Nos trae la cuenta, por favor?",                                                          "result": "wrong" },
+      { "id": "CAF-05.02r", "es": "¿Puede repetir más despacio?",                                                                                                                    "result": "repeat" }
+    ]},
+    { "id": "CAF-05.03", "speaker": "staff", "es": "Solo tengo una mesa para dos. Si esperan unos quince minutos, podría juntar dos mesas.", "repeatEs": "Ahorita solo hay una mesa para dos personas. En unos quince minutos les junto dos mesas.", "next": "CAF-05.04" },
+    { "id": "CAF-05.04", "speaker": "student", "choices": [
+      { "id": "CAF-05.04a", "es": "Preferiríamos no arriesgarnos. Si pidiéramos para llevar, ¿cuánto tardarían?", "result": "correct", "next": "CAF-05.05" },
+      { "id": "CAF-05.04b", "es": "No queremos esperar. ¿Para llevar cuánto tiempo?",                             "result": "awkward", "next": "CAF-05.05" },
+      { "id": "CAF-05.04c", "es": "Preferiríamos arriesgarnos. Esperamos una hora.",                              "result": "wrong" },
+      { "id": "CAF-05.04r", "es": "¿Puede repetir más despacio?",                                                 "result": "repeat" }
+    ]},
+    { "id": "CAF-05.05", "speaker": "staff", "es": "Entre diez y doce minutos, siempre que elijan pollo o nopales.", "repeatEs": "Si piden tacos de pollo o de nopales, están listos en diez o doce minutos.", "next": "CAF-05.06" },
+    { "id": "CAF-05.06", "speaker": "student", "choices": [
+      { "id": "CAF-05.06a", "es": "Nos funciona. Queremos cuatro tacos de pollo, cuatro de nopales y cuatro aguas de jamaica. De los de pollo, dos sin cilantro.", "result": "correct", "next": "CAF-05.07", "adds": [ { "item": "taco_pollo", "qty": 4 }, { "item": "taco_nopales", "qty": 4 }, { "item": "agua_jamaica", "qty": 4 } ] },
+      { "id": "CAF-05.06b", "es": "Ok. Cuatro pollo, cuatro nopales, cuatro jamaica. Dos sin cilantro.",                                                         "result": "awkward", "next": "CAF-05.07", "adds": [ { "item": "taco_pollo", "qty": 4 }, { "item": "taco_nopales", "qty": 4 }, { "item": "agua_jamaica", "qty": 4 } ] },
+      { "id": "CAF-05.06c", "es": "Nos funciona. Queremos ocho tacos al pastor, por favor.",                                                                     "result": "wrong" },
+      { "id": "CAF-05.06r", "es": "¿Puede repetir más despacio?",                                                                                               "result": "repeat" }
+    ]},
+    { "id": "CAF-05.07", "speaker": "staff", "es": "De acuerdo. ¿Los empaco por separado?", "repeatEs": "Muy bien. ¿Quieren los tacos en paquetes separados?", "next": "CAF-05.08" },
+    { "id": "CAF-05.08", "speaker": "student", "choices": [
+      { "id": "CAF-05.08a", "es": "Sí, en paquetes de dos. Le agradecería que marcara los que no llevan cilantro. Si hubiera algún retraso, ¿nos avisaría?", "result": "correct", "next": "CAF-05.09" },
+      { "id": "CAF-05.08b", "es": "Sí, en paquetes de dos. Le agradecería que marca los que no llevan cilantro.",                                          "result": "awkward", "next": "CAF-05.09" },
+      { "id": "CAF-05.08c", "es": "No, todo junto en una bolsa, y todos con cilantro.",                                                                   "result": "wrong" },
+      { "id": "CAF-05.08r", "es": "¿Puede repetir más despacio?",                                                                                         "result": "repeat" }
+    ]},
+    { "id": "CAF-05.09", "speaker": "staff", "es": "Claro. Son cuatro paquetes de dos tacos y cuatro bebidas, todo para llevar. El total es de trescientos treinta y dos pesos.", "end": true }
+  ]
+}
