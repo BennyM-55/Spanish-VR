@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f130fc2822f8e54499059b6954d6faa1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 212996
+  packageName: Mexican Restaurant
+  packageVersion: 1.2
+  assetPath: Assets/Mexican Restaurant/Models/Materials/cup.mat
+  uploadId: 788896

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bea40a795e7b9a046a8b7df6be23a3fd
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 212996
+  packageName: Mexican Restaurant
+  packageVersion: 1.2
+  assetPath: Assets/Mexican Restaurant/Prefabs/Guacamole.prefab
+  uploadId: 788896

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c88baa56df495714984f9b490fa5f12c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 212996
+  packageName: Mexican Restaurant
+  packageVersion: 1.2
+  assetPath: Assets/Mexican Restaurant/Prefabs/Cash register.prefab
+  uploadId: 788896

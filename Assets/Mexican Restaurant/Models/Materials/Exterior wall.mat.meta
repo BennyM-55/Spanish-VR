@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 35669b7ff75b4da46bd9c73c61fcdd92
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 212996
+  packageName: Mexican Restaurant
+  packageVersion: 1.2
+  assetPath: Assets/Mexican Restaurant/Models/Materials/Exterior wall.mat
+  uploadId: 788896

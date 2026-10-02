@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b848d4fac7a1be84a94aec808c29ecd7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 212996
+  packageName: Mexican Restaurant
+  packageVersion: 1.2
+  assetPath: Assets/Mexican Restaurant/Models/Materials/El rancho.mat
+  uploadId: 788896

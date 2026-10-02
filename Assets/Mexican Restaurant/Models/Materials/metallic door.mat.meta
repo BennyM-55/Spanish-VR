@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: aa10f3fca1cd9ab46b456995de8220d5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 212996
+  packageName: Mexican Restaurant
+  packageVersion: 1.2
+  assetPath: Assets/Mexican Restaurant/Models/Materials/metallic door.mat
+  uploadId: 788896

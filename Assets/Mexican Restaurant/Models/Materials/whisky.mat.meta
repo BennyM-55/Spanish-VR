@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fd071772661468c44a5c5234d073f663
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 212996
+  packageName: Mexican Restaurant
+  packageVersion: 1.2
+  assetPath: Assets/Mexican Restaurant/Models/Materials/whisky.mat
+  uploadId: 788896

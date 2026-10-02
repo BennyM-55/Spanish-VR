@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3b45cc79b2b3b0d428deb80796d80cae
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 212996
+  packageName: Mexican Restaurant
+  packageVersion: 1.2
+  assetPath: Assets/Mexican Restaurant/Models/Materials/road.mat
+  uploadId: 788896

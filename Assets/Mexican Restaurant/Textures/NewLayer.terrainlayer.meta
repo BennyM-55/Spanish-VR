@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 915f147aee9073e4dbacb3d9bfb902c5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 212996
+  packageName: Mexican Restaurant
+  packageVersion: 1.2
+  assetPath: Assets/Mexican Restaurant/Textures/NewLayer.terrainlayer
+  uploadId: 788896
