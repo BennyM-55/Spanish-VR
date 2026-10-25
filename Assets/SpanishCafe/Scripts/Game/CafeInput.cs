@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
@@ -9,7 +10,7 @@ namespace SpanishCafe
   
     public static class CafeInput
     {
-        public static bool TalkPressed => Pressed(KeyCode.E);
+        public static bool TalkPressed => Pressed(KeyCode.E) || ControllerTalkPressed;
         public static bool HintPressed => Pressed(KeyCode.H);
         public static bool SubtitlesPressed => Pressed(KeyCode.T);
         public static bool ClosePressed => Pressed(KeyCode.Escape);
@@ -24,6 +25,30 @@ namespace SpanishCafe
                     return i;
             }
             return -1;
+        }
+
+        // A or X on the VR controller works like E
+        // We only check once per frame so it counts as one press, not every frame you hold it
+        static readonly List<UnityEngine.XR.InputDevice> controllers = new List<UnityEngine.XR.InputDevice>();
+        static int checkedFrame = -1;
+        static bool buttonWasDown, buttonPressedNow;
+
+        static bool ControllerTalkPressed
+        {
+            get
+            {
+                if (checkedFrame == Time.frameCount) return buttonPressedNow;
+                checkedFrame = Time.frameCount;
+
+                bool down = false;
+                UnityEngine.XR.InputDevices.GetDevicesWithCharacteristics(UnityEngine.XR.InputDeviceCharacteristics.Controller, controllers);
+                foreach (var controller in controllers)
+                    if (controller.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primaryButton, out bool pressed) && pressed) down = true;
+
+                buttonPressedNow = down && !buttonWasDown;
+                buttonWasDown = down;
+                return buttonPressedNow;
+            }
         }
 
         static bool Pressed(KeyCode key)

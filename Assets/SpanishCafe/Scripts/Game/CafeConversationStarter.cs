@@ -23,6 +23,9 @@ namespace SpanishCafe
         [Tooltip("Optional. Plays recorded lines from Resources/CafeAudio.")]
         public AudioSource voice;
 
+        [Tooltip("Auto = floating panel with a headset, flat screen without one. Pick World to test the VR panel on a computer.")]
+        public CafeDialogueUI.PanelMode panelMode = CafeDialogueUI.PanelMode.Auto;
+
         [Tooltip("Extra scripts to pause while talking, like a camera controller.")]
         public Behaviour[] pauseWhileTalking;
 
@@ -73,8 +76,9 @@ namespace SpanishCafe
                 return;
             }
 
+            ui.SetPanelMode(panelMode);
             bool near = FlatDistance(player.position, transform.position) <= talkDistance;
-            ui.ShowPrompt(this, near ? $"Presiona E para hablar con {staffName}  ·  Press E to talk" : null);
+            ui.ShowPrompt(this, near ? $"Presiona E o A para hablar con {staffName}  ·  Press E or A to talk" : null);
 
             if (near && CafeInput.TalkPressed) StartTalking();
         }
@@ -103,7 +107,7 @@ namespace SpanishCafe
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
 
-            ui.Open(staffName, voice);
+            ui.Open(staffName, voice, transform);
         }
 
         void StopTalking()
@@ -167,6 +171,9 @@ namespace SpanishCafe
         // Finds the student's avatar: the café movement script first, then the usual fallbacks.
         static Transform FindPlayer()
         {
+            // With a headset on, the player is wherever their head is
+            if (UnityEngine.XR.XRSettings.isDeviceActive && Camera.main != null) return Camera.main.transform;
+
             foreach (var script in FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None))
                 if (script.GetType().Name == "BoZoPlayerMovement") return script.transform;
 

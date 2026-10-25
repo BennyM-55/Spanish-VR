@@ -14,6 +14,16 @@ namespace SpanishCafe
     {
         enum Mode { Closed, LevelSelect, Talking, Summary }
 
+        // Auto picks World when a headset is on, and Screen on a normal computer
+        public enum PanelMode { Auto, Screen, World }
+
+        // 0.8 mm per pixel, so the panel is a little under 1 meter wide in VR
+        const float WorldScale = 0.0008f;
+        const float PanelDistance = 1.5f;
+
+        // If Lupita is further than this off to the side, the panel opens where you're looking instead
+        const float MaxSideAngle = 35f;
+
         static CafeDialogueUI instance;
 
         public static CafeDialogueUI Instance
@@ -44,6 +54,8 @@ namespace SpanishCafe
         readonly HashSet<string> missedChoices = new HashSet<string>();
         readonly List<Action> numberActions = new List<Action>();
 
+        Canvas canvas;
+        bool inWorld;
         GameObject panel, promptBox;
         TextMeshProUGUI headerText, staffText, subtitleText, feedbackText, orderText, promptText;
         TextMeshProUGUI hintLabel, subtitleLabel;
@@ -79,6 +91,7 @@ namespace SpanishCafe
         void Update()
         {
             if (!IsOpen) return;
+            if (inWorld) FaceHead();
 
             if (CafeInput.ClosePressed)
             {
@@ -115,15 +128,25 @@ namespace SpanishCafe
             promptOwner = owner;
             promptText.text = text;
             promptBox.SetActive(!IsOpen);
+
+            // In VR the prompt floats over Lupita's head instead of the bottom of the screen
+            if (inWorld && !IsOpen && owner is Component worker) PlaceAbove(worker.transform);
         }
 
-        public void Open(string workerName, AudioSource voiceSource)
+        public void SetPanelMode(PanelMode wanted)
+        {
+            if (IsOpen) return; // don't flip it while someone is reading
+            UseWorld(wanted == PanelMode.World || (wanted == PanelMode.Auto && UnityEngine.XR.XRSettings.isDeviceActive));
+        }
+
+        public void Open(string workerName, AudioSource voiceSource, Transform worker = null)
         {
             staffName = string.IsNullOrEmpty(workerName) ? "Lupita" : workerName;
             voice = voiceSource;
             EnsureEventSystem();
             promptBox.SetActive(false);
             panel.SetActive(true);
+            if (inWorld) PlaceInFront(worker);
             ShowLevelSelect();
         }
 
@@ -158,7 +181,10 @@ namespace SpanishCafe
             feedbackText.text = levels.Length == 0
                 ? Colored(Red, "No levels found. Check Resources/CafeContent/Levels/levels.json.")
                 : "";
-            orderText.text = $"Usa el ratón o las teclas 1–{Mathf.Max(1, levels.Length)} · Use the mouse or number keys";
+            int count = Mathf.Max(1, levels.Length);
+            orderText.text = inWorld
+                ? $"Apunta y aprieta el gatillo, o usa 1–{count} · Point and pull the trigger, or keys 1–{count}"
+                : $"Usa el ratón o las teclas 1–{count} · Use the mouse or number keys";
             hintButton.gameObject.SetActive(false);
             subtitleButton.gameObject.SetActive(false);
         }
@@ -422,12 +448,80 @@ namespace SpanishCafe
 
 
 
+        // VR panel
+
+        void UseWorld(bool world)
+        {
+            if (inWorld == world) return;
+            inWorld = world;
+
+            var rect = (RectTransform)canvas.transform;
+            if (!world)
+            {
+                canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+                rect.localScale = Vector3.one;
+                return;
+            }
+
+            canvas.renderMode = RenderMode.WorldSpace;
+            canvas.worldCamera = Camera.main; // the mouse still needs a camera to click on it
+            rect.sizeDelta = new Vector2(1300f, 1000f);
+            rect.pivot = new Vector2(0.5f, 0f); // bottom middle, so the panel grows up from the spot we pick
+            rect.localScale = Vector3.one * WorldScale;
+
+            // This lets the controller ray point at the buttons and click them
+            if (canvas.GetComponent<UnityEngine.XR.Interaction.Toolkit.UI.TrackedDeviceGraphicRaycaster>() == null)
+                canvas.gameObject.AddComponent<UnityEngine.XR.Interaction.Toolkit.UI.TrackedDeviceGraphicRaycaster>();
+        }
+
+        // Puts the panel between the player and Lupita, a little under eye level
+        void PlaceInFront(Transform worker)
+        {
+            var head = Camera.main != null ? Camera.main.transform : null;
+            if (head == null) return;
+
+            var looking = new Vector3(head.forward.x, 0f, head.forward.z);
+            if (looking.sqrMagnitude < 0.01f) looking = head.up; // looking straight down, use the top of the head instead
+            looking.y = 0f;
+            var toWorker = worker != null ? worker.position - head.position : looking;
+            toWorker.y = 0f;
+
+            // Only aim at Lupita if she's kind of in front of you, so the panel never opens half off screen
+            bool useWorker = worker != null && toWorker.sqrMagnitude > 0.01f && Vector3.Angle(looking, toWorker) <= MaxSideAngle;
+            float distance = useWorker ? Mathf.Clamp(toWorker.magnitude - 0.4f, 0.8f, PanelDistance) : PanelDistance;
+            if (!useWorker) toWorker = looking;
+            var spot = head.position + toWorker.normalized * distance;
+            spot.y = head.position.y - 0.55f;
+            canvas.transform.position = spot;
+            FaceHead(true);
+        }
+
+        void PlaceAbove(Transform worker)
+        {
+            canvas.transform.position = worker.position + Vector3.up * 2.1f;
+            FaceHead(true);
+        }
+
+        // Turns the panel toward the player but keeps it standing straight up
+        void FaceHead(bool snap = false)
+        {
+            var head = Camera.main != null ? Camera.main.transform : null;
+            if (head == null) return;
+
+            var away = canvas.transform.position - head.position;
+            away.y = 0f;
+            if (away.sqrMagnitude < 0.01f) return;
+
+            var target = Quaternion.LookRotation(away);
+            canvas.transform.rotation = snap ? target : Quaternion.Slerp(canvas.transform.rotation, target, 4f * Time.deltaTime);
+        }
+
         void Build()
         {
             var canvasObject = new GameObject("Canvas", typeof(RectTransform), typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster));
             canvasObject.transform.SetParent(transform, false);
 
-            var canvas = canvasObject.GetComponent<Canvas>();
+            canvas = canvasObject.GetComponent<Canvas>();
             canvas.renderMode = RenderMode.ScreenSpaceOverlay;
             canvas.sortingOrder = 500;
 
@@ -606,7 +700,8 @@ namespace SpanishCafe
             // Clicking buttons needs an EventSystem, and the cafe scene doesn't have one yet
             var go = new GameObject("EventSystem", typeof(EventSystem));
 #if ENABLE_INPUT_SYSTEM
-            go.AddComponent<UnityEngine.InputSystem.UI.InputSystemUIInputModule>();
+            // The XR one handles the controller ray and the mouse, so it works both ways
+            go.AddComponent<UnityEngine.XR.Interaction.Toolkit.UI.XRUIInputModule>();
 #else
             go.AddComponent<StandaloneInputModule>();
 #endif
