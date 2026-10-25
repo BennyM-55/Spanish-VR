@@ -175,7 +175,13 @@ namespace SpanishCafe
             {
                 var level = levels[i];
                 string title = CafeContent.GetScenario(level)?.titleEs ?? "";
-                AddChoiceButton(i + 1, $"<b>{level.level}</b> · {level.nameEs} <color={Grey}>({level.nameEn})</color>", title, () => StartLevel(level));
+
+                // Green "Hecho" and best score next to levels they already finished
+                // (the default font doesn't have a check mark, it shows up as a box)
+                string done = CafeProgress.Finished(level.level)
+                    ? $"   <color={Green}><b>Hecho</b> · {Mathf.Max(0, CafeProgress.Best(level.level))}/8</color>"
+                    : "";
+                AddChoiceButton(i + 1, $"<b>{level.level}</b> · {level.nameEs} <color={Grey}>({level.nameEn})</color>{done}", title, () => StartLevel(level));
             }
 
             feedbackText.text = levels.Length == 0
@@ -238,10 +244,14 @@ namespace SpanishCafe
 
         void ShowSummary(string lastFeedback)
         {
+            // Only save once, the first time this screen shows up
+            bool firstTime = mode != Mode.Summary;
             mode = Mode.Summary;
             var level = manager.Level;
             var score = manager.Score;
             var staff = manager.StaffTurn;
+            int bestBefore = CafeProgress.Best(level.level);
+            bool newBest = firstTime && CafeProgress.Record(level.level, score.Total);
 
             headerText.text = $"¡Terminaste! · {level.level} {level.nameEs} · {manager.Scenario.titleEs}";
             if (staff != null)
@@ -249,7 +259,12 @@ namespace SpanishCafe
 
             var text = new StringBuilder();
             if (!string.IsNullOrEmpty(lastFeedback)) text.Append(lastFeedback).Append("\n\n");
-            text.Append($"<b>Puntaje: {score.Total}/8</b> <size=85%><color={Grey}>(Score)</color></size>\n");
+            text.Append($"<b>Puntaje: {score.Total}/8</b> <size=85%><color={Grey}>(Score)</color></size>");
+            if (newBest && bestBefore >= 0)
+                text.Append($"   <color={Green}><b>¡Nuevo récord!</b></color> <size=85%><color={Grey}>(New best, before: {bestBefore}/8)</color></size>");
+            else if (!newBest && bestBefore >= 0)
+                text.Append($"   <size=85%><color={Grey}>Tu mejor: {bestBefore}/8 (Your best)</color></size>");
+            text.Append("\n");
             foreach (var row in CafeContent.Rubric)
             {
                 int points = score.ForRubric(row.id);
@@ -488,7 +503,7 @@ namespace SpanishCafe
 
             // Only aim at Lupita if she's kind of in front of you, so the panel never opens half off screen
             bool useWorker = worker != null && toWorker.sqrMagnitude > 0.01f && Vector3.Angle(looking, toWorker) <= MaxSideAngle;
-            float distance = useWorker ? Mathf.Clamp(toWorker.magnitude - 0.4f, 0.8f, PanelDistance) : PanelDistance;
+            float distance = useWorker ? Mathf.Clamp(toWorker.magnitude - 0.8f, 0.8f, PanelDistance) : PanelDistance;
             if (!useWorker) toWorker = looking;
             var spot = head.position + toWorker.normalized * distance;
             spot.y = head.position.y - 0.55f;

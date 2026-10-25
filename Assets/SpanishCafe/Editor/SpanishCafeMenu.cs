@@ -111,6 +111,16 @@ namespace SpanishCafe.EditorTools
             return forward.sqrMagnitude < 0.01f ? Vector3.forward : forward.normalized;
         }
 
+        [UnityEditor.MenuItem("Spanish Café/Reset Saved Progress")]
+        static void ResetProgress()
+        {
+            if (!EditorUtility.DisplayDialog("Spanish Café", "Erase the finished levels and best scores on this computer?", "Erase", "Cancel")) return;
+
+            CafeContent.EnsureLoaded();
+            CafeProgress.ResetAll();
+            Debug.Log("[SpanishCafe] Progress erased. Every level starts fresh.");
+        }
+
         [UnityEditor.MenuItem("Spanish Café/Validate Content")]
         static void Validate()
         {
