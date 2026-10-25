@@ -7,7 +7,7 @@ namespace SpanishCafe.EditorTools
     // Adds a Spanish Café menu to the Unity menu bar with a few setup helpers
     public static class SpanishCafeMenu
     {
-        [MenuItem("Spanish Café/Add Conversation To Selected Character")]
+        [UnityEditor.MenuItem("Spanish Café/Add Conversation To Selected Character")]
         static void AddToSelected()
         {
             var target = Selection.activeGameObject;
@@ -23,7 +23,7 @@ namespace SpanishCafe.EditorTools
             Debug.Log($"[SpanishCafe] {target.name} can now talk. Walk up to it in Play mode and press E.");
         }
 
-        [MenuItem("Spanish Café/Create Placeholder Lupita")]
+        [UnityEditor.MenuItem("Spanish Café/Create Placeholder Lupita")]
         static void CreatePlaceholder()
         {
             // A simple stand in until the team has a real character behind the counter.
@@ -39,7 +39,7 @@ namespace SpanishCafe.EditorTools
             Debug.Log("[SpanishCafe] Placed Lupita where the Scene view is looking. Move her behind the counter.");
         }
 
-        [MenuItem("Spanish Café/Validate Content")]
+        [UnityEditor.MenuItem("Spanish Café/Validate Content")]
         static void Validate()
         {
             CafeContent.Reload();
