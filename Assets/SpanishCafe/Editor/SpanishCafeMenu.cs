@@ -26,17 +26,89 @@ namespace SpanishCafe.EditorTools
         [UnityEditor.MenuItem("Spanish Café/Create Placeholder Lupita")]
         static void CreatePlaceholder()
         {
+            if (StopIfPlaying()) return;
+
             // A simple stand in until the team has a real character behind the counter.
             var lupita = GameObject.CreatePrimitive(PrimitiveType.Capsule);
             lupita.name = "Lupita (placeholder)";
 
-            var sceneView = SceneView.lastActiveSceneView;
-            if (sceneView != null) lupita.transform.position = sceneView.pivot;
+            // 2 meters in front of the camera and a little to the left, so the menu board fits on the right
+            var eye = FindEye();
+            if (eye != null)
+            {
+                var forward = FlatForward(eye);
+                var spot = eye.position + forward * 2f - Vector3.Cross(Vector3.up, forward) * 0.6f;
+                spot.y = 1f; // the capsule is 2 m tall, so this puts her feet on the floor
+                lupita.transform.position = spot;
+            }
 
             lupita.AddComponent<CafeConversationStarter>();
             Undo.RegisterCreatedObjectUndo(lupita, "Create Placeholder Lupita");
             Selection.activeGameObject = lupita;
-            Debug.Log("[SpanishCafe] Placed Lupita where the Scene view is looking. Move her behind the counter.");
+            Debug.Log("[SpanishCafe] Placed Lupita in front of the camera. Move her behind the counter.");
+        }
+
+        [UnityEditor.MenuItem("Spanish Café/Create Menu Board")]
+        static void CreateMenuBoard()
+        {
+            if (StopIfPlaying()) return;
+
+            var board = new GameObject("Menu Board");
+            board.AddComponent<CafeMenuBoard>();
+
+            var eye = FindEye();
+            if (eye != null)
+            {
+                var forward = FlatForward(eye);
+                var right = Vector3.Cross(Vector3.up, forward);
+
+                // If Lupita is in front of the camera, the board goes behind her and to her side
+                // If she's off to the side or not there, it goes in front of the camera on the right
+                var worker = Object.FindAnyObjectByType<CafeConversationStarter>();
+                Vector3 spot = eye.position + forward * 2.5f + right * 1f;
+                if (worker != null)
+                {
+                    var away = worker.transform.position - eye.position;
+                    away.y = 0f;
+                    if (away.sqrMagnitude > 0.01f && Vector3.Angle(forward, away) < 45f)
+                    {
+                        away.Normalize();
+                        spot = worker.transform.position + away * 1.2f + Vector3.Cross(Vector3.up, away) * 1.1f;
+                    }
+                }
+                spot.y = 1.7f;
+                board.transform.position = spot;
+
+                var facing = spot - eye.position;
+                facing.y = 0f;
+                if (facing.sqrMagnitude > 0.01f) board.transform.rotation = Quaternion.LookRotation(facing);
+            }
+
+            Undo.RegisterCreatedObjectUndo(board, "Create Menu Board");
+            Selection.activeGameObject = board;
+            Debug.Log("[SpanishCafe] Added the menu board. Move it onto a wall, it shows up when you press Play.");
+        }
+
+        // Stuff you add while Play is on gets deleted when you stop, so we stop them first
+        static bool StopIfPlaying()
+        {
+            if (!EditorApplication.isPlaying) return false;
+            EditorUtility.DisplayDialog("Spanish Café", "Stop Play first (the ▶ button). Anything you add during Play disappears when it stops.", "OK");
+            return true;
+        }
+
+        // Use the player's camera if there is one, if not use the Scene view camera
+        static Transform FindEye()
+        {
+            if (Camera.main != null) return Camera.main.transform;
+            var sceneView = SceneView.lastActiveSceneView;
+            return sceneView != null ? sceneView.camera.transform : null;
+        }
+
+        static Vector3 FlatForward(Transform eye)
+        {
+            var forward = new Vector3(eye.forward.x, 0f, eye.forward.z);
+            return forward.sqrMagnitude < 0.01f ? Vector3.forward : forward.normalized;
         }
 
         [UnityEditor.MenuItem("Spanish Café/Validate Content")]
