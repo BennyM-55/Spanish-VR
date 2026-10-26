@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b3450535af8e98a4394f83d298f821db
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 212996
+  packageName: Mexican Restaurant
+  packageVersion: 1.2
+  assetPath: Assets/Mexican Restaurant/Models/Materials/chairs.mat
+  uploadId: 788896

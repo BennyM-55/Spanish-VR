@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 72b8a6dc2fcd39e4ea39e67eb259c471
+AssetOrigin:
+  serializedVersion: 1
+  productId: 212996
+  packageName: Mexican Restaurant
+  packageVersion: 1.2
+  assetPath: Assets/Mexican Restaurant/Scripts/RotateMoveCamera_InputSystem.cs
+  uploadId: 788896

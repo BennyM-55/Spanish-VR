@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fdba75aaa7f723844aedb350bb78dca8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 112000000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 212996
+  packageName: Mexican Restaurant
+  packageVersion: 1.2
+  assetPath: Assets/Mexican Restaurant/Scenes/LightingData.asset
+  uploadId: 788896

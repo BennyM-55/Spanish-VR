@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6ed679cdba565e94a9760c7091983e18
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 212996
+  packageName: Mexican Restaurant
+  packageVersion: 1.2
+  assetPath: Assets/Mexican Restaurant/Models/Materials/taco.mat
+  uploadId: 788896

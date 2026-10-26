@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a1d1e17284c62e4419d9ac43505ed8d7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 212996
+  packageName: Mexican Restaurant
+  packageVersion: 1.2
+  assetPath: Assets/Mexican Restaurant/Models/Materials/bottle.mat
+  uploadId: 788896

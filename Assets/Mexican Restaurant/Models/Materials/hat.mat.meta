@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 948d72354aa0ecb44a6c7efdf27a4dd3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 212996
+  packageName: Mexican Restaurant
+  packageVersion: 1.2
+  assetPath: Assets/Mexican Restaurant/Models/Materials/hat.mat
+  uploadId: 788896

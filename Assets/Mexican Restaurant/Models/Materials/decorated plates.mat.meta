@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: af7e09a19cb17a74ea154a0f157a71fc
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 212996
+  packageName: Mexican Restaurant
+  packageVersion: 1.2
+  assetPath: Assets/Mexican Restaurant/Models/Materials/decorated plates.mat
+  uploadId: 788896
