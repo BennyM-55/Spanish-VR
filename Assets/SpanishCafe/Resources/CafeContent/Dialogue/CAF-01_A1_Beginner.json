@@ -1,0 +1,38 @@
+{
+  "scenarioId": "CAF-01",
+  "level": "A1",
+  "staffName": "Lupita",
+  "titleEs": "Una mesa y el primer pedido",
+  "goalEs": "Saludar, pedir una mesa y ordenar con cortesía.",
+  "turns": [
+    { "id": "CAF-01.01", "speaker": "staff", "es": "Buenas tardes. ¿Para cuántas personas?", "repeatEs": "Buenas tardes. ¿Cuántas personas son?", "next": "CAF-01.02" },
+    { "id": "CAF-01.02", "speaker": "student", "choices": [
+      { "id": "CAF-01.02a", "es": "Buenas tardes. Una mesa para dos, por favor.", "result": "correct", "next": "CAF-01.03" },
+      { "id": "CAF-01.02b", "es": "Dos.",                                         "result": "awkward", "next": "CAF-01.03" },
+      { "id": "CAF-01.02c", "es": "Buenas tardes. Un café, por favor.",           "result": "wrong" },
+      { "id": "CAF-01.02r", "es": "¿Puede repetir más despacio?",                 "result": "repeat" }
+    ]},
+    { "id": "CAF-01.03", "speaker": "staff", "es": "Claro. Aquí tienen el menú.", "repeatEs": "Claro. Aquí está el menú.", "next": "CAF-01.04" },
+    { "id": "CAF-01.04", "speaker": "student", "choices": [
+      { "id": "CAF-01.04a", "es": "Gracias. ¿Cuánto cuesta un café americano?", "result": "correct", "next": "CAF-01.05" },
+      { "id": "CAF-01.04b", "es": "¿Cuánto?",                                   "result": "awkward", "next": "CAF-01.05" },
+      { "id": "CAF-01.04c", "es": "Gracias. ¿Dónde está el baño?",              "result": "wrong" },
+      { "id": "CAF-01.04r", "es": "¿Puede repetir más despacio?",               "result": "repeat" }
+    ]},
+    { "id": "CAF-01.05", "speaker": "staff", "es": "Cuesta treinta y cinco pesos.", "repeatEs": "Treinta y cinco pesos.", "next": "CAF-01.06" },
+    { "id": "CAF-01.06", "speaker": "student", "choices": [
+      { "id": "CAF-01.06a", "es": "Un café americano, por favor.",      "result": "correct", "next": "CAF-01.07", "addItem": "cafe_americano", "qty": 1 },
+      { "id": "CAF-01.06b", "es": "Café.",                              "result": "awkward", "next": "CAF-01.07", "addItem": "cafe_americano", "qty": 1 },
+      { "id": "CAF-01.06c", "es": "Treinta y cinco pesos, por favor.",  "result": "wrong" },
+      { "id": "CAF-01.06r", "es": "¿Puede repetir más despacio?",       "result": "repeat" }
+    ]},
+    { "id": "CAF-01.07", "speaker": "staff", "es": "¿Algo más?", "repeatEs": "¿Quiere algo más?", "next": "CAF-01.08" },
+    { "id": "CAF-01.08", "speaker": "student", "choices": [
+      { "id": "CAF-01.08a", "es": "No, gracias. Eso es todo por ahora.", "result": "correct", "next": "CAF-01.09" },
+      { "id": "CAF-01.08b", "es": "No.",                                 "result": "awkward", "next": "CAF-01.09" },
+      { "id": "CAF-01.08c", "es": "De nada.",                            "result": "wrong" },
+      { "id": "CAF-01.08r", "es": "¿Puede repetir más despacio?",        "result": "repeat" }
+    ]},
+    { "id": "CAF-01.09", "speaker": "staff", "es": "Muy bien. Ahorita se lo traigo.", "end": true }
+  ]
+}
