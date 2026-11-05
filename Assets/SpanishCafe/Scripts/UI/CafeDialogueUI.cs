@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using TMPro;
@@ -65,6 +66,8 @@ namespace SpanishCafe
         Mode mode = Mode.Closed;
         string staffName = "Lupita";
         AudioSource voice;
+        StudentSpeech studentSpeech;
+        Coroutine talkTurn;
         bool subtitlesOn;
         string shuffledFor;
         string repeatShownFor;
@@ -79,6 +82,7 @@ namespace SpanishCafe
             instance = this;
             CafeContent.EnsureLoaded();
             Build();
+            studentSpeech = StudentSpeech.Create(transform);
             panel.SetActive(false);
             promptBox.SetActive(false);
         }
@@ -139,10 +143,11 @@ namespace SpanishCafe
             UseWorld(wanted == PanelMode.World || (wanted == PanelMode.Auto && UnityEngine.XR.XRSettings.isDeviceActive));
         }
 
-        public void Open(string workerName, AudioSource voiceSource, Transform worker = null)
+        public void Open(string workerName, AudioSource voiceSource, Transform worker = null, Transform student = null)
         {
             staffName = string.IsNullOrEmpty(workerName) ? "Lupita" : workerName;
             voice = voiceSource;
+            studentSpeech.Follow(student);
             EnsureEventSystem();
             promptBox.SetActive(false);
             panel.SetActive(true);
@@ -153,6 +158,7 @@ namespace SpanishCafe
         public void Close()
         {
             if (!IsOpen) return;
+            StopTalkTurn();
             if (voice != null) voice.Stop();
             panel.SetActive(false);
             mode = Mode.Closed;
@@ -203,6 +209,7 @@ namespace SpanishCafe
                 return;
             }
 
+            StopTalkTurn();
             mode = Mode.Talking;
             subtitlesOn = level.showSubtitles;
             shuffledFor = null;
@@ -372,8 +379,27 @@ namespace SpanishCafe
 
             ShowTurn(feedback);
 
+            // The student says their line first, then Lupita answers when they're done
+            StopTalkTurn();
+            talkTurn = StartCoroutine(StudentThenStaff(choice, result, staffBefore));
+        }
+
+        IEnumerator StudentThenStaff(DialogueChoice choice, ChoiceResult result, DialogueTurn staffBefore)
+        {
+            var clip = Resources.Load<AudioClip>("CafeAudio/" + choice.id.Replace('.', '_'));
+            float wait = studentSpeech.Say(choice.es, clip);
+            yield return new WaitForSeconds(wait + 0.3f); // a tiny pause like a real conversation
+
             if (result == ChoiceResult.Repeat) PlayLine(manager.StaffTurn, true);
             else if (manager.StaffTurn != staffBefore) PlayLine(manager.StaffTurn, false);
+            talkTurn = null;
+        }
+
+        void StopTalkTurn()
+        {
+            if (talkTurn != null) StopCoroutine(talkTurn);
+            talkTurn = null;
+            studentSpeech.Hide();
         }
 
         void ContinueTalking()

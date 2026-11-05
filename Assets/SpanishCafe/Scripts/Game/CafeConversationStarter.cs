@@ -49,6 +49,13 @@ namespace SpanishCafe
             ui = CafeDialogueUI.Instance;
             ui.Closed += StopTalking;
             if (voice == null) voice = GetComponent<AudioSource>();
+            if (voice == null)
+            {
+                // No speaker on her yet, so we add one while playing. It goes away when Play stops, nothing gets saved
+                voice = gameObject.AddComponent<AudioSource>();
+                voice.playOnAwake = false;
+                voice.spatialBlend = 0.5f;
+            }
             if (player == null) player = FindPlayer();
         }
 
@@ -107,7 +114,7 @@ namespace SpanishCafe
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
 
-            ui.Open(staffName, voice, transform);
+            ui.Open(staffName, voice, transform, player);
         }
 
         void StopTalking()

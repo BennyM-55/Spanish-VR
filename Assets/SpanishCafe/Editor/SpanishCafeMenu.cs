@@ -48,6 +48,45 @@ namespace SpanishCafe.EditorTools
             Debug.Log("[SpanishCafe] Placed Lupita in front of the camera. Move her behind the counter.");
         }
 
+        // The same character kit James used for BoZo. We only make a new copy, his BoZo stays the same
+        const string CharacterPrefab = "Assets/BoZo_StylizedModularCharacters/Prefabs/BSMC_CharacterBase.prefab";
+
+        [UnityEditor.MenuItem("Spanish Café/Add Lupita (BoZo character)")]
+        static void AddBoZoLupita()
+        {
+            if (StopIfPlaying()) return;
+
+            var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(CharacterPrefab);
+            if (prefab == null)
+            {
+                EditorUtility.DisplayDialog("Spanish Café", "Couldn't find the BoZo character kit. Make sure you're on main with James's café merged in.", "OK");
+                return;
+            }
+
+            // A new copy of the character, it doesn't have the walking script so she just stands there in idle
+            var lupita = (GameObject)PrefabUtility.InstantiatePrefab(prefab);
+            lupita.name = "Lupita";
+
+            var eye = FindEye();
+            if (eye != null)
+            {
+                var forward = FlatForward(eye);
+                var spot = eye.position + forward * 2.5f;
+
+                // Drop her down onto whatever floor is under that spot (start at eye height so we don't hit the ceiling)
+                if (Physics.Raycast(spot, Vector3.down, out var hit, 20f)) spot.y = hit.point.y;
+                lupita.transform.position = spot;
+                lupita.transform.rotation = Quaternion.LookRotation(-forward); // facing the camera
+            }
+
+            var starter = lupita.AddComponent<CafeConversationStarter>();
+            starter.panelMode = CafeDialogueUI.PanelMode.Auto;
+
+            Undo.RegisterCreatedObjectUndo(lupita, "Add Lupita");
+            Selection.activeGameObject = lupita;
+            Debug.Log("[SpanishCafe] Added Lupita using the BoZo character kit. Move her behind the counter, BoZo walks up and presses E.");
+        }
+
         [UnityEditor.MenuItem("Spanish Café/Create Menu Board")]
         static void CreateMenuBoard()
         {
