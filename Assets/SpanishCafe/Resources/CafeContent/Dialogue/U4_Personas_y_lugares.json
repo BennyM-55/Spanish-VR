@@ -1,0 +1,202 @@
+{
+  "scenarioId": "U4",
+  "level": "Unidad 4",
+  "staffName": "Lupita",
+  "titleEs": "¿Hay wifi?",
+  "goalEs": "Usar hay, ser y estar para lugares, hablar de tus clases con verbos -ar y decir qué te gusta.",
+  "turns": [
+    {
+      "id": "U4.01",
+      "speaker": "staff",
+      "es": "¡Buenas tardes! ¿Mesa para uno? ¿Va a estudiar aquí?",
+      "repeatEs": "¿Quiere una mesa? ¿Va a estudiar?",
+      "next": "U4.02"
+    },
+    {
+      "id": "U4.02",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U4.02a",
+          "es": "Sí, gracias. ¿Hay wifi aquí?",
+          "result": "correct",
+          "next": "U4.03"
+        },
+        {
+          "id": "U4.02b",
+          "es": "Sí, gracias. ¿Está wifi aquí?",
+          "result": "awkward",
+          "next": "U4.03"
+        },
+        {
+          "id": "U4.02c",
+          "es": "Sí, la biblioteca es un edificio nuevo.",
+          "result": "wrong"
+        },
+        {
+          "id": "U4.02r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U4.03",
+      "speaker": "staff",
+      "es": "Sí, hay wifi. La contraseña está en el menú. ¿Necesita algo más?",
+      "repeatEs": "Sí, hay wifi. La contraseña está en el menú.",
+      "next": "U4.04"
+    },
+    {
+      "id": "U4.04",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U4.04a",
+          "es": "Sí. ¿Dónde está la biblioteca? ¿Está lejos de aquí?",
+          "result": "correct",
+          "next": "U4.05"
+        },
+        {
+          "id": "U4.04b",
+          "es": "Sí. ¿Dónde hay la biblioteca?",
+          "result": "awkward",
+          "next": "U4.05"
+        },
+        {
+          "id": "U4.04c",
+          "es": "Sí. Necesito comprar un libro en la biblioteca.",
+          "result": "wrong"
+        },
+        {
+          "id": "U4.04r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U4.05",
+      "speaker": "staff",
+      "es": "La biblioteca está muy cerca, al lado del centro estudiantil. Es un edificio nuevo y muy grande. ¿Qué estudia usted?",
+      "repeatEs": "Está cerca. ¿Qué estudia?",
+      "next": "U4.06"
+    },
+    {
+      "id": "U4.06",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U4.06a",
+          "es": "Estudio administración de empresas. Tomo cuatro clases este semestre.",
+          "result": "correct",
+          "next": "U4.07"
+        },
+        {
+          "id": "U4.06b",
+          "es": "Estudio administración de empresas. Toma cuatro clases este semestre.",
+          "result": "awkward",
+          "next": "U4.07"
+        },
+        {
+          "id": "U4.06c",
+          "es": "Hay cuatro clases en la biblioteca.",
+          "result": "wrong"
+        },
+        {
+          "id": "U4.06r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U4.07",
+      "speaker": "staff",
+      "es": "¡Qué bien! ¿Y le gusta el café? ¿Qué le sirvo?",
+      "repeatEs": "¿Le gusta el café? ¿Qué quiere?",
+      "next": "U4.08"
+    },
+    {
+      "id": "U4.08",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U4.08a",
+          "es": "Sí, me gusta mucho el café. Un café de olla, por favor.",
+          "result": "correct",
+          "next": "U4.09",
+          "adds": [
+            {
+              "item": "cafe_olla",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "U4.08b",
+          "es": "Sí, me gustan mucho el café. Un café de olla, por favor.",
+          "result": "awkward",
+          "next": "U4.09",
+          "adds": [
+            {
+              "item": "cafe_olla",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "U4.08c",
+          "es": "Hay muchos cuadernos en mi escritorio.",
+          "result": "wrong"
+        },
+        {
+          "id": "U4.08r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U4.09",
+      "speaker": "staff",
+      "es": "¿Y algo de comer? Los tacos de nopales están muy buenos.",
+      "repeatEs": "¿Quiere comer algo?",
+      "next": "U4.10"
+    },
+    {
+      "id": "U4.10",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U4.10a",
+          "es": "No, gracias. No me gustan los nopales. Solo el café.",
+          "result": "correct",
+          "next": "U4.11"
+        },
+        {
+          "id": "U4.10b",
+          "es": "No, gracias. No me gusta los nopales.",
+          "result": "awkward",
+          "next": "U4.11"
+        },
+        {
+          "id": "U4.10c",
+          "es": "Sí, ¿dónde está el gimnasio?",
+          "result": "wrong"
+        },
+        {
+          "id": "U4.10r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U4.11",
+      "speaker": "staff",
+      "es": "Muy bien. Son cuarenta pesos por su café de olla. ¡Que le vaya bien con la tarea!",
+      "end": true
+    }
+  ]
+}

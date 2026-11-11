@@ -1,0 +1,237 @@
+{
+  "scenarioId": "U2",
+  "level": "Unidad 2",
+  "staffName": "Lupita",
+  "titleEs": "Una mesa de estudiantes",
+  "goalEs": "Saludar en grupo, decir de dónde son y qué estudian, y hacer preguntas con qué y cuál.",
+  "turns": [
+    {
+      "id": "U2.01",
+      "speaker": "staff",
+      "es": "¡Hola, chicos! ¿Qué tal? ¿Cómo están ustedes hoy?",
+      "repeatEs": "Hola. ¿Cómo están ustedes?",
+      "next": "U2.02"
+    },
+    {
+      "id": "U2.02",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U2.02a",
+          "es": "Estamos muy bien, gracias. ¿Y usted, Lupita?",
+          "result": "correct",
+          "next": "U2.03"
+        },
+        {
+          "id": "U2.02b",
+          "es": "Están bien, gracias.",
+          "result": "awkward",
+          "next": "U2.03"
+        },
+        {
+          "id": "U2.02c",
+          "es": "Somos de Texas.",
+          "result": "wrong"
+        },
+        {
+          "id": "U2.02r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U2.03",
+      "speaker": "staff",
+      "es": "¡Súper bien! Oigan, ustedes no son de aquí, ¿verdad? ¿De dónde son?",
+      "repeatEs": "¿De dónde son ustedes? No son de aquí, ¿verdad?",
+      "next": "U2.04"
+    },
+    {
+      "id": "U2.04",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U2.04a",
+          "es": "No, no somos de aquí. Somos de Florida. Somos estudiantes de la Universidad de Florida.",
+          "result": "correct",
+          "next": "U2.05"
+        },
+        {
+          "id": "U2.04b",
+          "es": "No, estamos de Florida.",
+          "result": "awkward",
+          "next": "U2.05"
+        },
+        {
+          "id": "U2.04c",
+          "es": "Sí, estamos cansados.",
+          "result": "wrong"
+        },
+        {
+          "id": "U2.04r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U2.05",
+      "speaker": "staff",
+      "es": "¡Qué padre! ¿Y qué estudian?",
+      "repeatEs": "¿Qué estudian ustedes?",
+      "next": "U2.06"
+    },
+    {
+      "id": "U2.06",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U2.06a",
+          "es": "Yo estudio biología y mi amiga estudia periodismo.",
+          "result": "correct",
+          "next": "U2.07"
+        },
+        {
+          "id": "U2.06b",
+          "es": "Nosotros estudio biología y periodismo.",
+          "result": "awkward",
+          "next": "U2.07"
+        },
+        {
+          "id": "U2.06c",
+          "es": "Estudiamos a las ocho de la mañana.",
+          "result": "wrong"
+        },
+        {
+          "id": "U2.06r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U2.07",
+      "speaker": "staff",
+      "es": "¿Y cuál es la clase más difícil este semestre?",
+      "repeatEs": "¿Qué clase es la más difícil?",
+      "next": "U2.08"
+    },
+    {
+      "id": "U2.08",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U2.08a",
+          "es": "Química. ¡Es muy difícil! El examen es mañana.",
+          "result": "correct",
+          "next": "U2.09"
+        },
+        {
+          "id": "U2.08b",
+          "es": "Química. ¡Son muy difícil!",
+          "result": "awkward",
+          "next": "U2.09"
+        },
+        {
+          "id": "U2.08c",
+          "es": "Mi especialización es biología.",
+          "result": "wrong"
+        },
+        {
+          "id": "U2.08r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U2.09",
+      "speaker": "staff",
+      "es": "¡Ánimo! Un cafecito les va a ayudar. ¿Qué quieren tomar?",
+      "repeatEs": "¿Qué van a tomar?",
+      "next": "U2.10"
+    },
+    {
+      "id": "U2.10",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U2.10a",
+          "es": "¿Cuál es el café más popular?",
+          "result": "correct",
+          "next": "U2.11"
+        },
+        {
+          "id": "U2.10b",
+          "es": "¿Qué es el café más popular?",
+          "result": "awkward",
+          "next": "U2.11"
+        },
+        {
+          "id": "U2.10c",
+          "es": "¡Hasta mañana, Lupita!",
+          "result": "wrong"
+        },
+        {
+          "id": "U2.10r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U2.11",
+      "speaker": "staff",
+      "es": "El café de olla, ¡con canela! ¿Les traigo dos?",
+      "repeatEs": "El café de olla es el más popular. ¿Dos?",
+      "next": "U2.12"
+    },
+    {
+      "id": "U2.12",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U2.12a",
+          "es": "Sí, dos cafés de olla, por favor. Es muy rico, ¿verdad?",
+          "result": "correct",
+          "next": "U2.13",
+          "adds": [
+            {
+              "item": "cafe_olla",
+              "qty": 2
+            }
+          ]
+        },
+        {
+          "id": "U2.12b",
+          "es": "Sí, dos café de olla, por favor.",
+          "result": "awkward",
+          "next": "U2.13",
+          "adds": [
+            {
+              "item": "cafe_olla",
+              "qty": 2
+            }
+          ]
+        },
+        {
+          "id": "U2.12c",
+          "es": "No sé. ¿Y tú?",
+          "result": "wrong"
+        },
+        {
+          "id": "U2.12r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U2.13",
+      "speaker": "staff",
+      "es": "¡Con mucho gusto! Son ochenta pesos. ¡Mucha suerte en el examen!",
+      "end": true
+    }
+  ]
+}
