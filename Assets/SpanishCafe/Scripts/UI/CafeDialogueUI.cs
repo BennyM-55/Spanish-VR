@@ -173,8 +173,9 @@ namespace SpanishCafe
             var levels = CafeContent.Levels;
 
             headerText.text = CafeContent.Menu?.cafeName ?? "Café La Esquina";
-            SetStaffLine($"<b>{staffName}:</b> ¡Hola! ¿Qué nivel quieres practicar hoy?",
-                         "Hi! Which level do you want to practice today?", true);
+            // Each unidad matches a unit from the Contraseña textbook the class uses
+            SetStaffLine($"<b>{staffName}:</b> ¡Hola! Bienvenidos a Café La Esquina. ¿Qué unidad de Contraseña quieres practicar hoy?",
+                         "Hi! Welcome to Café La Esquina. Which Contraseña unit do you want to practice today?", true);
 
             ClearChoices();
             for (int i = 0; i < levels.Length; i++)

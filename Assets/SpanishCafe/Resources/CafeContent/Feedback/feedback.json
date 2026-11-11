@@ -1,79 +1,538 @@
 {
   "rubric": [
-    { "id": "task",     "es": "Cumple la tarea",          "en": "Completes the task",    "level0": "Not yet",         "level1": "With help",          "level2": "Independently" },
-    { "id": "clarity",  "es": "Se comunica con claridad", "en": "Communicates clearly",  "level0": "Meaning unclear", "level1": "Some clarification", "level2": "Meaning clear" },
-    { "id": "repair",   "es": "Resuelve una dificultad",  "en": "Handles a difficulty",  "level0": "Stops",           "level1": "Uses a hint",        "level2": "Asks or adapts" },
-    { "id": "language", "es": "Usa lenguaje adecuado",    "en": "Uses suitable language","level0": "Needs a model",   "level1": "Mostly suitable",    "level2": "Clear and polite" }
+    {
+      "id": "task",
+      "es": "Cumple la tarea",
+      "en": "Completes the task",
+      "level0": "Not yet",
+      "level1": "With help",
+      "level2": "Independently"
+    },
+    {
+      "id": "clarity",
+      "es": "Se comunica con claridad",
+      "en": "Communicates clearly",
+      "level0": "Meaning unclear",
+      "level1": "Some clarification",
+      "level2": "Meaning clear"
+    },
+    {
+      "id": "repair",
+      "es": "Resuelve una dificultad",
+      "en": "Handles a difficulty",
+      "level0": "Stops",
+      "level1": "Uses a hint",
+      "level2": "Asks or adapts"
+    },
+    {
+      "id": "language",
+      "es": "Usa lenguaje adecuado",
+      "en": "Uses suitable language",
+      "level0": "Needs a model",
+      "level1": "Mostly suitable",
+      "level2": "Clear and polite"
+    }
   ],
   "entries": [
-    { "id": "general.correct.1", "es": "¡Muy bien!",   "en": "Nice!" },
-    { "id": "general.correct.2", "es": "¡Excelente!",  "en": "Excellent!" },
-    { "id": "general.correct.3", "es": "¡Perfecto!",   "en": "Perfect!" },
-    { "id": "general.awkward",   "es": "Se entiende, pero se puede decir mejor.",              "en": "Understandable, but it could sound more natural." },
-    { "id": "general.wrong",     "es": "Mmm, eso no responde a la pregunta. Intenta otra vez.", "en": "Hmm, that doesn't answer the question. Try again." },
-    { "id": "general.repeat",    "es": "¡Buena idea! Pedir que repitan siempre está bien.",     "en": "Good idea! Asking someone to repeat is always okay." },
-    { "id": "general.noHints",   "es": "Ya no quedan pistas en este nivel.",                    "en": "No hints left at this level." },
-
-    { "id": "CAF-01.02b",      "es": "¡Te entendió! Saluda y di: «Una mesa para dos, por favor».",       "en": "She understood! Add a greeting and say 'Una mesa para dos, por favor' to sound polite." },
-    { "id": "CAF-01.02c",      "es": "Lupita preguntó cuántas personas son, no qué quieres tomar.",      "en": "Lupita asked how many people, not what you want to drink. Answer with a number." },
-    { "id": "CAF-01.02.hint",  "es": "Responde con un número: «Una mesa para...».",                      "en": "Answer with a number: 'Una mesa para...' (A table for...)." },
-    { "id": "CAF-01.04b",      "es": "¿Cuánto qué? Di el producto: «¿Cuánto cuesta un café americano?».", "en": "How much what? Name the item: '¿Cuánto cuesta un café americano?'" },
-    { "id": "CAF-01.04c",      "es": "Esa pregunta es sobre el baño. La tarea es preguntar el precio.",  "en": "That asks where the restroom is. Your task is to ask a price." },
-    { "id": "CAF-01.04.hint",  "es": "Usa «¿Cuánto cuesta...?».",                                        "en": "Use '¿Cuánto cuesta...?' (How much is...?)." },
-    { "id": "CAF-01.06b",      "es": "Se entiende, pero suena brusco. Di qué café y agrega «por favor».", "en": "Understandable, but blunt. Say which coffee and add 'por favor'." },
-    { "id": "CAF-01.06c",      "es": "Ella ya te dijo el precio. Ahora pide el café.",                   "en": "She already told you the price. Now order the coffee." },
-    { "id": "CAF-01.06.hint",  "es": "Pide un producto y agrega «por favor».",                           "en": "Order one item and add 'por favor'." },
-    { "id": "CAF-01.08b",      "es": "Correcto, pero agrega «gracias» para ser amable.",                 "en": "Correct, but add 'gracias' to be polite." },
-    { "id": "CAF-01.08c",      "es": "«De nada» responde a «gracias». Ella preguntó si quieres algo más.", "en": "'De nada' means 'you're welcome'. She asked if you want anything else." },
-    { "id": "CAF-01.08.hint",  "es": "Di que no quieres nada más: «No, gracias...».",                    "en": "Say you don't want anything else: 'No, gracias...'" },
-
-    { "id": "CAF-02.02b",      "es": "¡Casi! Se dice «un agua», no «una agua». Y «Me da...» suena más amable.", "en": "Almost! It's 'un agua', not 'una agua' (agua starts with a stressed 'a'). 'Me da...' also sounds more polite." },
-    { "id": "CAF-02.02c",      "es": "Todavía no has pedido. Pide los tacos y la bebida.",               "en": "You haven't ordered yet. Ask for the tacos and the drink." },
-    { "id": "CAF-02.02.hint",  "es": "Usa «Me da...» + cantidad + comida.",                              "en": "Use 'Me da...' + quantity + food." },
-    { "id": "CAF-02.04b",      "es": "Se entiende, pero falta la cebolla y preguntar por la salsa.",     "en": "Understood, but you didn't answer about the onion or ask about the salsa." },
-    { "id": "CAF-02.04c",      "es": "«Mucho gusto» es para cuando conoces a alguien. Responde sobre la cebolla y el cilantro.", "en": "'Mucho gusto' is for meeting someone. Answer about the onion and cilantro." },
-    { "id": "CAF-02.04.hint",  "es": "Usa «con» y «sin»: «Con cebolla, pero sin...».",                   "en": "Use 'con' (with) and 'sin' (without)." },
-    { "id": "CAF-02.06b",      "es": "Bien, pero confirma la salsa: «Sí, aparte, por favor».",           "en": "Good, but confirm the salsa too: 'Sí, aparte, por favor.'" },
-    { "id": "CAF-02.06c",      "es": "Ya pediste en el mostrador. Ella preguntó por la salsa verde.",    "en": "You already ordered at the counter. She asked about the green salsa." },
-    { "id": "CAF-02.06.hint",  "es": "«Aparte» es en otro recipiente. «Para llevar» es para comer en otro lugar.", "en": "'Aparte' = on the side. 'Para llevar' = to go." },
-
-    { "id": "CAF-03.02b",      "es": "«Dame» es muy directo con alguien que no conoces. Usa «Quisiera...» o «¿Me da...?».", "en": "'Dame' is very direct with a stranger. Use 'Quisiera...' or '¿Me da...?'" },
-    { "id": "CAF-03.02c",      "es": "Todavía no has pedido ni pagado. Ella pregunta qué vas a pedir.",  "en": "You haven't ordered or paid yet. She's asking what you'll order." },
-    { "id": "CAF-03.02.hint",  "es": "«Quisiera...» es una forma amable de pedir.",                      "en": "'Quisiera...' (I would like...) is a polite way to order." },
-    { "id": "CAF-03.04b",      "es": "Se entiende, pero usa oraciones completas: «No como cerdo».",      "en": "Understood, but use full sentences: 'No como cerdo.' (I don't eat pork.)" },
-    { "id": "CAF-03.04c",      "es": "Escucha otra vez: ya no hay pollo. Elige otra opción.",            "en": "Listen again: there's no more chicken. Choose another option." },
-    { "id": "CAF-03.04.hint",  "es": "Explica tu restricción y pregunta qué lleva: «¿Llevan carne?».",   "en": "Explain your restriction and ask what's in it: '¿Llevan carne?'" },
-    { "id": "CAF-03.06b",      "es": "Se dice «¿Me alcanza?» o «¿Está bien?», no «es bien».",            "en": "Say '¿Me alcanza?' (Is it enough?) or '¿Está bien?', not 'es bien'." },
-    { "id": "CAF-03.06c",      "es": "¡Cuidado! «Tengo cien años» es tu edad. Para dinero: «Tengo cien pesos».", "en": "Careful! 'Tengo cien años' means you're 100 years old. For money: 'Tengo cien pesos.'" },
-    { "id": "CAF-03.06.hint",  "es": "Usa «¿Me alcanza para...?».",                                      "en": "Use '¿Me alcanza para...?' (Do I have enough for...?)." },
-    { "id": "CAF-03.08b",      "es": "Se entiende, pero «¿Ya viene endulzado?» suena más natural.",      "en": "Understood, but '¿Ya viene endulzado?' sounds more natural." },
-    { "id": "CAF-03.08c",      "es": "Revisa la cuenta: 50 + 40 = 90, no 190.",                          "en": "Check the math: 50 + 40 = 90, not 190." },
-    { "id": "CAF-03.08.hint",  "es": "Pregunta si el café ya trae azúcar: «¿Ya viene...?».",             "en": "Ask if the coffee already has sugar: '¿Ya viene...?'" },
-
-    { "id": "CAF-04.02b",      "es": "Tienes razón, pero «esto está mal» suena a culpa. Explica con cortesía lo que pidieron.", "en": "You're right, but 'esto está mal' sounds like blame. Politely explain what you ordered." },
-    { "id": "CAF-04.02c",      "es": "Eso cambia el pedido. Pidieron tacos de pollo, uno sin cilantro.", "en": "That changes the order. You ordered chicken tacos, one without cilantro." },
-    { "id": "CAF-04.02.hint",  "es": "Usa «Habíamos pedido...» para describir el pedido original.",      "en": "Use 'Habíamos pedido...' (We had ordered...) to describe the original order." },
-    { "id": "CAF-04.04b",      "es": "Se entiende, pero di cuántas y qué bebidas.",                      "en": "Understood, but say how many drinks and which ones." },
-    { "id": "CAF-04.04c",      "es": "Sí pidieron bebidas: dos aguas de jamaica.",                       "en": "You did order drinks: two aguas de jamaica." },
-    { "id": "CAF-04.04.hint",  "es": "Menciona lo que falta: «También pedimos...».",                     "en": "Mention what's missing: 'También pedimos...' (We also ordered...)." },
-    { "id": "CAF-04.06b",      "es": "116 es correcto, pero explica el cálculo con cortesía: «¿Podría revisarla?».", "en": "116 is right, but explain your math politely: '¿Podría revisarla?'" },
-    { "id": "CAF-04.06c",      "es": "¡Revisa la cuenta! 2 × 28 + 2 × 30 = 116, no 146.",                "en": "Check the bill! 2 × 28 + 2 × 30 = 116, not 146." },
-    { "id": "CAF-04.06.hint",  "es": "Suma dos tacos de pollo (28 c/u) y dos aguas (30 c/u).",           "en": "Add it up: two chicken tacos (28 each) and two drinks (30 each)." },
-    { "id": "CAF-04.08b",      "es": "Se dice «por separado», y es mejor preguntar: «¿Podemos pagar por separado?».", "en": "Say 'por separado', and ask instead of telling: '¿Podemos pagar por separado?'" },
-    { "id": "CAF-04.08c",      "es": "Cada persona pidió un taco y un agua, no dos tacos.",              "en": "Each person ordered one taco and one drink, not two tacos." },
-    { "id": "CAF-04.08.hint",  "es": "Pregunta con «¿Podemos...?» y explica cómo dividir.",              "en": "Ask with '¿Podemos...?' and explain how to split it." },
-
-    { "id": "CAF-05.02b",      "es": "Se entiende, pero a este nivel suaviza la petición: «¿Sería posible...?».", "en": "Understood, but at this level, soften the request: '¿Sería posible...?' (Would it be possible...?)" },
-    { "id": "CAF-05.02c",      "es": "Todavía no han pedido. Primero explica su situación.",             "en": "You haven't ordered yet. Explain your situation first." },
-    { "id": "CAF-05.02.hint",  "es": "Explica el límite de tiempo y pregunta en condicional: «¿Sería posible...?».", "en": "Explain the time limit and ask with the conditional: '¿Sería posible...?'" },
-    { "id": "CAF-05.04b",      "es": "Se entiende, pero es muy directo. Usa «Preferiríamos...» y «Si pidiéramos...».", "en": "Understood, but very direct. Use 'Preferiríamos...' and 'Si pidiéramos...'" },
-    { "id": "CAF-05.04c",      "es": "Eso contradice su prisa: solo tienen treinta minutos.",            "en": "That contradicts your situation: you only have thirty minutes." },
-    { "id": "CAF-05.04.hint",  "es": "Propón otra opción: «Si pidiéramos para llevar...».",              "en": "Propose an alternative: 'Si pidiéramos para llevar...' (If we ordered to go...)." },
-    { "id": "CAF-05.06b",      "es": "Las cantidades están bien, pero no queda claro cuáles van sin cilantro. Usa oraciones completas.", "en": "The quantities are right, but it's unclear which two have no cilantro. Use full sentences." },
-    { "id": "CAF-05.06c",      "es": "Ella dijo que solo el pollo o los nopales salen rápido.",          "en": "She said only chicken or cactus will be ready fast." },
-    { "id": "CAF-05.06.hint",  "es": "Confirma cantidades exactas y la excepción: «De los de pollo, dos sin cilantro».", "en": "Confirm exact quantities and the exception: 'De los de pollo, dos sin cilantro.'" },
-    { "id": "CAF-05.08b",      "es": "Después de «Le agradecería que...» va el subjuntivo: «marcara», no «marca».", "en": "After 'Le agradecería que...' use the subjunctive: 'marcara', not 'marca'." },
-    { "id": "CAF-05.08c",      "es": "Eso contradice su pedido: dos tacos van sin cilantro.",            "en": "That contradicts your order: two tacos go without cilantro." },
-    { "id": "CAF-05.08.hint",  "es": "Usa «Le agradecería que» + subjuntivo y «Si hubiera...».",         "en": "Use 'Le agradecería que' + subjunctive, and 'Si hubiera...' (If there were...)." }
+    {
+      "id": "general.correct.1",
+      "es": "¡Muy bien!",
+      "en": "Nice!"
+    },
+    {
+      "id": "general.correct.2",
+      "es": "¡Excelente!",
+      "en": "Excellent!"
+    },
+    {
+      "id": "general.correct.3",
+      "es": "¡Perfecto!",
+      "en": "Perfect!"
+    },
+    {
+      "id": "general.awkward",
+      "es": "Se entiende, pero se puede decir mejor.",
+      "en": "Understandable, but it could sound more natural."
+    },
+    {
+      "id": "general.wrong",
+      "es": "Mmm, eso no responde a la pregunta. Intenta otra vez.",
+      "en": "Hmm, that doesn't answer the question. Try again."
+    },
+    {
+      "id": "general.repeat",
+      "es": "¡Buena idea! Pedir que repitan siempre está bien.",
+      "en": "Good idea! Asking someone to repeat is always okay."
+    },
+    {
+      "id": "general.noHints",
+      "es": "Ya no quedan pistas en este nivel.",
+      "en": "No hints left at this level."
+    },
+    {
+      "id": "U1.02b",
+      "es": "¡Se entiende! Pero para decir cómo te sientes usa estar: «Estoy bien».",
+      "en": "Understandable! But to say how you feel, use estar: 'Estoy bien'. Ser is for who you are, not how you feel."
+    },
+    {
+      "id": "U1.02c",
+      "es": "Lupita preguntó cómo estás, no de dónde eres. Responde con «Estoy...».",
+      "en": "Lupita asked how you are, not where you are from. Answer with 'Estoy...'."
+    },
+    {
+      "id": "U1.02.hint",
+      "es": "¿Cómo te sientes? Usa estar: «Estoy...».",
+      "en": "How do you feel? Use estar: 'Estoy...'."
+    },
+    {
+      "id": "U1.04b",
+      "es": "Casi. El origen va con ser: «Soy de Gainesville».",
+      "en": "Almost. Origin goes with ser: 'Soy de Gainesville'. Estar is for location and feelings."
+    },
+    {
+      "id": "U1.04c",
+      "es": "Ella quiere saber tu nombre y de dónde eres.",
+      "en": "She wants to know your name and where you are from."
+    },
+    {
+      "id": "U1.04.hint",
+      "es": "Nombre: «Me llamo...». Origen: «Soy de...».",
+      "en": "Name: 'Me llamo...'. Origin: 'Soy de...'."
+    },
+    {
+      "id": "U1.06b",
+      "es": "Te entendió, pero sed va con tener: «Tengo sed».",
+      "en": "She understood, but thirst goes with tener: 'Tengo sed' (literally 'I have thirst')."
+    },
+    {
+      "id": "U1.06c",
+      "es": "Ella preguntó si tienes hambre o sed, no tu edad.",
+      "en": "She asked if you are hungry or thirsty, not your age."
+    },
+    {
+      "id": "U1.06.hint",
+      "es": "Usa tener: «Tengo hambre» o «Tengo sed».",
+      "en": "Use tener: 'Tengo hambre' (hungry) or 'Tengo sed' (thirsty)."
+    },
+    {
+      "id": "U1.08b",
+      "es": "¡Bien! Solo un detalle: pan es masculino, entonces es «un pan dulce».",
+      "en": "Good! Just one detail: pan is masculine, so it's 'un pan dulce'. Articles agree with the noun."
+    },
+    {
+      "id": "U1.08c",
+      "es": "Ella te ofreció pan dulce. Di sí o no.",
+      "en": "She offered you sweet bread. Say yes or no."
+    },
+    {
+      "id": "U1.08.hint",
+      "es": "Acepta con «Sí, un pan dulce, por favor».",
+      "en": "Accept with 'Sí, un pan dulce, por favor'."
+    },
+    {
+      "id": "U1.10b",
+      "es": "Se entiende. Para decir qué es algo usa ser: «Mi número es...».",
+      "en": "Understood. To say what something is, use ser: 'Mi número es...'."
+    },
+    {
+      "id": "U1.10c",
+      "es": "Ella pidió tu número de teléfono. En México se dice en pares: «treinta y cinco, veintiuno...».",
+      "en": "She asked for your phone number. In Mexico you say it in pairs: 'treinta y cinco, veintiuno...'."
+    },
+    {
+      "id": "U1.10.hint",
+      "es": "Di tu número en pares: «Es el treinta y cinco, veintiuno...».",
+      "en": "Say your number in pairs: 'Es el treinta y cinco, veintiuno...'."
+    },
+    {
+      "id": "U2.02b",
+      "es": "Te entendió, pero hablas de ustedes mismos: «Estamos bien».",
+      "en": "She understood, but you are talking about yourselves: 'Estamos bien' (we are fine)."
+    },
+    {
+      "id": "U2.02c",
+      "es": "Lupita preguntó cómo están, no de dónde son.",
+      "en": "Lupita asked how you are, not where you are from."
+    },
+    {
+      "id": "U2.02.hint",
+      "es": "Hablas por el grupo: «Estamos...».",
+      "en": "You speak for the group: 'Estamos...' (we are)."
+    },
+    {
+      "id": "U2.04b",
+      "es": "Casi. El origen va con ser: «Somos de Florida».",
+      "en": "Almost. Origin goes with ser: 'Somos de Florida'."
+    },
+    {
+      "id": "U2.04c",
+      "es": "Ella preguntó de dónde son. Usa «Somos de...».",
+      "en": "She asked where you are from. Use 'Somos de...'."
+    },
+    {
+      "id": "U2.04.hint",
+      "es": "Origen en plural: «Somos de...».",
+      "en": "Origin in plural: 'Somos de...' (we are from)."
+    },
+    {
+      "id": "U2.06b",
+      "es": "Bien, solo cambia el verbo: «Nosotros estudiamos...».",
+      "en": "Good, just change the verb: 'Nosotros estudiamos...'. The verb matches who does it."
+    },
+    {
+      "id": "U2.06c",
+      "es": "Ella preguntó qué estudian, no a qué hora.",
+      "en": "She asked what you study, not at what time."
+    },
+    {
+      "id": "U2.06.hint",
+      "es": "Di tu especialización: «Estudio...».",
+      "en": "Say your major: 'Estudio...' (I study)."
+    },
+    {
+      "id": "U2.08b",
+      "es": "Una clase es singular: «Es muy difícil».",
+      "en": "One class is singular: 'Es muy difícil'."
+    },
+    {
+      "id": "U2.08c",
+      "es": "Ella preguntó cuál clase es la más difícil.",
+      "en": "She asked which class is the hardest."
+    },
+    {
+      "id": "U2.08.hint",
+      "es": "Nombra una clase y descríbela con es: «Química. Es...».",
+      "en": "Name a class and describe it with es: 'Química. Es...'."
+    },
+    {
+      "id": "U2.10b",
+      "es": "Se entiende. Para elegir entre opciones usa cuál: «¿Cuál es...?».",
+      "en": "Understood. To choose among options, use cuál: '¿Cuál es...?'. Qué asks for a definition."
+    },
+    {
+      "id": "U2.10c",
+      "es": "¡Todavía no se van! Pregunta por el café antes de pedir.",
+      "en": "You are not leaving yet! Ask about the coffee before ordering."
+    },
+    {
+      "id": "U2.10.hint",
+      "es": "Pregunta por la mejor opción: «¿Cuál es...?».",
+      "en": "Ask for the best option: '¿Cuál es...?' (which is)."
+    },
+    {
+      "id": "U2.12b",
+      "es": "¡Bien! En plural es «dos cafés».",
+      "en": "Good! In plural it's 'dos cafés'. Add -s after a vowel."
+    },
+    {
+      "id": "U2.12c",
+      "es": "Ella quiere saber si traer dos. Contesta sí o no.",
+      "en": "She wants to know whether to bring two. Answer yes or no."
+    },
+    {
+      "id": "U2.12.hint",
+      "es": "Acepta en plural: «Sí, dos cafés...».",
+      "en": "Accept in plural: 'Sí, dos cafés...'."
+    },
+    {
+      "id": "U3.02b",
+      "es": "Se entiende. Para preguntar cuándo pasa algo di «¿A qué hora...?».",
+      "en": "Understood. To ask when something happens, say '¿A qué hora...?'. '¿Qué hora es?' asks the current time."
+    },
+    {
+      "id": "U3.02c",
+      "es": "Ella te ofreció ayuda. Haz tu pregunta sobre el horario.",
+      "en": "She offered to help. Ask your question about the hours."
+    },
+    {
+      "id": "U3.02.hint",
+      "es": "Pregunta el horario: «¿A qué hora cierra...?».",
+      "en": "Ask about the hours: '¿A qué hora cierra...?'."
+    },
+    {
+      "id": "U3.04b",
+      "es": "Casi. Solo la una usa es; las demás horas usan son: «Son las diez».",
+      "en": "Almost. Only one o'clock uses es (Es la una); every other hour uses son: 'Son las diez'."
+    },
+    {
+      "id": "U3.04c",
+      "es": "Ella preguntó la hora, no el día.",
+      "en": "She asked the time, not the day."
+    },
+    {
+      "id": "U3.04.hint",
+      "es": "La hora en plural: «Son las...».",
+      "en": "Time in plural: 'Son las...'."
+    },
+    {
+      "id": "U3.06b",
+      "es": "Te entendió. Para obligaciones falta que: «Tengo que estudiar».",
+      "en": "She understood. For obligations you need que: 'Tengo que estudiar'."
+    },
+    {
+      "id": "U3.06c",
+      "es": "Primero pide algo de tomar.",
+      "en": "First, order something to drink."
+    },
+    {
+      "id": "U3.06.hint",
+      "es": "Pide y di lo que tienes que hacer: «Tengo que...».",
+      "en": "Order, then say what you have to do: 'Tengo que...'."
+    },
+    {
+      "id": "U3.08b",
+      "es": "¡Bien! Para planes usa ir a + infinitivo: «Voy a venir».",
+      "en": "Good! For plans use ir a + infinitive: 'Voy a venir'."
+    },
+    {
+      "id": "U3.08c",
+      "es": "Ella habla de este sábado. Acepta o rechaza la invitación.",
+      "en": "She means this Saturday. Accept or decline the invitation."
+    },
+    {
+      "id": "U3.08.hint",
+      "es": "Acepta: «¡Buena idea! Voy a...».",
+      "en": "Accept: '¡Buena idea! Voy a...' (I'm going to)."
+    },
+    {
+      "id": "U3.10b",
+      "es": "Casi. No olvides la a: «Vamos a bailar».",
+      "en": "Almost. Don't forget the a: 'Vamos a bailar'."
+    },
+    {
+      "id": "U3.10c",
+      "es": "Ella preguntó qué van a hacer, no a qué hora.",
+      "en": "She asked what you're going to do, not what time."
+    },
+    {
+      "id": "U3.10.hint",
+      "es": "Planes en grupo: «Vamos a...».",
+      "en": "Group plans: 'Vamos a...' (we're going to)."
+    },
+    {
+      "id": "U4.02b",
+      "es": "Se entiende. Para preguntar si algo existe usa hay: «¿Hay wifi?».",
+      "en": "Understood. To ask whether something exists, use hay: '¿Hay wifi?'."
+    },
+    {
+      "id": "U4.02c",
+      "es": "Ella preguntó si vas a estudiar aquí. Contesta y pregunta lo que necesitas.",
+      "en": "She asked if you're studying here. Answer and ask for what you need."
+    },
+    {
+      "id": "U4.02.hint",
+      "es": "Pregunta si algo existe: «¿Hay...?».",
+      "en": "Ask whether something exists: '¿Hay...?' (is there)."
+    },
+    {
+      "id": "U4.04b",
+      "es": "Casi. Hay no va con el/la. Para un lugar específico usa estar: «¿Dónde está la biblioteca?».",
+      "en": "Almost. Hay isn't used with el/la. For a specific place, use estar: '¿Dónde está la biblioteca?'."
+    },
+    {
+      "id": "U4.04c",
+      "es": "¡Ojo! En la biblioteca no se compran libros. Para comprar es la librería.",
+      "en": "Careful! You don't buy books at the biblioteca (library). The place to buy books is the librería (bookstore)."
+    },
+    {
+      "id": "U4.04.hint",
+      "es": "Ubicación con estar: «¿Dónde está...?».",
+      "en": "Location with estar: '¿Dónde está...?' (where is)."
+    },
+    {
+      "id": "U4.06b",
+      "es": "¡Bien! Pero hablas de ti: «Tomo cuatro clases». Con yo, los verbos -ar terminan en -o.",
+      "en": "Good! But you're talking about yourself: 'Tomo cuatro clases'. With yo, -ar verbs end in -o."
+    },
+    {
+      "id": "U4.06c",
+      "es": "Ella preguntó qué estudias. Usa «Estudio...».",
+      "en": "She asked what you study. Use 'Estudio...'."
+    },
+    {
+      "id": "U4.06.hint",
+      "es": "Habla de ti con verbos -ar: «Estudio... Tomo...».",
+      "en": "Talk about yourself with -ar verbs: 'Estudio... Tomo...'."
+    },
+    {
+      "id": "U4.08b",
+      "es": "Te entendió. El café es una cosa, entonces es «me gusta», sin -n.",
+      "en": "She understood. Coffee is one thing, so it's 'me gusta', without -n. Use gustan for plural things."
+    },
+    {
+      "id": "U4.08c",
+      "es": "Ella preguntó si te gusta el café y qué vas a tomar.",
+      "en": "She asked if you like coffee and what you'll have."
+    },
+    {
+      "id": "U4.08.hint",
+      "es": "Usa «Me gusta...» y pide.",
+      "en": "Use 'Me gusta...' (I like) and order."
+    },
+    {
+      "id": "U4.10b",
+      "es": "Casi. Los nopales son plural: «No me gustan los nopales».",
+      "en": "Almost. Nopales is plural: 'No me gustan los nopales'."
+    },
+    {
+      "id": "U4.10c",
+      "es": "Ella te ofreció tacos. Di sí o no y explica.",
+      "en": "She offered you tacos. Say yes or no and explain."
+    },
+    {
+      "id": "U4.10.hint",
+      "es": "Rechaza con «No me gustan...».",
+      "en": "Decline with 'No me gustan...' (I don't like)."
+    },
+    {
+      "id": "U5.02b",
+      "es": "Se entiende. Para información usa saber: «No sé qué pedir». Conocer es para personas, lugares y cosas que te son familiares.",
+      "en": "Understood. For information, use saber: 'No sé qué pedir'. Conocer is for people, places and things you are familiar with."
+    },
+    {
+      "id": "U5.02c",
+      "es": "Ella preguntó si sabes qué vas a pedir.",
+      "en": "She asked if you know what you're going to order."
+    },
+    {
+      "id": "U5.02.hint",
+      "es": "Información con saber: «No sé...».",
+      "en": "Information with saber: 'No sé...' (I don't know)."
+    },
+    {
+      "id": "U5.04b",
+      "es": "¡Bien! Con yo, los verbos -er terminan en -o: «bebo».",
+      "en": "Good! With yo, -er verbs end in -o: 'bebo'."
+    },
+    {
+      "id": "U5.04c",
+      "es": "Ella preguntó si bebes café todos los días.",
+      "en": "She asked if you drink coffee every day."
+    },
+    {
+      "id": "U5.04.hint",
+      "es": "Habla de tu rutina: «Bebo café...».",
+      "en": "Talk about your routine: 'Bebo café...' (I drink)."
+    },
+    {
+      "id": "U5.06b",
+      "es": "Casi. Para personas usa conocer: «No conozco a doña Carmen».",
+      "en": "Almost. For people, use conocer: 'No conozco a doña Carmen'."
+    },
+    {
+      "id": "U5.06c",
+      "es": "Ella preguntó si conoces a la dueña.",
+      "en": "She asked if you know the owner."
+    },
+    {
+      "id": "U5.06.hint",
+      "es": "Personas con conocer + a: «No conozco a...».",
+      "en": "People with conocer + a: 'No conozco a...'."
+    },
+    {
+      "id": "U5.08b",
+      "es": "¡Bonito! Solo falta la a personal: «Admiro a mi abuela».",
+      "en": "Lovely! Just add the personal a before a person: 'Admiro a mi abuela'."
+    },
+    {
+      "id": "U5.08c",
+      "es": "Ella preguntó a qué persona admiras. Usa «Admiro a...».",
+      "en": "She asked which person you admire. Use 'Admiro a...'."
+    },
+    {
+      "id": "U5.08.hint",
+      "es": "Nombra a una persona y describe sus cualidades.",
+      "en": "Name a person and describe their qualities."
+    },
+    {
+      "id": "U5.10b",
+      "es": "¡Gracias! Lupita es mujer: «simpática y trabajadora».",
+      "en": "Thank you! Lupita is a woman: 'simpática y trabajadora'."
+    },
+    {
+      "id": "U5.10c",
+      "es": "Ella preguntó quién merece el premio. Nombra a una persona.",
+      "en": "She asked who deserves the award. Name a person."
+    },
+    {
+      "id": "U5.10.hint",
+      "es": "Nombra a alguien y describe sus cualidades.",
+      "en": "Name someone and describe their qualities."
+    },
+    {
+      "id": "U6.02b",
+      "es": "Te entendió. Padres es plural: «mis padres».",
+      "en": "She understood. Padres is plural: 'mis padres'. Possessives agree in number with the noun."
+    },
+    {
+      "id": "U6.02c",
+      "es": "Ella preguntó para cuántas personas es la mesa.",
+      "en": "She asked how many people the table is for."
+    },
+    {
+      "id": "U6.02.hint",
+      "es": "Di cuántas personas y quiénes vienen: «mis padres...».",
+      "en": "Say how many people and who is coming: 'mis padres...'."
+    },
+    {
+      "id": "U6.04b",
+      "es": "¡Bien descrito! Hermana es femenino: «alta y delgada».",
+      "en": "Well described! Hermana is feminine: 'alta y delgada'."
+    },
+    {
+      "id": "U6.04c",
+      "es": "Ella preguntó cómo es tu hermana físicamente.",
+      "en": "She asked what your sister looks like."
+    },
+    {
+      "id": "U6.04.hint",
+      "es": "Describe con ser y tener: «Es alta... Tiene el pelo...».",
+      "en": "Describe with ser and tener: 'Es alta... Tiene el pelo...'."
+    },
+    {
+      "id": "U6.06b",
+      "es": "Te entendió. Recuerda el cambio e>ie: «prefiere», «quieren».",
+      "en": "She understood. Remember the e>ie stem change: 'prefiere', 'quieren'."
+    },
+    {
+      "id": "U6.06c",
+      "es": "Ella preguntó qué quieren tomar.",
+      "en": "She asked what they want to drink."
+    },
+    {
+      "id": "U6.06.hint",
+      "es": "Usa prefiere y quieren para tu familia.",
+      "en": "Use prefiere and quieren for your family."
+    },
+    {
+      "id": "U6.08b",
+      "es": "Casi. Con yo también cambia la raíz: «quiero», «puedo».",
+      "en": "Almost. With yo the stem changes too: 'quiero', 'puedo'."
+    },
+    {
+      "id": "U6.08c",
+      "es": "Ella preguntó qué quieres tú.",
+      "en": "She asked what you want."
+    },
+    {
+      "id": "U6.08.hint",
+      "es": "Usa quiero y puedo.",
+      "en": "Use quiero (I want) and puedo (I can)."
+    },
+    {
+      "id": "U6.10b",
+      "es": "Te entendió por el contexto, pero son tus padres: «Son mis padres».",
+      "en": "She understood from context, but they are your parents: 'Son mis padres'. Su could mean Lupita's."
+    },
+    {
+      "id": "U6.10c",
+      "es": "Ella preguntó si los señores son tus padres.",
+      "en": "She asked if the couple are your parents."
+    },
+    {
+      "id": "U6.10.hint",
+      "es": "Usa mis para tu familia: «Son mis padres».",
+      "en": "Use mis for your family: 'Son mis padres'."
+    }
   ]
 }

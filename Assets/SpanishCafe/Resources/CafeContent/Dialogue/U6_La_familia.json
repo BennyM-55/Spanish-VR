@@ -1,0 +1,230 @@
+{
+  "scenarioId": "U6",
+  "level": "Unidad 6",
+  "staffName": "Lupita",
+  "titleEs": "Una mesa para la familia",
+  "goalEs": "Hablar de tu familia con posesivos, describir cómo son y pedir con verbos de cambio radical.",
+  "turns": [
+    {
+      "id": "U6.01",
+      "speaker": "staff",
+      "es": "¡Buenas tardes! ¿Mesa para uno?",
+      "repeatEs": "¿Es una mesa para una persona?",
+      "next": "U6.02"
+    },
+    {
+      "id": "U6.02",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U6.02a",
+          "es": "No, para cuatro. Mis padres y mi hermana vienen en cinco minutos.",
+          "result": "correct",
+          "next": "U6.03"
+        },
+        {
+          "id": "U6.02b",
+          "es": "No, para cuatro. Mi padres y mi hermana vienen pronto.",
+          "result": "awkward",
+          "next": "U6.03"
+        },
+        {
+          "id": "U6.02c",
+          "es": "Sí, tengo una hermana gemela.",
+          "result": "wrong"
+        },
+        {
+          "id": "U6.02r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U6.03",
+      "speaker": "staff",
+      "es": "¡Perfecto! ¿Cómo es su hermana? Así la reconozco en la puerta.",
+      "repeatEs": "¿Cómo es su hermana?",
+      "next": "U6.04"
+    },
+    {
+      "id": "U6.04",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U6.04a",
+          "es": "Es alta y delgada, y tiene el pelo rizado. Se parece a mi mamá.",
+          "result": "correct",
+          "next": "U6.05"
+        },
+        {
+          "id": "U6.04b",
+          "es": "Es alto y delgado, y tiene el pelo rizado.",
+          "result": "awkward",
+          "next": "U6.05"
+        },
+        {
+          "id": "U6.04c",
+          "es": "Mi hermana prefiere el té.",
+          "result": "wrong"
+        },
+        {
+          "id": "U6.04r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U6.05",
+      "speaker": "staff",
+      "es": "Muy bien. ¿Quiere pedir las bebidas de su familia mientras llegan?",
+      "repeatEs": "¿Qué quiere tomar su familia?",
+      "next": "U6.06"
+    },
+    {
+      "id": "U6.06",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U6.06a",
+          "es": "Sí. Mi hermana prefiere agua de jamaica y mis padres quieren dos cafés americanos.",
+          "result": "correct",
+          "next": "U6.07",
+          "adds": [
+            {
+              "item": "agua_jamaica",
+              "qty": 1
+            },
+            {
+              "item": "cafe_americano",
+              "qty": 2
+            }
+          ]
+        },
+        {
+          "id": "U6.06b",
+          "es": "Sí. Mi hermana prefere agua de jamaica y mis padres queren dos cafés americanos.",
+          "result": "awkward",
+          "next": "U6.07",
+          "adds": [
+            {
+              "item": "agua_jamaica",
+              "qty": 1
+            },
+            {
+              "item": "cafe_americano",
+              "qty": 2
+            }
+          ]
+        },
+        {
+          "id": "U6.06c",
+          "es": "Sí. Mi hermana tiene veinte años.",
+          "result": "wrong"
+        },
+        {
+          "id": "U6.06r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U6.07",
+      "speaker": "staff",
+      "es": "Ahorita se los sirvo. ¿Y usted? ¿Qué quiere?",
+      "repeatEs": "¿Usted qué quiere tomar?",
+      "next": "U6.08"
+    },
+    {
+      "id": "U6.08",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U6.08a",
+          "es": "Quiero un café de olla, por favor. ¿Puedo pedir un pan dulce también?",
+          "result": "correct",
+          "next": "U6.09",
+          "adds": [
+            {
+              "item": "cafe_olla",
+              "qty": 1
+            },
+            {
+              "item": "pan_dulce",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "U6.08b",
+          "es": "Quero un café de olla, por favor. ¿Podo pedir un pan dulce también?",
+          "result": "awkward",
+          "next": "U6.09",
+          "adds": [
+            {
+              "item": "cafe_olla",
+              "qty": 1
+            },
+            {
+              "item": "pan_dulce",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "U6.08c",
+          "es": "Mi abuelo es muy alto.",
+          "result": "wrong"
+        },
+        {
+          "id": "U6.08r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U6.09",
+      "speaker": "staff",
+      "es": "¡Claro que sí! Oiga, ¿son ellos? ¿Los señores en la puerta?",
+      "repeatEs": "¿Son sus padres? ¿Los señores en la puerta?",
+      "next": "U6.10"
+    },
+    {
+      "id": "U6.10",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U6.10a",
+          "es": "¡Sí, son mis padres! Y la chica alta es mi hermana.",
+          "result": "correct",
+          "next": "U6.11"
+        },
+        {
+          "id": "U6.10b",
+          "es": "¡Sí, son sus padres!",
+          "result": "awkward",
+          "next": "U6.11"
+        },
+        {
+          "id": "U6.10c",
+          "es": "Mi tía está divorciada.",
+          "result": "wrong"
+        },
+        {
+          "id": "U6.10r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U6.11",
+      "speaker": "staff",
+      "es": "¡Bienvenidos! Pasen, su mesa está lista. Ahorita les traigo todo. Son ciento sesenta y cinco pesos, pero pagan al final.",
+      "end": true
+    }
+  ]
+}
