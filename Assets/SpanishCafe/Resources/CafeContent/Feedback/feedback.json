@@ -66,8 +66,8 @@
     },
     {
       "id": "general.noHints",
-      "es": "Ya no quedan pistas en este nivel.",
-      "en": "No hints left at this level."
+      "es": "Ya usaste tus 3 pistas en esta conversación. ¡Tú puedes!",
+      "en": "You've used your 3 hints for this conversation. You've got this!"
     },
     {
       "id": "U1.02b",
@@ -81,8 +81,8 @@
     },
     {
       "id": "U1.02.hint",
-      "es": "¿Cómo te sientes? Usa estar: «Estoy...».",
-      "en": "How do you feel? Use estar: 'Estoy...'."
+      "es": "Lupita pregunta cómo te sientes. ¿Qué verbo es para estados: ser o estar?",
+      "en": "Lupita asks how you feel. Which verb is for states: ser or estar?"
     },
     {
       "id": "U1.04b",
@@ -96,8 +96,8 @@
     },
     {
       "id": "U1.04.hint",
-      "es": "Nombre: «Me llamo...». Origen: «Soy de...».",
-      "en": "Name: 'Me llamo...'. Origin: 'Soy de...'."
+      "es": "Dos datos: tu nombre y tu origen. El origen usa el mismo verbo que la identidad.",
+      "en": "Two facts: your name and your origin. Origin uses the same verb as identity."
     },
     {
       "id": "U1.06b",
@@ -111,8 +111,8 @@
     },
     {
       "id": "U1.06.hint",
-      "es": "Usa tener: «Tengo hambre» o «Tengo sed».",
-      "en": "Use tener: 'Tengo hambre' (hungry) or 'Tengo sed' (thirsty)."
+      "es": "Hambre y sed no van con estar. Piensa en el verbo de «___ veinte años».",
+      "en": "Hunger and thirst don't go with estar. Think of the verb in '___ veinte años'."
     },
     {
       "id": "U1.08b",
@@ -126,8 +126,8 @@
     },
     {
       "id": "U1.08.hint",
-      "es": "Acepta con «Sí, un pan dulce, por favor».",
-      "en": "Accept with 'Sí, un pan dulce, por favor'."
+      "es": "Ella te ofrece algo: acepta. ¿Pan es masculino o femenino?",
+      "en": "She's offering you something: accept. Is pan masculine or feminine?"
     },
     {
       "id": "U1.10b",
@@ -141,8 +141,8 @@
     },
     {
       "id": "U1.10.hint",
-      "es": "Di tu número en pares: «Es el treinta y cinco, veintiuno...».",
-      "en": "Say your number in pairs: 'Es el treinta y cinco, veintiuno...'."
+      "es": "Da tu número en pares, como en México. ¿Ser o estar para decir qué es algo?",
+      "en": "Give your number in pairs, like in Mexico. Ser or estar to say what something is?"
     },
     {
       "id": "U2.02b",
@@ -156,8 +156,8 @@
     },
     {
       "id": "U2.02.hint",
-      "es": "Hablas por el grupo: «Estamos...».",
-      "en": "You speak for the group: 'Estamos...' (we are)."
+      "es": "Hablas por todo el grupo. ¿Cómo es estar con nosotros?",
+      "en": "You speak for the whole group. What is estar with nosotros?"
     },
     {
       "id": "U2.04b",
@@ -171,8 +171,8 @@
     },
     {
       "id": "U2.04.hint",
-      "es": "Origen en plural: «Somos de...».",
-      "en": "Origin in plural: 'Somos de...' (we are from)."
+      "es": "Ella pregunta el origen del grupo. Usa ser en plural.",
+      "en": "She asks the group's origin. Use ser in the plural."
     },
     {
       "id": "U2.06b",
@@ -186,8 +186,8 @@
     },
     {
       "id": "U2.06.hint",
-      "es": "Di tu especialización: «Estudio...».",
-      "en": "Say your major: 'Estudio...' (I study)."
+      "es": "Di qué estudias tú y qué estudia tu amiga: cada verbo con su persona.",
+      "en": "Say what you study and what your friend studies: each verb with its own person."
     },
     {
       "id": "U2.08b",
@@ -201,8 +201,8 @@
     },
     {
       "id": "U2.08.hint",
-      "es": "Nombra una clase y descríbela con es: «Química. Es...».",
-      "en": "Name a class and describe it with es: 'Química. Es...'."
+      "es": "Nombra una sola clase y descríbela. Una clase = verbo en singular.",
+      "en": "Name one class and describe it. One class = singular verb."
     },
     {
       "id": "U2.10b",
@@ -216,8 +216,8 @@
     },
     {
       "id": "U2.10.hint",
-      "es": "Pregunta por la mejor opción: «¿Cuál es...?».",
-      "en": "Ask for the best option: '¿Cuál es...?' (which is)."
+      "es": "Antes de pedir, pregunta por la mejor opción entre varias. ¿Qué o cuál?",
+      "en": "Before ordering, ask for the best option among several. Qué or cuál?"
     },
     {
       "id": "U2.12b",
@@ -231,8 +231,8 @@
     },
     {
       "id": "U2.12.hint",
-      "es": "Acepta en plural: «Sí, dos cafés...».",
-      "en": "Accept in plural: 'Sí, dos cafés...'."
+      "es": "Acepta los dos y revisa el plural de café.",
+      "en": "Accept both, and check the plural of café."
     },
     {
       "id": "U3.02b",
@@ -246,8 +246,8 @@
     },
     {
       "id": "U3.02.hint",
-      "es": "Pregunta el horario: «¿A qué hora cierra...?».",
-      "en": "Ask about the hours: '¿A qué hora cierra...?'."
+      "es": "Quieres saber el horario. ¿Con qué palabras empieza una pregunta sobre cuándo pasa algo?",
+      "en": "You want the hours. Which words start a question about when something happens?"
     },
     {
       "id": "U3.04b",
@@ -261,8 +261,8 @@
     },
     {
       "id": "U3.04.hint",
-      "es": "La hora en plural: «Son las...».",
-      "en": "Time in plural: 'Son las...'."
+      "es": "Mira el reloj: 10:15. ¿Es o son? Solo la una es singular.",
+      "en": "Look at the clock: 10:15. Es or son? Only one o'clock is singular."
     },
     {
       "id": "U3.06b",
@@ -276,8 +276,8 @@
     },
     {
       "id": "U3.06.hint",
-      "es": "Pide y di lo que tienes que hacer: «Tengo que...».",
-      "en": "Order, then say what you have to do: 'Tengo que...'."
+      "es": "Pide una bebida y explica tu obligación: tener + ___ + infinitivo.",
+      "en": "Order a drink and explain your obligation: tener + ___ + infinitive."
     },
     {
       "id": "U3.08b",
@@ -291,8 +291,8 @@
     },
     {
       "id": "U3.08.hint",
-      "es": "Acepta: «¡Buena idea! Voy a...».",
-      "en": "Accept: '¡Buena idea! Voy a...' (I'm going to)."
+      "es": "Acepta la invitación y di tu plan: ir + ___ + infinitivo.",
+      "en": "Accept the invitation and say your plan: ir + ___ + infinitive."
     },
     {
       "id": "U3.10b",
@@ -306,8 +306,8 @@
     },
     {
       "id": "U3.10.hint",
-      "es": "Planes en grupo: «Vamos a...».",
-      "en": "Group plans: 'Vamos a...' (we're going to)."
+      "es": "Habla del plan del grupo. No olvides la palabra que va después de ir.",
+      "en": "Talk about the group's plan. Don't forget the word that goes after ir."
     },
     {
       "id": "U4.02b",
@@ -321,8 +321,8 @@
     },
     {
       "id": "U4.02.hint",
-      "es": "Pregunta si algo existe: «¿Hay...?».",
-      "en": "Ask whether something exists: '¿Hay...?' (is there)."
+      "es": "¿Quieres saber si algo existe aquí? Usa la forma especial de haber.",
+      "en": "Want to know if something exists here? Use the special form of haber."
     },
     {
       "id": "U4.04b",
@@ -336,8 +336,8 @@
     },
     {
       "id": "U4.04.hint",
-      "es": "Ubicación con estar: «¿Dónde está...?».",
-      "en": "Location with estar: '¿Dónde está...?' (where is)."
+      "es": "Pregunta dónde queda un lugar específico. ¿Hay o estar?",
+      "en": "Ask where a specific place is. Hay or estar?"
     },
     {
       "id": "U4.06b",
@@ -351,8 +351,8 @@
     },
     {
       "id": "U4.06.hint",
-      "es": "Habla de ti con verbos -ar: «Estudio... Tomo...».",
-      "en": "Talk about yourself with -ar verbs: 'Estudio... Tomo...'."
+      "es": "Habla de ti. Con yo, los verbos -ar terminan en una vocal especial.",
+      "en": "Talk about yourself. With yo, -ar verbs end in a special vowel."
     },
     {
       "id": "U4.08b",
@@ -366,8 +366,8 @@
     },
     {
       "id": "U4.08.hint",
-      "es": "Usa «Me gusta...» y pide.",
-      "en": "Use 'Me gusta...' (I like) and order."
+      "es": "El café es una sola cosa. ¿Gusta o gustan?",
+      "en": "Coffee is one thing. Gusta or gustan?"
     },
     {
       "id": "U4.10b",
@@ -381,8 +381,8 @@
     },
     {
       "id": "U4.10.hint",
-      "es": "Rechaza con «No me gustan...».",
-      "en": "Decline with 'No me gustan...' (I don't like)."
+      "es": "Rechaza la comida. Los nopales son varios: ¿gusta o gustan?",
+      "en": "Decline the food. Nopales are several: gusta or gustan?"
     },
     {
       "id": "U5.02b",
@@ -396,8 +396,8 @@
     },
     {
       "id": "U5.02.hint",
-      "es": "Información con saber: «No sé...».",
-      "en": "Information with saber: 'No sé...' (I don't know)."
+      "es": "¿Es información o una persona o lugar? Elige entre saber y conocer.",
+      "en": "Is it information, or a person or place? Choose between saber and conocer."
     },
     {
       "id": "U5.04b",
@@ -411,8 +411,8 @@
     },
     {
       "id": "U5.04.hint",
-      "es": "Habla de tu rutina: «Bebo café...».",
-      "en": "Talk about your routine: 'Bebo café...' (I drink)."
+      "es": "Habla de tu rutina con un verbo -er en la forma yo.",
+      "en": "Talk about your routine with an -er verb in the yo form."
     },
     {
       "id": "U5.06b",
@@ -426,8 +426,8 @@
     },
     {
       "id": "U5.06.hint",
-      "es": "Personas con conocer + a: «No conozco a...».",
-      "en": "People with conocer + a: 'No conozco a...'."
+      "es": "Es una persona: usa conocer y una palabrita antes del nombre.",
+      "en": "It's a person: use conocer and a little word before the name."
     },
     {
       "id": "U5.08b",
@@ -441,8 +441,8 @@
     },
     {
       "id": "U5.08.hint",
-      "es": "Nombra a una persona y describe sus cualidades.",
-      "en": "Name a person and describe their qualities."
+      "es": "Admiras a una persona. ¿Qué palabrita va antes de una persona?",
+      "en": "You admire a person. What little word goes before a person?"
     },
     {
       "id": "U5.10b",
@@ -456,8 +456,8 @@
     },
     {
       "id": "U5.10.hint",
-      "es": "Nombra a alguien y describe sus cualidades.",
-      "en": "Name someone and describe their qualities."
+      "es": "Elige a alguien y describe sus cualidades. Revisa el género de los adjetivos.",
+      "en": "Pick someone and describe their qualities. Check the adjectives' gender."
     },
     {
       "id": "U6.02b",
@@ -471,8 +471,8 @@
     },
     {
       "id": "U6.02.hint",
-      "es": "Di cuántas personas y quiénes vienen: «mis padres...».",
-      "en": "Say how many people and who is coming: 'mis padres...'."
+      "es": "Di para cuántas personas y quiénes vienen. Padres es plural: ¿mi o mis?",
+      "en": "Say how many people and who is coming. Padres is plural: mi or mis?"
     },
     {
       "id": "U6.04b",
@@ -486,8 +486,8 @@
     },
     {
       "id": "U6.04.hint",
-      "es": "Describe con ser y tener: «Es alta... Tiene el pelo...».",
-      "en": "Describe with ser and tener: 'Es alta... Tiene el pelo...'."
+      "es": "Describe cómo es con ser y tener. Hermana es femenino.",
+      "en": "Describe her with ser and tener. Hermana is feminine."
     },
     {
       "id": "U6.06b",
@@ -501,8 +501,8 @@
     },
     {
       "id": "U6.06.hint",
-      "es": "Usa prefiere y quieren para tu familia.",
-      "en": "Use prefiere and quieren for your family."
+      "es": "Pide por tu familia con verbos que cambian e>ie.",
+      "en": "Order for your family with verbs that change e>ie."
     },
     {
       "id": "U6.08b",
@@ -516,8 +516,8 @@
     },
     {
       "id": "U6.08.hint",
-      "es": "Usa quiero y puedo.",
-      "en": "Use quiero (I want) and puedo (I can)."
+      "es": "Pide para ti. Con yo, querer y poder también cambian la raíz.",
+      "en": "Order for yourself. With yo, querer and poder also change their stem."
     },
     {
       "id": "U6.10b",
@@ -531,8 +531,8 @@
     },
     {
       "id": "U6.10.hint",
-      "es": "Usa mis para tu familia: «Son mis padres».",
-      "en": "Use mis for your family: 'Son mis padres'."
+      "es": "Son tus padres, no los de Lupita. ¿Qué posesivo usas?",
+      "en": "They're your parents, not Lupita's. Which possessive do you use?"
     }
   ]
 }
