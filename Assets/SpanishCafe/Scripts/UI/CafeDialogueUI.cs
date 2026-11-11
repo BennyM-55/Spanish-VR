@@ -69,6 +69,13 @@ namespace SpanishCafe
         StudentSpeech studentSpeech;
         Coroutine talkTurn;
         bool subtitlesOn;
+
+        // Rebuilds the feedback or hint on screen, so pressing T can add or take away its English
+        Func<string> feedbackMaker;
+
+        // Saved the first time the score screen shows, so redrawing it never loses the "¡Nuevo récord!"
+        int summaryBestBefore;
+        bool summaryNewBest;
         string shuffledFor;
         string repeatShownFor;
 
@@ -111,7 +118,7 @@ namespace SpanishCafe
             }
 
             if (mode == Mode.Talking && CafeInput.HintPressed && hintButton.interactable) ShowHint();
-            if (mode != Mode.LevelSelect && CafeInput.SubtitlesPressed) ToggleSubtitles();
+            if (CafeInput.SubtitlesPressed) ToggleSubtitles();
             if (mode == Mode.Talking && CafeInput.ContinuePressed && manager.StudentTurn == null) ContinueTalking();
         }
 
@@ -152,6 +159,7 @@ namespace SpanishCafe
             promptBox.SetActive(false);
             panel.SetActive(true);
             if (inWorld) PlaceInFront(worker);
+            subtitlesOn = false; // the professor wants Spanish only to start, students can press T if they need English
             ShowLevelSelect();
         }
 
@@ -169,13 +177,15 @@ namespace SpanishCafe
 
         void ShowLevelSelect()
         {
+            StopTalkTurn(); // so a line that was still playing doesn't keep talking on the menu
+            feedbackMaker = null;
             mode = Mode.LevelSelect;
             var levels = CafeContent.Levels;
 
             headerText.text = CafeContent.Menu?.cafeName ?? "Café La Esquina";
             // Each unidad matches a unit from the Contraseña textbook the class uses
             SetStaffLine($"<b>{staffName}:</b> ¡Hola! Bienvenidos a Café La Esquina. ¿Qué unidad de Contraseña quieres practicar hoy?",
-                         "Hi! Welcome to Café La Esquina. Which Contraseña unit do you want to practice today?", true);
+                         "Hi! Welcome to Café La Esquina. Which Contraseña unit do you want to practice today?", subtitlesOn);
 
             ClearChoices();
             for (int i = 0; i < levels.Length; i++)
@@ -188,7 +198,8 @@ namespace SpanishCafe
                 string done = CafeProgress.Finished(level.level)
                     ? $"   <color={Green}><b>Hecho</b> · {Mathf.Max(0, CafeProgress.Best(level.level))}/8</color>"
                     : "";
-                AddChoiceButton(i + 1, $"<b>{level.level}</b> · {level.nameEs} <color={Grey}>({level.nameEn})</color>{done}", title, () => StartLevel(level));
+                string english = subtitlesOn ? $" <color={Grey}>({level.nameEn})</color>" : "";
+                AddChoiceButton(i + 1, $"<b>{level.level}</b> · {level.nameEs}{english}{done}", title, () => StartLevel(level));
             }
 
             feedbackText.text = levels.Length == 0
@@ -196,10 +207,11 @@ namespace SpanishCafe
                 : "";
             int count = Mathf.Max(1, levels.Length);
             orderText.text = inWorld
-                ? $"Apunta y aprieta el gatillo, o usa 1–{count} · Point and pull the trigger, or keys 1–{count}"
-                : $"Usa el ratón o las teclas 1–{count} · Use the mouse or number keys";
+                ? $"Apunta y aprieta el gatillo, o usa 1–{count}" + En(" · Point and pull the trigger, or keys 1–" + count, true)
+                : $"Usa el ratón o las teclas 1–{count}" + En(" · Use the mouse or number keys", true);
             hintButton.gameObject.SetActive(false);
-            subtitleButton.gameObject.SetActive(false);
+            subtitleButton.gameObject.SetActive(true);
+            RefreshButtons();
         }
 
         void StartLevel(LevelInfo level)
@@ -211,8 +223,11 @@ namespace SpanishCafe
             }
 
             StopTalkTurn();
+            bool fromMenu = mode == Mode.LevelSelect;
             mode = Mode.Talking;
-            subtitlesOn = level.showSubtitles;
+            feedbackMaker = null;
+            // A unit can still turn English on from levels.json, but only when you pick it, so "Jugar otra vez" keeps your choice
+            if (fromMenu && (level.showSubtitles || level.showChoiceTranslations)) subtitlesOn = true;
             shuffledFor = null;
             repeatShownFor = null;
             missedChoices.Clear();
@@ -258,8 +273,13 @@ namespace SpanishCafe
             var level = manager.Level;
             var score = manager.Score;
             var staff = manager.StaffTurn;
-            int bestBefore = CafeProgress.Best(level.level);
-            bool newBest = firstTime && CafeProgress.Record(level.level, score.Total);
+            if (firstTime)
+            {
+                summaryBestBefore = CafeProgress.Best(level.level);
+                summaryNewBest = CafeProgress.Record(level.level, score.Total);
+            }
+            int bestBefore = summaryBestBefore;
+            bool newBest = summaryNewBest;
 
             headerText.text = $"¡Terminaste! · {level.level} {level.nameEs} · {manager.Scenario.titleEs}";
             if (staff != null)
@@ -267,27 +287,27 @@ namespace SpanishCafe
 
             var text = new StringBuilder();
             if (!string.IsNullOrEmpty(lastFeedback)) text.Append(lastFeedback).Append("\n\n");
-            text.Append($"<b>Puntaje: {score.Total}/8</b> <size=85%><color={Grey}>(Score)</color></size>");
+            text.Append($"<b>Puntaje: {score.Total}/8</b>" + En($" <size=85%><color={Grey}>(Score)</color></size>", true));
             if (newBest && bestBefore >= 0)
-                text.Append($"   <color={Green}><b>¡Nuevo récord!</b></color> <size=85%><color={Grey}>(New best, before: {bestBefore}/8)</color></size>");
+                text.Append($"   <color={Green}><b>¡Nuevo récord!</b></color>" + En($" <size=85%><color={Grey}>(New best, before: {bestBefore}/8)</color></size>", true));
             else if (!newBest && bestBefore >= 0)
-                text.Append($"   <size=85%><color={Grey}>Tu mejor: {bestBefore}/8 (Your best)</color></size>");
+                text.Append($"   <size=85%><color={Grey}>Tu mejor: {bestBefore}/8</color></size>" + En($" <size=85%><color={Grey}>(Your best)</color></size>", true));
             text.Append("\n");
             foreach (var row in CafeContent.Rubric)
             {
                 int points = score.ForRubric(row.id);
                 string meaning = points == 2 ? row.level2 : points == 1 ? row.level1 : row.level0;
-                text.Append($"<size=85%>{row.es} <color={Grey}>/ {row.en}</color>: <b>{points}</b> · {meaning}</size>\n");
+                text.Append($"<size=85%>{row.es}" + En($" <color={Grey}>/ {row.en}</color>", true) + $": <b>{points}</b> · {meaning}</size>\n");
             }
             text.Append($"\n<b>Tu turno, sin guion:</b> {level.challengeEs}\n");
-            text.Append($"<size=85%><color={Grey}><i>Try it without the script: {level.challengeEn}</i></color></size>");
+            text.Append(En($"<size=85%><color={Grey}><i>Try it without the script: {level.challengeEn}</i></color></size>", true));
             feedbackText.text = text.ToString();
             orderText.text = OrderSummary();
 
             ClearChoices();
-            AddChoiceButton(1, "Jugar otra vez", "Play again", () => StartLevel(level));
-            AddChoiceButton(2, "Elegir otro nivel", "Choose another level", ShowLevelSelect);
-            AddChoiceButton(3, "Cerrar", "Close", Close);
+            AddChoiceButton(1, "Jugar otra vez", En("Play again"), () => StartLevel(level));
+            AddChoiceButton(2, "Elegir otra unidad", En("Choose another unit"), ShowLevelSelect);
+            AddChoiceButton(3, "Cerrar", En("Close"), Close);
             hintButton.gameObject.SetActive(false);
             subtitleButton.gameObject.SetActive(true);
             RefreshButtons();
@@ -302,7 +322,7 @@ namespace SpanishCafe
             var turn = manager.StudentTurn;
             if (turn == null)
             {
-                AddChoiceButton(1, "Continuar", "Continue", ContinueTalking);
+                AddChoiceButton(1, "Continuar", En("Continue"), ContinueTalking);
                 return;
             }
 
@@ -317,7 +337,7 @@ namespace SpanishCafe
             for (int i = 0; i < shownChoices.Count; i++)
             {
                 var choice = shownChoices[i];
-                string english = level.showChoiceTranslations ? CafeContent.English(choice.id) : null;
+                string english = subtitlesOn ? CafeContent.English(choice.id) : null;
                 var button = AddChoiceButton(i + 1, choice.es, english, () => Pick(choice));
 
                 // Gray out answers they already tried, so they don't click them twice?
@@ -359,26 +379,26 @@ namespace SpanishCafe
             var staffBefore = manager.StaffTurn;
             var result = manager.Choose(choice);
 
-            string feedback;
             switch (result)
             {
                 case ChoiceResult.Correct:
-                    feedback = Colored(Green, Praise());
+                    var praise = CafeContent.Feedback("general.correct." + UnityEngine.Random.Range(1, 4));
+                    feedbackMaker = () => Colored(Green, Praise(praise));
                     break;
                 case ChoiceResult.Awkward:
-                    feedback = Colored(Amber, FeedbackText(choice.id, "general.awkward"));
+                    feedbackMaker = () => Colored(Amber, FeedbackText(choice.id, "general.awkward"));
                     break;
                 case ChoiceResult.Wrong:
                     missedChoices.Add(choice.id);
-                    feedback = Colored(Red, FeedbackText(choice.id, "general.wrong"));
+                    feedbackMaker = () => Colored(Red, FeedbackText(choice.id, "general.wrong"));
                     break;
                 default:
                     repeatShownFor = staffBefore?.id;
-                    feedback = Colored(Blue, FeedbackText(null, "general.repeat"));
+                    feedbackMaker = () => Colored(Blue, FeedbackText(null, "general.repeat"));
                     break;
             }
 
-            ShowTurn(feedback);
+            ShowTurn(feedbackMaker());
 
             // The student says their line first, then Lupita answers when they're done
             StopTalkTurn();
@@ -407,6 +427,7 @@ namespace SpanishCafe
         {
             var staffBefore = manager.StaffTurn;
             manager.Continue();
+            feedbackMaker = null;
             ShowTurn("");
             if (manager.StaffTurn != staffBefore) PlayLine(manager.StaffTurn, false);
         }
@@ -418,24 +439,39 @@ namespace SpanishCafe
 
             if (!manager.UseHint())
             {
-                feedbackText.text = Colored(Blue, FeedbackText(null, "general.noHints"));
+                feedbackMaker = () => Colored(Blue, FeedbackText(null, "general.noHints"));
+                feedbackText.text = feedbackMaker();
                 RefreshButtons();
                 return;
             }
 
             var hint = CafeContent.Feedback(turn.id + ".hint");
-            feedbackText.text = hint == null
+            feedbackMaker = () => hint == null
                 ? Colored(Blue, "Pista: lee otra vez lo que dijo " + staffName + ".")
-                : Colored(Blue, $"<b>Pista:</b> {hint.es}\n<size=85%>Hint: {hint.en}</size>");
+                : Colored(Blue, $"<b>Pista:</b> {hint.es}" + En($"\n<size=85%>Hint: {hint.en}</size>", true));
+            feedbackText.text = feedbackMaker();
             RefreshButtons();
         }
 
+        // One switch for all the English: Lupita's subtitle, the translations under the answers, and feedback
         void ToggleSubtitles()
         {
             subtitlesOn = !subtitlesOn;
             subtitleText.gameObject.SetActive(subtitlesOn && !string.IsNullOrEmpty(subtitleText.text));
+
+            // Redraw the buttons so the English under each answer shows up or goes away right now
+            if (mode == Mode.LevelSelect) ShowLevelSelect();
+            else if (mode == Mode.Summary) ShowSummary(feedbackMaker?.Invoke() ?? "");
+            else if (mode == Mode.Talking)
+            {
+                BuildChoices(manager.Level);
+                if (feedbackMaker != null) feedbackText.text = feedbackMaker();
+            }
             RefreshButtons();
         }
+
+        // Gives back the English only when the switch is on. If inline is true it returns "" instead of null
+        string En(string english, bool inline = false) => subtitlesOn ? english : (inline ? "" : null);
 
         void RefreshButtons()
         {
@@ -444,7 +480,7 @@ namespace SpanishCafe
             hintLabel.text = unlimited ? "Pista (H)" : $"Pista (H) · {left}";
             hintButton.interactable = left > 0 && manager.StudentTurn != null;
             hintLabel.alpha = hintButton.interactable ? 1f : 0.45f;
-            subtitleLabel.text = subtitlesOn ? "Subtítulos (T): sí" : "Subtítulos (T): no";
+            subtitleLabel.text = subtitlesOn ? "Inglés (T): sí" : "Inglés (T): no";
         }
 
 
@@ -460,16 +496,15 @@ namespace SpanishCafe
             return $"Pedido: {manager.Order.Describe()}   ·   Total: ${manager.Order.Total} {CafeContent.Currency}";
         }
 
-        static string Praise()
+        string Praise(FeedbackEntry entry)
         {
-            var entry = CafeContent.Feedback("general.correct." + UnityEngine.Random.Range(1, 4));
-            return entry == null ? "¡Muy bien!" : $"{entry.es} <size=85%>{entry.en}</size>";
+            return entry == null ? "¡Muy bien!" : entry.es + En($" <size=85%>{entry.en}</size>", true);
         }
 
-        static string FeedbackText(string id, string fallbackId)
+        string FeedbackText(string id, string fallbackId)
         {
             var entry = CafeContent.Feedback(id) ?? CafeContent.Feedback(fallbackId);
-            return entry == null ? "" : $"{entry.es}\n<size=85%>{entry.en}</size>";
+            return entry == null ? "" : entry.es + En($"\n<size=85%>{entry.en}</size>", true);
         }
 
         static string Colored(string hex, string text) => $"<color={hex}>{text}</color>";
@@ -639,7 +674,8 @@ namespace SpanishCafe
             {
                 var child = choicesRoot.GetChild(i).gameObject;
                 child.SetActive(false); // hide it now so the layout ignores it
-                Destroy(child);
+                if (Application.isPlaying) Destroy(child);
+                else DestroyImmediate(child); // the QA check runs outside Play mode
             }
         }
 
