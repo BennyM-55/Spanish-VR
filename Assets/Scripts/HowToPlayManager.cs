@@ -26,9 +26,9 @@ public class HowToPlayManager : MonoBehaviour {
     private string[] descriptions = {
         "Welcome to Café La Esquina! Explore a virtual Spanish café and practice your Spanish through interactive lessons.",
 
-        "Use your keyboard to move around the café. Explore the environment and find different activities to complete.",
+        "Use WASD to walk around the cafe. W moves forward, A moves left, S moves backward, and D moves right.",
 
-        "Approach objects and characters in the café to interact with them. Follow the instructions shown during each activity.",
+        "Press E to talk to Lupita and press F to sit down in a chair.",
 
         "Practice Spanish vocabulary and conversations through café activities. Read the prompts and choose the correct responses.",
 
