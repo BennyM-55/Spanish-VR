@@ -1,0 +1,202 @@
+{
+  "scenarioId": "U5",
+  "level": "Unidad 5",
+  "staffName": "Lupita",
+  "titleEs": "¿Conoce a la dueña?",
+  "goalEs": "Usar verbos -er/-ir, distinguir saber y conocer, y describir a una persona que admiras.",
+  "turns": [
+    {
+      "id": "U5.01",
+      "speaker": "staff",
+      "es": "¡Hola! ¿Ya sabe qué va a pedir?",
+      "repeatEs": "¿Sabe qué quiere?",
+      "next": "U5.02"
+    },
+    {
+      "id": "U5.02",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U5.02a",
+          "es": "Todavía no sé. No conozco el menú. ¿Qué me recomienda?",
+          "result": "correct",
+          "next": "U5.03"
+        },
+        {
+          "id": "U5.02b",
+          "es": "Todavía no conozco qué pedir.",
+          "result": "awkward",
+          "next": "U5.03"
+        },
+        {
+          "id": "U5.02c",
+          "es": "Sí, conozco a Lupita.",
+          "result": "wrong"
+        },
+        {
+          "id": "U5.02r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U5.03",
+      "speaker": "staff",
+      "es": "Le recomiendo el café de olla. ¿Usted bebe café todos los días?",
+      "repeatEs": "¿Bebe café todos los días?",
+      "next": "U5.04"
+    },
+    {
+      "id": "U5.04",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U5.04a",
+          "es": "Sí, bebo café todas las mañanas. Un café de olla, por favor.",
+          "result": "correct",
+          "next": "U5.05",
+          "adds": [
+            {
+              "item": "cafe_olla",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "U5.04b",
+          "es": "Sí, bebe café todas las mañanas. Un café de olla, por favor.",
+          "result": "awkward",
+          "next": "U5.05",
+          "adds": [
+            {
+              "item": "cafe_olla",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "U5.04c",
+          "es": "Sí, escribo una carta a mi mamá.",
+          "result": "wrong"
+        },
+        {
+          "id": "U5.04r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U5.05",
+      "speaker": "staff",
+      "es": "¡Igual que yo! Oiga, ¿conoce a doña Carmen, la dueña del café?",
+      "repeatEs": "¿Conoce a la dueña? Se llama doña Carmen.",
+      "next": "U5.06"
+    },
+    {
+      "id": "U5.06",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U5.06a",
+          "es": "No, no conozco a doña Carmen. ¿Cómo es?",
+          "result": "correct",
+          "next": "U5.07"
+        },
+        {
+          "id": "U5.06b",
+          "es": "No, no sé a doña Carmen. ¿Cómo es?",
+          "result": "awkward",
+          "next": "U5.07"
+        },
+        {
+          "id": "U5.06c",
+          "es": "Sí, sé hablar español.",
+          "result": "wrong"
+        },
+        {
+          "id": "U5.06r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U5.07",
+      "speaker": "staff",
+      "es": "Es muy amable y paciente, y siempre ayuda a todos. ¡La admiro mucho! ¿Y usted? ¿A quién admira?",
+      "repeatEs": "Doña Carmen es muy amable. ¿A quién admira usted?",
+      "next": "U5.08"
+    },
+    {
+      "id": "U5.08",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U5.08a",
+          "es": "Admiro a mi abuela. Es valiente y comprensiva, y siempre comparte todo. Vive con nosotros.",
+          "result": "correct",
+          "next": "U5.09"
+        },
+        {
+          "id": "U5.08b",
+          "es": "Admiro mi abuela. Es valiente y comprensiva.",
+          "result": "awkward",
+          "next": "U5.09"
+        },
+        {
+          "id": "U5.08c",
+          "es": "Admiro el café de olla.",
+          "result": "wrong"
+        },
+        {
+          "id": "U5.08r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U5.09",
+      "speaker": "staff",
+      "es": "¡Qué bonito! Este mes votamos por el empleado del mes. ¿Usted sabe quién merece el premio?",
+      "repeatEs": "¿Quién merece el premio del empleado del mes?",
+      "next": "U5.10"
+    },
+    {
+      "id": "U5.10",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U5.10a",
+          "es": "¡Usted, Lupita! Es muy simpática y trabajadora.",
+          "result": "correct",
+          "next": "U5.11"
+        },
+        {
+          "id": "U5.10b",
+          "es": "¡Usted, Lupita! Es muy simpático y trabajador.",
+          "result": "awkward",
+          "next": "U5.11"
+        },
+        {
+          "id": "U5.10c",
+          "es": "No sé. El menú es aburrido.",
+          "result": "wrong"
+        },
+        {
+          "id": "U5.10r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U5.11",
+      "speaker": "staff",
+      "es": "¡Ay, qué amable! Muchas gracias. Aquí está su café de olla: son cuarenta pesos.",
+      "end": true
+    }
+  ]
+}

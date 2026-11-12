@@ -1,0 +1,202 @@
+{
+  "scenarioId": "U3",
+  "level": "Unidad 3",
+  "staffName": "Lupita",
+  "titleEs": "¿Qué va a hacer el sábado?",
+  "goalEs": "Preguntar y decir la hora, hablar de obligaciones con tener que y de planes con ir a.",
+  "turns": [
+    {
+      "id": "U3.01",
+      "speaker": "staff",
+      "es": "¡Buenos días! ¿En qué le puedo ayudar?",
+      "repeatEs": "Buenos días. ¿Qué necesita?",
+      "next": "U3.02"
+    },
+    {
+      "id": "U3.02",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U3.02a",
+          "es": "Buenos días. ¿A qué hora cierra el café hoy?",
+          "result": "correct",
+          "next": "U3.03"
+        },
+        {
+          "id": "U3.02b",
+          "es": "Buenos días. ¿Qué hora cierra el café?",
+          "result": "awkward",
+          "next": "U3.03"
+        },
+        {
+          "id": "U3.02c",
+          "es": "Son las diez y cuarto.",
+          "result": "wrong"
+        },
+        {
+          "id": "U3.02r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U3.03",
+      "speaker": "staff",
+      "es": "Hoy cerramos a las nueve de la noche. Oiga, ¿qué hora es? Mi celular no tiene batería.",
+      "repeatEs": "Cerramos a las nueve. ¿Qué hora es, por favor?",
+      "next": "U3.04"
+    },
+    {
+      "id": "U3.04",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U3.04a",
+          "es": "Son las diez y cuarto.",
+          "result": "correct",
+          "next": "U3.05"
+        },
+        {
+          "id": "U3.04b",
+          "es": "Es las diez y cuarto.",
+          "result": "awkward",
+          "next": "U3.05"
+        },
+        {
+          "id": "U3.04c",
+          "es": "Es lunes.",
+          "result": "wrong"
+        },
+        {
+          "id": "U3.04r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U3.05",
+      "speaker": "staff",
+      "es": "¡Gracias! ¿Y qué le sirvo?",
+      "repeatEs": "¿Qué quiere tomar?",
+      "next": "U3.06"
+    },
+    {
+      "id": "U3.06",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U3.06a",
+          "es": "Un café americano, por favor. Tengo que estudiar toda la tarde.",
+          "result": "correct",
+          "next": "U3.07",
+          "adds": [
+            {
+              "item": "cafe_americano",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "U3.06b",
+          "es": "Un café americano, por favor. Tengo estudiar toda la tarde.",
+          "result": "awkward",
+          "next": "U3.07",
+          "adds": [
+            {
+              "item": "cafe_americano",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "U3.06c",
+          "es": "Voy al gimnasio todos los días.",
+          "result": "wrong"
+        },
+        {
+          "id": "U3.06r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U3.07",
+      "speaker": "staff",
+      "es": "¡Ay, qué lástima! Oiga, ¿tiene planes el sábado? Hay música en vivo aquí a las ocho.",
+      "repeatEs": "El sábado hay música aquí a las ocho. ¿Tiene planes?",
+      "next": "U3.08"
+    },
+    {
+      "id": "U3.08",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U3.08a",
+          "es": "No tengo planes. ¡Qué buena idea! Voy a venir con unos amigos.",
+          "result": "correct",
+          "next": "U3.09"
+        },
+        {
+          "id": "U3.08b",
+          "es": "¡Buena idea! Voy venir con unos amigos.",
+          "result": "awkward",
+          "next": "U3.09"
+        },
+        {
+          "id": "U3.08c",
+          "es": "En el verano.",
+          "result": "wrong"
+        },
+        {
+          "id": "U3.08r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U3.09",
+      "speaker": "staff",
+      "es": "¡Qué bien! ¿Y qué van a hacer después del concierto?",
+      "repeatEs": "¿Qué van a hacer después?",
+      "next": "U3.10"
+    },
+    {
+      "id": "U3.10",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U3.10a",
+          "es": "Vamos a bailar y después vamos a cenar.",
+          "result": "correct",
+          "next": "U3.11"
+        },
+        {
+          "id": "U3.10b",
+          "es": "Vamos bailar y cenar.",
+          "result": "awkward",
+          "next": "U3.11"
+        },
+        {
+          "id": "U3.10c",
+          "es": "Vamos a las diez y cuarto.",
+          "result": "wrong"
+        },
+        {
+          "id": "U3.10r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U3.11",
+      "speaker": "staff",
+      "es": "¡Perfecto! Aquí está su americano. Son treinta y cinco pesos. ¡Nos vemos el sábado a las ocho en punto!",
+      "end": true
+    }
+  ]
+}

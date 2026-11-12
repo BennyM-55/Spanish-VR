@@ -1,8 +1,9 @@
-Optional recorded lines for Lupita go in this folder.
+Voice clips for Lupita and the student go in this folder.
 
 Name each file after the line id, with dots changed to underscores:
-  CAF-01_01.wav          Lupita's line CAF-01.01
-  CAF-01_01_repeat.wav   the slower version she says after "¿Puede repetir?"
+  U1_01.wav          Lupita's line U1.01 (Unidad 1)
+  U1_01_repeat.wav   the slower version she says after "¿Puede repetir?"
+  U1_02a.wav         the student's answer U1.02a
 
-Then add an AudioSource component to Lupita. The game plays the clip when she says that line.
+The game plays the clip when that line is said. Lupita gets a speaker automatically when you press Play.
 Lines without a recording just show as text, so you can add audio a little at a time.

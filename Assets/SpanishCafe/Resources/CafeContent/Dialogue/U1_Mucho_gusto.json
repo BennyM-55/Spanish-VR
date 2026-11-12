@@ -1,0 +1,214 @@
+{
+  "scenarioId": "U1",
+  "level": "Unidad 1",
+  "staffName": "Lupita",
+  "titleEs": "Mucho gusto, soy...",
+  "goalEs": "Presentarte, decir cómo estás y de dónde eres, pedir según tienes hambre o sed y dar tu número.",
+  "turns": [
+    {
+      "id": "U1.01",
+      "speaker": "staff",
+      "es": "¡Buenas tardes y bienvenidos a Café La Esquina! Soy Lupita. ¿Cómo está usted?",
+      "repeatEs": "Hola, soy Lupita. ¿Cómo está usted hoy?",
+      "next": "U1.02"
+    },
+    {
+      "id": "U1.02",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U1.02a",
+          "es": "Estoy muy bien, gracias. ¿Y usted?",
+          "result": "correct",
+          "next": "U1.03"
+        },
+        {
+          "id": "U1.02b",
+          "es": "Soy bien, gracias.",
+          "result": "awkward",
+          "next": "U1.03"
+        },
+        {
+          "id": "U1.02c",
+          "es": "Soy de Florida.",
+          "result": "wrong"
+        },
+        {
+          "id": "U1.02r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U1.03",
+      "speaker": "staff",
+      "es": "¡Qué bueno! Yo estoy muy bien, gracias. ¿Cómo se llama usted y de dónde es?",
+      "repeatEs": "¿Cuál es su nombre? ¿De dónde es?",
+      "next": "U1.04"
+    },
+    {
+      "id": "U1.04",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U1.04a",
+          "es": "Me llamo Alex. Soy de Gainesville, Florida.",
+          "result": "correct",
+          "next": "U1.05"
+        },
+        {
+          "id": "U1.04b",
+          "es": "Me llamo Alex. Estoy de Gainesville.",
+          "result": "awkward",
+          "next": "U1.05"
+        },
+        {
+          "id": "U1.04c",
+          "es": "Tengo sueño.",
+          "result": "wrong"
+        },
+        {
+          "id": "U1.04r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U1.05",
+      "speaker": "staff",
+      "es": "¡Mucho gusto, Alex! ¿Tiene hambre o tiene sed?",
+      "repeatEs": "¿Quiere comer o tomar algo?",
+      "next": "U1.06"
+    },
+    {
+      "id": "U1.06",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U1.06a",
+          "es": "Tengo mucha sed. Un agua de jamaica, por favor.",
+          "result": "correct",
+          "next": "U1.07",
+          "adds": [
+            {
+              "item": "agua_jamaica",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "U1.06b",
+          "es": "Estoy sed. Un agua de jamaica, por favor.",
+          "result": "awkward",
+          "next": "U1.07",
+          "adds": [
+            {
+              "item": "agua_jamaica",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "U1.06c",
+          "es": "Tengo veinte años.",
+          "result": "wrong"
+        },
+        {
+          "id": "U1.06r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U1.07",
+      "speaker": "staff",
+      "es": "Claro. ¿Y algo para comer? El pan dulce está muy rico hoy.",
+      "repeatEs": "¿Quiere un pan dulce? Está muy rico.",
+      "next": "U1.08"
+    },
+    {
+      "id": "U1.08",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U1.08a",
+          "es": "Sí, un pan dulce, por favor. ¿Cuánto es en total?",
+          "result": "correct",
+          "next": "U1.09",
+          "adds": [
+            {
+              "item": "pan_dulce",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "U1.08b",
+          "es": "Sí, una pan dulce, por favor.",
+          "result": "awkward",
+          "next": "U1.09",
+          "adds": [
+            {
+              "item": "pan_dulce",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "U1.08c",
+          "es": "Tengo frío. ¿Dónde está el baño?",
+          "result": "wrong"
+        },
+        {
+          "id": "U1.08r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U1.09",
+      "speaker": "staff",
+      "es": "Son cincuenta y cinco pesos. ¿Quiere acumular puntos? Necesito su número de teléfono.",
+      "repeatEs": "Son cincuenta y cinco pesos. ¿Me da su número de teléfono?",
+      "next": "U1.10"
+    },
+    {
+      "id": "U1.10",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "U1.10a",
+          "es": "Sí, claro. Es el treinta y cinco, veintiuno, ochenta y cuatro, setenta, noventa y seis.",
+          "result": "correct",
+          "next": "U1.11"
+        },
+        {
+          "id": "U1.10b",
+          "es": "Sí, claro. Mi número está treinta y cinco, veintiuno, ochenta y cuatro...",
+          "result": "awkward",
+          "next": "U1.11"
+        },
+        {
+          "id": "U1.10c",
+          "es": "Son cincuenta y cinco años.",
+          "result": "wrong"
+        },
+        {
+          "id": "U1.10r",
+          "es": "¿Puede repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "U1.11",
+      "speaker": "staff",
+      "es": "¡Perfecto! Ahorita le traigo su agua de jamaica y su pan dulce. ¡Mucho gusto, Alex!",
+      "end": true
+    }
+  ]
+}

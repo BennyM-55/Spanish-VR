@@ -1,143 +1,821 @@
 {
   "language": "en",
   "entries": [
-    { "id": "CAF-01.title",     "en": "A table and a first order" },
-    { "id": "CAF-01.goal",      "en": "Greet the staff, ask for a table, and order one item politely." },
-
-    { "id": "CAF-01.01",        "en": "Good afternoon. How many people?" },
-    { "id": "CAF-01.01.repeat", "en": "Good afternoon. How many people are there?" },
-    { "id": "CAF-01.02a",       "en": "Good afternoon. A table for two, please." },
-    { "id": "CAF-01.02b",       "en": "Two." },
-    { "id": "CAF-01.02c",       "en": "Good afternoon. A coffee, please." },
-    { "id": "CAF-01.02r",       "en": "Could you repeat that more slowly?" },
-
-    { "id": "CAF-01.03",        "en": "Of course. Here are your menus." },
-    { "id": "CAF-01.03.repeat", "en": "Of course. Here is the menu." },
-    { "id": "CAF-01.04a",       "en": "Thank you. How much is an americano?" },
-    { "id": "CAF-01.04b",       "en": "How much?" },
-    { "id": "CAF-01.04c",       "en": "Thank you. Where is the restroom?" },
-    { "id": "CAF-01.04r",       "en": "Could you repeat that more slowly?" },
-
-    { "id": "CAF-01.05",        "en": "It costs thirty-five pesos." },
-    { "id": "CAF-01.05.repeat", "en": "Thirty-five pesos." },
-    { "id": "CAF-01.06a",       "en": "An americano, please." },
-    { "id": "CAF-01.06b",       "en": "Coffee." },
-    { "id": "CAF-01.06c",       "en": "Thirty-five pesos, please." },
-    { "id": "CAF-01.06r",       "en": "Could you repeat that more slowly?" },
-
-    { "id": "CAF-01.07",        "en": "Anything else?" },
-    { "id": "CAF-01.07.repeat", "en": "Would you like anything else?" },
-    { "id": "CAF-01.08a",       "en": "No, thank you. That is all for now." },
-    { "id": "CAF-01.08b",       "en": "No." },
-    { "id": "CAF-01.08c",       "en": "You're welcome." },
-    { "id": "CAF-01.08r",       "en": "Could you repeat that more slowly?" },
-
-    { "id": "CAF-01.09",        "en": "Alrighty I will bring it to you right away!" },
-
-    { "id": "CAF-02.title",     "en": "Tacos, toppings, and takeout" },
-    { "id": "CAF-02.goal",      "en": "Specify quantities, request a change, and ask for repetition." },
-    { "id": "CAF-02.01",        "en": "Hello. What would you like to order?" },
-    { "id": "CAF-02.01.repeat", "en": "Hello. What are you going to have?" },
-    { "id": "CAF-02.02a",       "en": "Could I have two al pastor tacos and a hibiscus drink, please?" },
-    { "id": "CAF-02.02b",       "en": "Two al pastor tacos. A hibiscus drink." },
-    { "id": "CAF-02.02c",       "en": "Could I have the bill, please?" },
-    { "id": "CAF-02.02r",       "en": "Could you repeat that more slowly?" },
-    { "id": "CAF-02.03",        "en": "Of course. With onion and cilantro?" },
-    { "id": "CAF-02.03.repeat", "en": "Do you want them with onion and with cilantro?" },
-    { "id": "CAF-02.04a",       "en": "With onion, but without cilantro. Is the salsa very spicy?" },
-    { "id": "CAF-02.04b",       "en": "No cilantro." },
-    { "id": "CAF-02.04c",       "en": "Nice to meet you." },
-    { "id": "CAF-02.04r",       "en": "Could you repeat that more slowly?" },
-    { "id": "CAF-02.05",        "en": "The red one is. Would you like the green one on the side?" },
-    { "id": "CAF-02.05.repeat", "en": "The red salsa is spicy. Shall I put the green salsa in a separate container?" },
-    { "id": "CAF-02.06a",       "en": "Yes, on the side, please. Everything to go." },
-    { "id": "CAF-02.06b",       "en": "Yes. To go." },
-    { "id": "CAF-02.06c",       "en": "Yes, please. A table for two." },
-    { "id": "CAF-02.06r",       "en": "Could you repeat that more slowly?" },
-    { "id": "CAF-02.07",        "en": "Perfect. Two al pastor without cilantro, a hibiscus drink, and the green salsa on the side. That's ninety pesos." },
-
-    { "id": "CAF-03.title",     "en": "Find an alternative within budget" },
-    { "id": "CAF-03.goal",      "en": "Explain a preference and choose another option when something runs out." },
-    { "id": "CAF-03.01",        "en": "Good afternoon. Do you know what you'd like to order?" },
-    { "id": "CAF-03.01.repeat", "en": "Good afternoon. What can I bring you?" },
-    { "id": "CAF-03.02a",       "en": "Yes. I would like two chicken tacos and a café de olla." },
-    { "id": "CAF-03.02b",       "en": "Give me two chicken tacos and a café de olla." },
-    { "id": "CAF-03.02c",       "en": "Yes, I already paid, thanks." },
-    { "id": "CAF-03.02r",       "en": "Could you repeat that more slowly?" },
-    { "id": "CAF-03.03",        "en": "Sorry, we have run out of chicken. We have al pastor and cactus tacos." },
-    { "id": "CAF-03.03.repeat", "en": "There's no more chicken. We have al pastor or cactus tacos." },
-    { "id": "CAF-03.04a",       "en": "I don't eat pork. Do the cactus tacos have meat or cheese?" },
-    { "id": "CAF-03.04b",       "en": "No pork. Cactus meat?" },
-    { "id": "CAF-03.04c",       "en": "Great! Two chicken ones, please." },
-    { "id": "CAF-03.04r",       "en": "Could you repeat that more slowly?" },
-    { "id": "CAF-03.05",        "en": "At this café, they don't. They have cactus, onion, and cilantro." },
-    { "id": "CAF-03.05.repeat", "en": "They have no meat or cheese. Just cactus, onion, and cilantro." },
-    { "id": "CAF-03.06a",       "en": "Then two cactus tacos. I have one hundred pesos. Do I have enough for the coffee too?" },
-    { "id": "CAF-03.06b",       "en": "Two cactus. A hundred pesos is good?" },
-    { "id": "CAF-03.06c",       "en": "Then two cactus tacos. I am one hundred years old." },
-    { "id": "CAF-03.06r",       "en": "Could you repeat that more slowly?" },
-    { "id": "CAF-03.07",        "en": "Yes. The tacos cost fifty and the coffee is forty. That's ninety pesos." },
-    { "id": "CAF-03.07.repeat", "en": "Yes, you have enough. Fifty plus forty: ninety pesos." },
-    { "id": "CAF-03.08a",       "en": "Perfect. Does the coffee already come sweetened?" },
-    { "id": "CAF-03.08b",       "en": "Coffee with sugar?" },
-    { "id": "CAF-03.08c",       "en": "Perfect. That's one hundred ninety pesos, right?" },
-    { "id": "CAF-03.08r",       "en": "Could you repeat that more slowly?" },
-    { "id": "CAF-03.09",        "en": "Yes, we make it with piloncillo and cinnamon. Enjoy your meal!" },
-
-    { "id": "CAF-04.title",     "en": "Fix an order and check the bill" },
-    { "id": "CAF-04.goal",      "en": "Correct a misunderstanding politely and explain a mistake on the bill." },
-    { "id": "CAF-04.01",        "en": "Here are your tacos. Enjoy your meal!" },
-    { "id": "CAF-04.01.repeat", "en": "Your tacos are here. Enjoy them!" },
-    { "id": "CAF-04.02a",       "en": "Excuse me, we had ordered two chicken tacos, one without cilantro. Both have cilantro." },
-    { "id": "CAF-04.02b",       "en": "Hey, this is wrong. Both have cilantro." },
-    { "id": "CAF-04.02c",       "en": "Excuse me, we ordered two tacos without chicken." },
-    { "id": "CAF-04.02r",       "en": "Could you repeat that more slowly?" },
-    { "id": "CAF-04.03",        "en": "You're right. I'll replace one. Is everything else all right?" },
-    { "id": "CAF-04.03.repeat", "en": "Sorry. I'll bring you another taco without cilantro. Is everything else okay?" },
-    { "id": "CAF-04.04a",       "en": "Yes, thank you. We also ordered two hibiscus drinks." },
-    { "id": "CAF-04.04b",       "en": "Yes. And the drinks." },
-    { "id": "CAF-04.04c",       "en": "No, thanks. We didn't order anything else." },
-    { "id": "CAF-04.04r",       "en": "Could you repeat that more slowly?" },
-    { "id": "CAF-04.05",        "en": "Here they are. The bill is one hundred forty-six pesos." },
-    { "id": "CAF-04.05.repeat", "en": "It's one hundred forty-six pesos in total." },
-    { "id": "CAF-04.06a",       "en": "Could you check it? The two tacos are fifty-six and the two drinks are sixty. I get one hundred sixteen." },
-    { "id": "CAF-04.06b",       "en": "It's wrong. It's one hundred sixteen." },
-    { "id": "CAF-04.06c",       "en": "Perfect, here's one hundred forty-six." },
-    { "id": "CAF-04.06r",       "en": "Could you repeat that more slowly?" },
-    { "id": "CAF-04.07",        "en": "That's right; I charged for one extra drink. I'll fix it now." },
-    { "id": "CAF-04.07.repeat", "en": "You're right, I charged an extra drink. I'll fix it right away." },
-    { "id": "CAF-04.08a",       "en": "Thanks for checking. Can we pay separately, one taco and one drink each?" },
-    { "id": "CAF-04.08b",       "en": "We pay separate." },
-    { "id": "CAF-04.08c",       "en": "Thanks for checking. Can we pay separately, two tacos each?" },
-    { "id": "CAF-04.08r",       "en": "Could you repeat that more slowly?" },
-    { "id": "CAF-04.09",        "en": "Of course. That's fifty-eight pesos per person." },
-
-    { "id": "CAF-05.title",     "en": "Negotiate a plan for the group" },
-    { "id": "CAF-05.goal",      "en": "Balance everyone's needs, propose alternatives, and confirm the agreement." },
-    { "id": "CAF-05.01",        "en": "Good afternoon, welcome to Café La Esquina. How can I help you?" },
-    { "id": "CAF-05.01.repeat", "en": "Welcome. What do you need?" },
-    { "id": "CAF-05.02a",       "en": "We are four University of Florida students. We have thirty minutes before we leave. Would it be possible to eat here without running late?" },
-    { "id": "CAF-05.02b",       "en": "We're four. We're in a hurry. We want to eat fast here." },
-    { "id": "CAF-05.02c",       "en": "We are four University of Florida students. Could you bring us the bill, please?" },
-    { "id": "CAF-05.02r",       "en": "Could you repeat that more slowly?" },
-    { "id": "CAF-05.03",        "en": "I only have a table for two. If you wait about fifteen minutes, I could put two tables together." },
-    { "id": "CAF-05.03.repeat", "en": "Right now there's only a table for two. In about fifteen minutes I'll put two tables together for you." },
-    { "id": "CAF-05.04a",       "en": "We would rather not risk it. If we ordered to go, how long would it take?" },
-    { "id": "CAF-05.04b",       "en": "We don't want to wait. To go how much time?" },
-    { "id": "CAF-05.04c",       "en": "We would rather take the risk. We'll wait an hour." },
-    { "id": "CAF-05.04r",       "en": "Could you repeat that more slowly?" },
-    { "id": "CAF-05.05",        "en": "Between ten and twelve minutes, as long as you choose chicken or cactus." },
-    { "id": "CAF-05.05.repeat", "en": "If you order chicken or cactus tacos, they're ready in ten or twelve minutes." },
-    { "id": "CAF-05.06a",       "en": "That works for us. We would like four chicken tacos, four cactus tacos, and four hibiscus drinks. Of the chicken tacos, two without cilantro." },
-    { "id": "CAF-05.06b",       "en": "Ok. Four chicken, four cactus, four hibiscus. Two no cilantro." },
-    { "id": "CAF-05.06c",       "en": "That works for us. We would like eight al pastor tacos, please." },
-    { "id": "CAF-05.06r",       "en": "Could you repeat that more slowly?" },
-    { "id": "CAF-05.07",        "en": "All right. Shall I pack them separately?" },
-    { "id": "CAF-05.07.repeat", "en": "Very well. Do you want the tacos in separate packages?" },
-    { "id": "CAF-05.08a",       "en": "Yes, in packages of two. I would appreciate it if you labeled the ones without cilantro. If there were a delay, would you let us know?" },
-    { "id": "CAF-05.08b",       "en": "Yes, in packages of two. I would appreciate it if you label the ones without cilantro." },
-    { "id": "CAF-05.08c",       "en": "No, everything together in one bag, and all with cilantro." },
-    { "id": "CAF-05.08r",       "en": "Could you repeat that more slowly?" },
-    { "id": "CAF-05.09",        "en": "Of course. That's four packages of two tacos and four drinks, all to go. The total is three hundred thirty-two pesos." }
+    {
+      "id": "U1.title",
+      "en": "Nice to meet you, I'm..."
+    },
+    {
+      "id": "U1.goal",
+      "en": "Introduce yourself, say how you are and where you are from, order based on hunger or thirst, and give your number."
+    },
+    {
+      "id": "U1.01",
+      "en": "Good afternoon and welcome to Café La Esquina! I'm Lupita. How are you?"
+    },
+    {
+      "id": "U1.01.repeat",
+      "en": "Hi, I'm Lupita. How are you today?"
+    },
+    {
+      "id": "U1.02a",
+      "en": "I'm very well, thank you. And you?"
+    },
+    {
+      "id": "U1.02b",
+      "en": "I am well, thank you. (with ser)"
+    },
+    {
+      "id": "U1.02c",
+      "en": "I'm from Florida."
+    },
+    {
+      "id": "U1.02r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U1.03",
+      "en": "Great! I'm very well, thanks. What is your name and where are you from?"
+    },
+    {
+      "id": "U1.03.repeat",
+      "en": "What is your name? Where are you from?"
+    },
+    {
+      "id": "U1.04a",
+      "en": "My name is Alex. I'm from Gainesville, Florida."
+    },
+    {
+      "id": "U1.04b",
+      "en": "My name is Alex. I am from Gainesville. (with estar)"
+    },
+    {
+      "id": "U1.04c",
+      "en": "I'm sleepy."
+    },
+    {
+      "id": "U1.04r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U1.05",
+      "en": "Nice to meet you, Alex! Are you hungry or thirsty?"
+    },
+    {
+      "id": "U1.05.repeat",
+      "en": "Do you want to eat or drink something?"
+    },
+    {
+      "id": "U1.06a",
+      "en": "I'm very thirsty. A hibiscus water, please."
+    },
+    {
+      "id": "U1.06b",
+      "en": "I am thirst. A hibiscus water, please."
+    },
+    {
+      "id": "U1.06c",
+      "en": "I'm twenty years old."
+    },
+    {
+      "id": "U1.06r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U1.07",
+      "en": "Sure. And something to eat? The sweet bread is very good today."
+    },
+    {
+      "id": "U1.07.repeat",
+      "en": "Do you want a sweet bread? It's very good."
+    },
+    {
+      "id": "U1.08a",
+      "en": "Yes, a sweet bread, please. How much is it in total?"
+    },
+    {
+      "id": "U1.08b",
+      "en": "Yes, a sweet bread, please. (wrong article)"
+    },
+    {
+      "id": "U1.08c",
+      "en": "I'm cold. Where is the restroom?"
+    },
+    {
+      "id": "U1.08r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U1.09",
+      "en": "That's fifty-five pesos. Would you like to earn points? I need your phone number."
+    },
+    {
+      "id": "U1.09.repeat",
+      "en": "That's fifty-five pesos. Can you give me your phone number?"
+    },
+    {
+      "id": "U1.10a",
+      "en": "Yes, of course. It's thirty-five, twenty-one, eighty-four, seventy, ninety-six."
+    },
+    {
+      "id": "U1.10b",
+      "en": "Yes, of course. My number is thirty-five, twenty-one, eighty-four... (with estar)"
+    },
+    {
+      "id": "U1.10c",
+      "en": "It's fifty-five years."
+    },
+    {
+      "id": "U1.10r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U1.11",
+      "en": "Perfect! I'll bring your hibiscus water and sweet bread right away. Nice to meet you, Alex!"
+    },
+    {
+      "id": "U2.title",
+      "en": "A table of students"
+    },
+    {
+      "id": "U2.goal",
+      "en": "Greet as a group, say where you are from and what you study, and ask questions with qué and cuál."
+    },
+    {
+      "id": "U2.01",
+      "en": "Hi, guys! How's it going? How are you all today?"
+    },
+    {
+      "id": "U2.01.repeat",
+      "en": "Hi. How are you all?"
+    },
+    {
+      "id": "U2.02a",
+      "en": "We are very well, thanks. And you, Lupita?"
+    },
+    {
+      "id": "U2.02b",
+      "en": "They are fine, thanks."
+    },
+    {
+      "id": "U2.02c",
+      "en": "We are from Texas."
+    },
+    {
+      "id": "U2.02r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U2.03",
+      "en": "Great! Hey, you all aren't from here, right? Where are you from?"
+    },
+    {
+      "id": "U2.03.repeat",
+      "en": "Where are you all from? You're not from here, right?"
+    },
+    {
+      "id": "U2.04a",
+      "en": "No, we're not from here. We're from Florida. We're students at the University of Florida."
+    },
+    {
+      "id": "U2.04b",
+      "en": "No, we are from Florida. (with estar)"
+    },
+    {
+      "id": "U2.04c",
+      "en": "Yes, we are tired."
+    },
+    {
+      "id": "U2.04r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U2.05",
+      "en": "How cool! And what do you study?"
+    },
+    {
+      "id": "U2.05.repeat",
+      "en": "What do you all study?"
+    },
+    {
+      "id": "U2.06a",
+      "en": "I study biology and my friend studies journalism."
+    },
+    {
+      "id": "U2.06b",
+      "en": "We study (I-form) biology and journalism."
+    },
+    {
+      "id": "U2.06c",
+      "en": "We study at eight in the morning."
+    },
+    {
+      "id": "U2.06r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U2.07",
+      "en": "And which is the hardest class this semester?"
+    },
+    {
+      "id": "U2.07.repeat",
+      "en": "Which class is the hardest?"
+    },
+    {
+      "id": "U2.08a",
+      "en": "Chemistry. It's very hard! The exam is tomorrow."
+    },
+    {
+      "id": "U2.08b",
+      "en": "Chemistry. They are very hard! (plural verb)"
+    },
+    {
+      "id": "U2.08c",
+      "en": "My major is biology."
+    },
+    {
+      "id": "U2.08r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U2.09",
+      "en": "Hang in there! A little coffee will help you. What would you like to drink?"
+    },
+    {
+      "id": "U2.09.repeat",
+      "en": "What are you going to drink?"
+    },
+    {
+      "id": "U2.10a",
+      "en": "Which is the most popular coffee?"
+    },
+    {
+      "id": "U2.10b",
+      "en": "What is the most popular coffee?"
+    },
+    {
+      "id": "U2.10c",
+      "en": "See you tomorrow, Lupita!"
+    },
+    {
+      "id": "U2.10r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U2.11",
+      "en": "The café de olla, with cinnamon! Shall I bring you two?"
+    },
+    {
+      "id": "U2.11.repeat",
+      "en": "The café de olla is the most popular. Two?"
+    },
+    {
+      "id": "U2.12a",
+      "en": "Yes, two cafés de olla, please. It's really good, right?"
+    },
+    {
+      "id": "U2.12b",
+      "en": "Yes, two coffee de olla, please."
+    },
+    {
+      "id": "U2.12c",
+      "en": "I don't know. And you?"
+    },
+    {
+      "id": "U2.12r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U2.13",
+      "en": "My pleasure! That's eighty pesos. Good luck on the exam!"
+    },
+    {
+      "id": "U3.title",
+      "en": "What are you going to do on Saturday?"
+    },
+    {
+      "id": "U3.goal",
+      "en": "Ask and tell the time, talk about obligations with tener que and plans with ir a."
+    },
+    {
+      "id": "U3.01",
+      "en": "Good morning! How can I help you?"
+    },
+    {
+      "id": "U3.01.repeat",
+      "en": "Good morning. What do you need?"
+    },
+    {
+      "id": "U3.02a",
+      "en": "Good morning. What time does the café close today?"
+    },
+    {
+      "id": "U3.02b",
+      "en": "Good morning. What time does the café close? (missing 'a')"
+    },
+    {
+      "id": "U3.02c",
+      "en": "It's a quarter past ten."
+    },
+    {
+      "id": "U3.02r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U3.03",
+      "en": "Today we close at nine at night. Hey, what time is it? My phone has no battery."
+    },
+    {
+      "id": "U3.03.repeat",
+      "en": "We close at nine. What time is it, please?"
+    },
+    {
+      "id": "U3.04a",
+      "en": "It's a quarter past ten."
+    },
+    {
+      "id": "U3.04b",
+      "en": "It is (singular) a quarter past ten."
+    },
+    {
+      "id": "U3.04c",
+      "en": "It's Monday."
+    },
+    {
+      "id": "U3.04r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U3.05",
+      "en": "Thanks! And what can I get you?"
+    },
+    {
+      "id": "U3.05.repeat",
+      "en": "What would you like to drink?"
+    },
+    {
+      "id": "U3.06a",
+      "en": "An americano, please. I have to study all afternoon."
+    },
+    {
+      "id": "U3.06b",
+      "en": "An americano, please. I have study all afternoon."
+    },
+    {
+      "id": "U3.06c",
+      "en": "I go to the gym every day."
+    },
+    {
+      "id": "U3.06r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U3.07",
+      "en": "Oh, what a shame! Hey, do you have plans on Saturday? There's live music here at eight."
+    },
+    {
+      "id": "U3.07.repeat",
+      "en": "On Saturday there's music here at eight. Do you have plans?"
+    },
+    {
+      "id": "U3.08a",
+      "en": "I don't have plans. What a good idea! I'm going to come with some friends."
+    },
+    {
+      "id": "U3.08b",
+      "en": "Good idea! I'm going come with some friends."
+    },
+    {
+      "id": "U3.08c",
+      "en": "In the summer."
+    },
+    {
+      "id": "U3.08r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U3.09",
+      "en": "Great! And what are you all going to do after the concert?"
+    },
+    {
+      "id": "U3.09.repeat",
+      "en": "What are you going to do afterwards?"
+    },
+    {
+      "id": "U3.10a",
+      "en": "We're going to dance and then we're going to have dinner."
+    },
+    {
+      "id": "U3.10b",
+      "en": "We're going dance and have dinner."
+    },
+    {
+      "id": "U3.10c",
+      "en": "We go at a quarter past ten."
+    },
+    {
+      "id": "U3.10r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U3.11",
+      "en": "Perfect! Here's your americano. That's thirty-five pesos. See you Saturday at eight sharp!"
+    },
+    {
+      "id": "U4.title",
+      "en": "Is there Wi-Fi?"
+    },
+    {
+      "id": "U4.goal",
+      "en": "Use hay, ser and estar for places, talk about your classes with -ar verbs, and say what you like."
+    },
+    {
+      "id": "U4.01",
+      "en": "Good afternoon! Table for one? Are you going to study here?"
+    },
+    {
+      "id": "U4.01.repeat",
+      "en": "Do you want a table? Are you going to study?"
+    },
+    {
+      "id": "U4.02a",
+      "en": "Yes, thanks. Is there Wi-Fi here?"
+    },
+    {
+      "id": "U4.02b",
+      "en": "Yes, thanks. Is Wi-Fi here? (with estar)"
+    },
+    {
+      "id": "U4.02c",
+      "en": "Yes, the library is a new building."
+    },
+    {
+      "id": "U4.02r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U4.03",
+      "en": "Yes, there's Wi-Fi. The password is on the menu. Do you need anything else?"
+    },
+    {
+      "id": "U4.03.repeat",
+      "en": "Yes, there is Wi-Fi. The password is on the menu."
+    },
+    {
+      "id": "U4.04a",
+      "en": "Yes. Where is the library? Is it far from here?"
+    },
+    {
+      "id": "U4.04b",
+      "en": "Yes. Where is there the library?"
+    },
+    {
+      "id": "U4.04c",
+      "en": "Yes. I need to buy a book at the library."
+    },
+    {
+      "id": "U4.04r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U4.05",
+      "en": "The library is very close, next to the student center. It's a new, very big building. What do you study?"
+    },
+    {
+      "id": "U4.05.repeat",
+      "en": "It's close. What do you study?"
+    },
+    {
+      "id": "U4.06a",
+      "en": "I study business administration. I'm taking four classes this semester."
+    },
+    {
+      "id": "U4.06b",
+      "en": "I study business administration. He/She takes four classes this semester."
+    },
+    {
+      "id": "U4.06c",
+      "en": "There are four classes in the library."
+    },
+    {
+      "id": "U4.06r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U4.07",
+      "en": "Nice! And do you like coffee? What can I get you?"
+    },
+    {
+      "id": "U4.07.repeat",
+      "en": "Do you like coffee? What would you like?"
+    },
+    {
+      "id": "U4.08a",
+      "en": "Yes, I really like coffee. A café de olla, please."
+    },
+    {
+      "id": "U4.08b",
+      "en": "Yes, I really like (plural) coffee. A café de olla, please."
+    },
+    {
+      "id": "U4.08c",
+      "en": "There are many notebooks on my desk."
+    },
+    {
+      "id": "U4.08r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U4.09",
+      "en": "And something to eat? The cactus tacos are very good."
+    },
+    {
+      "id": "U4.09.repeat",
+      "en": "Do you want to eat something?"
+    },
+    {
+      "id": "U4.10a",
+      "en": "No, thanks. I don't like cactus. Just the coffee."
+    },
+    {
+      "id": "U4.10b",
+      "en": "No, thanks. I don't like (singular) cactus."
+    },
+    {
+      "id": "U4.10c",
+      "en": "Yes, where is the gym?"
+    },
+    {
+      "id": "U4.10r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U4.11",
+      "en": "Very good. It's forty pesos for your café de olla. Good luck with your homework!"
+    },
+    {
+      "id": "U5.title",
+      "en": "Do you know the owner?"
+    },
+    {
+      "id": "U5.goal",
+      "en": "Use -er/-ir verbs, tell saber from conocer, and describe a person you admire."
+    },
+    {
+      "id": "U5.01",
+      "en": "Hi! Do you already know what you're going to order?"
+    },
+    {
+      "id": "U5.01.repeat",
+      "en": "Do you know what you want?"
+    },
+    {
+      "id": "U5.02a",
+      "en": "I don't know yet. I'm not familiar with the menu. What do you recommend?"
+    },
+    {
+      "id": "U5.02b",
+      "en": "I'm not acquainted with what to order yet."
+    },
+    {
+      "id": "U5.02c",
+      "en": "Yes, I know Lupita."
+    },
+    {
+      "id": "U5.02r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U5.03",
+      "en": "I recommend the café de olla. Do you drink coffee every day?"
+    },
+    {
+      "id": "U5.03.repeat",
+      "en": "Do you drink coffee every day?"
+    },
+    {
+      "id": "U5.04a",
+      "en": "Yes, I drink coffee every morning. A café de olla, please."
+    },
+    {
+      "id": "U5.04b",
+      "en": "Yes, he/she drinks coffee every morning. A café de olla, please."
+    },
+    {
+      "id": "U5.04c",
+      "en": "Yes, I write a letter to my mom."
+    },
+    {
+      "id": "U5.04r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U5.05",
+      "en": "Same as me! Hey, do you know doña Carmen, the café's owner?"
+    },
+    {
+      "id": "U5.05.repeat",
+      "en": "Do you know the owner? Her name is doña Carmen."
+    },
+    {
+      "id": "U5.06a",
+      "en": "No, I don't know doña Carmen. What is she like?"
+    },
+    {
+      "id": "U5.06b",
+      "en": "No, I don't know (saber) doña Carmen. What is she like?"
+    },
+    {
+      "id": "U5.06c",
+      "en": "Yes, I know how to speak Spanish."
+    },
+    {
+      "id": "U5.06r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U5.07",
+      "en": "She's very kind and patient, and she always helps everyone. I admire her a lot! And you? Who do you admire?"
+    },
+    {
+      "id": "U5.07.repeat",
+      "en": "Doña Carmen is very kind. Who do you admire?"
+    },
+    {
+      "id": "U5.08a",
+      "en": "I admire my grandmother. She's brave and understanding, and she always shares everything. She lives with us."
+    },
+    {
+      "id": "U5.08b",
+      "en": "I admire my grandmother. She's brave and understanding. (missing personal a)"
+    },
+    {
+      "id": "U5.08c",
+      "en": "I admire the café de olla."
+    },
+    {
+      "id": "U5.08r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U5.09",
+      "en": "How lovely! This month we vote for employee of the month. Do you know who deserves the award?"
+    },
+    {
+      "id": "U5.09.repeat",
+      "en": "Who deserves the employee of the month award?"
+    },
+    {
+      "id": "U5.10a",
+      "en": "You, Lupita! You're very nice and hard-working."
+    },
+    {
+      "id": "U5.10b",
+      "en": "You, Lupita! You're very nice and hard-working (masculine)."
+    },
+    {
+      "id": "U5.10c",
+      "en": "I don't know. The menu is boring."
+    },
+    {
+      "id": "U5.10r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U5.11",
+      "en": "Oh, how kind! Thank you so much. Here's your café de olla: that's forty pesos."
+    },
+    {
+      "id": "U6.title",
+      "en": "A table for the family"
+    },
+    {
+      "id": "U6.goal",
+      "en": "Talk about your family with possessives, describe what they look like, and order with stem-changing verbs."
+    },
+    {
+      "id": "U6.01",
+      "en": "Good afternoon! Table for one?"
+    },
+    {
+      "id": "U6.01.repeat",
+      "en": "Is it a table for one person?"
+    },
+    {
+      "id": "U6.02a",
+      "en": "No, for four. My parents and my sister are coming in five minutes."
+    },
+    {
+      "id": "U6.02b",
+      "en": "No, for four. My (singular) parents and my sister are coming soon."
+    },
+    {
+      "id": "U6.02c",
+      "en": "Yes, I have a twin sister."
+    },
+    {
+      "id": "U6.02r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U6.03",
+      "en": "Perfect! What does your sister look like? That way I'll recognize her at the door."
+    },
+    {
+      "id": "U6.03.repeat",
+      "en": "What does your sister look like?"
+    },
+    {
+      "id": "U6.04a",
+      "en": "She's tall and thin, and she has curly hair. She looks like my mom."
+    },
+    {
+      "id": "U6.04b",
+      "en": "She's tall and thin (masculine), and she has curly hair."
+    },
+    {
+      "id": "U6.04c",
+      "en": "My sister prefers tea."
+    },
+    {
+      "id": "U6.04r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U6.05",
+      "en": "Very good. Would you like to order your family's drinks while they arrive?"
+    },
+    {
+      "id": "U6.05.repeat",
+      "en": "What would your family like to drink?"
+    },
+    {
+      "id": "U6.06a",
+      "en": "Yes. My sister prefers hibiscus water and my parents want two americanos."
+    },
+    {
+      "id": "U6.06b",
+      "en": "Yes. My sister prefers hibiscus water and my parents want two americanos. (no stem change)"
+    },
+    {
+      "id": "U6.06c",
+      "en": "Yes. My sister is twenty years old."
+    },
+    {
+      "id": "U6.06r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U6.07",
+      "en": "I'll serve them right away. And you? What would you like?"
+    },
+    {
+      "id": "U6.07.repeat",
+      "en": "What would you like to drink?"
+    },
+    {
+      "id": "U6.08a",
+      "en": "I want a café de olla, please. Can I order a sweet bread too?"
+    },
+    {
+      "id": "U6.08b",
+      "en": "I want a café de olla, please. Can I order a sweet bread too? (no stem change)"
+    },
+    {
+      "id": "U6.08c",
+      "en": "My grandfather is very tall."
+    },
+    {
+      "id": "U6.08r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U6.09",
+      "en": "Of course! Hey, is that them? The couple at the door?"
+    },
+    {
+      "id": "U6.09.repeat",
+      "en": "Are those your parents? The couple at the door?"
+    },
+    {
+      "id": "U6.10a",
+      "en": "Yes, those are my parents! And the tall girl is my sister."
+    },
+    {
+      "id": "U6.10b",
+      "en": "Yes, those are your/her parents!"
+    },
+    {
+      "id": "U6.10c",
+      "en": "My aunt is divorced."
+    },
+    {
+      "id": "U6.10r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "U6.11",
+      "en": "Welcome! Come in, your table is ready. I'll bring everything right away. It's one hundred sixty-five pesos, but you pay at the end."
+    }
   ]
 }
