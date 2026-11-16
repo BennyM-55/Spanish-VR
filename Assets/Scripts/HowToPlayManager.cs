@@ -28,7 +28,7 @@ public class HowToPlayManager : MonoBehaviour {
 
         "Use WASD to walk around the cafe. W moves forward, A moves left, S moves backward, and D moves right.",
 
-        "Press E to talk to Lupita and press F to sit down in a chair.",
+        "Press E to talk to Lupita and place your order. Once you finish ordering, walk toward the front of the cafe near the window. Find the red chair next to the girl wearing a purple shirt. Walk up to the chair and press F to sit down and wait for your order.",
 
         "Practice Spanish vocabulary and conversations through café activities. Read the prompts and choose the correct responses.",
 

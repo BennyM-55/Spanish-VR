@@ -4,7 +4,7 @@ using UnityEngine;
 public class LessonManager : MonoBehaviour {
     public static LessonManager instance;
 
-    public int totalUnits = 4;
+    public int totalUnits = 6;
     public int lessonsPerUnit = 5;
 
     void Awake() {

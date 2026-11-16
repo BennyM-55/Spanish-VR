@@ -150,8 +150,7 @@ namespace SpanishCafe
             UseWorld(wanted == PanelMode.World || (wanted == PanelMode.Auto && UnityEngine.XR.XRSettings.isDeviceActive));
         }
 
-        public void Open(string workerName, AudioSource voiceSource, Transform worker = null, Transform student = null)
-        {
+public void Open(string workerName, AudioSource voiceSource, Transform worker = null, Transform student = null) {
             staffName = string.IsNullOrEmpty(workerName) ? "Lupita" : workerName;
             voice = voiceSource;
             studentSpeech.Follow(student);
@@ -160,7 +159,16 @@ namespace SpanishCafe
             panel.SetActive(true);
             if (inWorld) PlaceInFront(worker);
             subtitlesOn = false; // the professor wants Spanish only to start, students can press T if they need English
-            ShowLevelSelect();
+
+            CafeContent.EnsureLoaded();
+
+            int unit = GameManager.instance.currentUnit;
+
+            if (unit >= 1 && unit <= CafeContent.Levels.Length) {
+                StartLevel(CafeContent.Levels[unit - 1]);
+            } else {
+                ShowLevelSelect();
+            }
         }
 
         public void Close()
