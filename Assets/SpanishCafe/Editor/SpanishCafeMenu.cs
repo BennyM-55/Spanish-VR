@@ -48,6 +48,27 @@ namespace SpanishCafe.EditorTools
             Debug.Log("[SpanishCafe] Placed Lupita in front of the camera. Move her behind the counter.");
         }
 
+        [UnityEditor.MenuItem("Spanish Café/Make Selected Character Mateo (table)")]
+        static void MakeMateo()
+        {
+            if (StopIfPlaying()) return;
+            var target = Selection.activeGameObject;
+            if (target == null)
+            {
+                EditorUtility.DisplayDialog("Spanish Café", "Click the character sitting at the table in the Hierarchy first, then try again.", "OK");
+                return;
+            }
+
+            // Lesson 2 of every unidad happens at the table, and the student has to sit in the chair first
+            var starter = target.GetComponent<CafeConversationStarter>() ?? Undo.AddComponent<CafeConversationStarter>(target);
+            Undo.RecordObject(starter, "Make Mateo");
+            starter.staffName = "Mateo";
+            starter.lesson = 2;
+            starter.needsToSit = true;
+            starter.facePlayer = false; // he's sitting, so he shouldn't spin in his chair
+            Debug.Log($"[SpanishCafe] {target.name} is now Mateo. Sit in the chair next to him and press E.");
+        }
+
         // The same character kit James used for BoZo. We only make a new copy, his BoZo stays the same
         const string CharacterPrefab = "Assets/BoZo_StylizedModularCharacters/Prefabs/BSMC_CharacterBase.prefab";
 

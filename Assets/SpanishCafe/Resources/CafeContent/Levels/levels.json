@@ -12,7 +12,25 @@
       "challengeEn": "Introduce yourself again: your name, where you are from, how you are today, and whether you are hungry or thirsty.",
       "successEn": "Use ser for name and origin (Soy de...), estar for how you feel (Estoy...), and tener for hunger or thirst (Tengo sed).",
       "sampleAnswerEs": "Me llamo Alex. Soy de Gainesville. Hoy estoy muy bien, pero tengo mucha sed.",
-      "sampleAnswerEn": "My name is Alex. I am from Gainesville. Today I am very well, but I am very thirsty."
+      "sampleAnswerEn": "My name is Alex. I am from Gainesville. Today I am very well, but I am very thirsty.",
+      "unit": 1,
+      "lesson": 1
+    },
+    {
+      "level": "Unidad 1",
+      "nameEs": "Conociendo a Mateo",
+      "nameEn": "Meeting Mateo",
+      "scenarioFile": "M1_Conociendo_a_Mateo",
+      "showSubtitles": false,
+      "showChoiceTranslations": false,
+      "maxHints": 3,
+      "challengeEs": "Preséntate a Valeria: tu nombre, de dónde eres, cómo estás hoy y cómo eres.",
+      "challengeEn": "Introduce yourself to Valeria: your name, where you're from, how you are today and what you're like.",
+      "successEn": "Use ser for name, origin and personality, estar for how you feel, and tener for sueño or hambre.",
+      "sampleAnswerEs": "Hola, me llamo Alex. Soy de Florida. Hoy estoy bien, pero tengo sueño. Soy paciente y responsable.",
+      "sampleAnswerEn": "Hi, my name is Alex. I'm from Florida. Today I'm fine, but I'm sleepy. I'm patient and responsible.",
+      "unit": 1,
+      "lesson": 2
     },
     {
       "level": "Unidad 2",
@@ -26,7 +44,25 @@
       "challengeEn": "Now you and your friend both study chemistry. Answer: where are you from, what do you study, and which is your hardest class?",
       "successEn": "Use plural forms (somos, estamos, estudiamos), agree adjectives, and use cuál to pick from options.",
       "sampleAnswerEs": "Somos de Florida. Estudiamos química. Nuestra clase más difícil es física.",
-      "sampleAnswerEn": "We are from Florida. We study chemistry. Our hardest class is physics."
+      "sampleAnswerEn": "We are from Florida. We study chemistry. Our hardest class is physics.",
+      "unit": 2,
+      "lesson": 1
+    },
+    {
+      "level": "Unidad 2",
+      "nameEs": "Compañeros de clase",
+      "nameEn": "Classmates",
+      "scenarioFile": "M2_Companeros_de_clase",
+      "showSubtitles": false,
+      "showChoiceTranslations": false,
+      "maxHints": 3,
+      "challengeEs": "Pregúntales a Mateo y a Valeria tres cosas sobre sus clases: una con ¿verdad?, una con qué y una con cuál.",
+      "challengeEn": "Ask Mateo and Valeria three things about their classes: one with ¿verdad?, one with qué and one with cuál.",
+      "successEn": "Tag question for confirmation, qué before a noun or for definitions, cuál to choose among options; plural ser/estar with ustedes.",
+      "sampleAnswerEs": "Ustedes son compañeros de clase, ¿verdad? ¿Qué clases tienen este semestre? ¿Cuál es su clase más difícil?",
+      "sampleAnswerEn": "You're classmates, right? What classes do you have this semester? Which is your hardest class?",
+      "unit": 2,
+      "lesson": 2
     },
     {
       "level": "Unidad 3",
@@ -40,7 +76,25 @@
       "challengeEn": "Lupita invites you to a salsa class on Friday at seven. You can't go. Decline politely and explain why.",
       "successEn": "Use a refusal phrase (¡Qué lástima!), tener que + infinitive for the reason, and ir a + infinitive for another plan.",
       "sampleAnswerEs": "¡Ay, qué lástima! El viernes tengo que trabajar a las siete. Pero voy a ir a la próxima clase.",
-      "sampleAnswerEn": "Oh, what a shame! On Friday I have to work at seven. But I'm going to go to the next class."
+      "sampleAnswerEn": "Oh, what a shame! On Friday I have to work at seven. But I'm going to go to the next class.",
+      "unit": 3,
+      "lesson": 1
+    },
+    {
+      "level": "Unidad 3",
+      "nameEs": "Planes para el fin de semana",
+      "nameEn": "Weekend plans",
+      "scenarioFile": "M3_Planes_para_el_finde",
+      "showSubtitles": false,
+      "showChoiceTranslations": false,
+      "maxHints": 3,
+      "challengeEs": "Invita a Mateo y a Valeria a hacer algo el viernes. Di la hora y lo que tienes que hacer antes.",
+      "challengeEn": "Invite Mateo and Valeria to do something on Friday. Say the time and what you have to do first.",
+      "successEn": "An invitation (¿Qué tal si...?), a time (a las...), ir a + infinitive and tener que + infinitive.",
+      "sampleAnswerEs": "¿Qué tal si vamos al cine el viernes a las siete? Antes tengo que trabajar, pero voy a llegar a tiempo.",
+      "sampleAnswerEn": "How about we go to the movies on Friday at seven? First I have to work, but I'm going to arrive on time.",
+      "unit": 3,
+      "lesson": 2
     },
     {
       "level": "Unidad 4",
@@ -54,7 +108,25 @@
       "challengeEn": "Ask if there's a table near the window, say where you study, and say what you don't like to drink.",
       "successEn": "Use hay for what exists, estar for where something is, an -ar verb in the yo form, and (no) me gusta/n.",
       "sampleAnswerEs": "¿Hay una mesa cerca de la ventana? Estudio en la biblioteca. No me gusta el café con azúcar.",
-      "sampleAnswerEn": "Is there a table near the window? I study at the library. I don't like coffee with sugar."
+      "sampleAnswerEn": "Is there a table near the window? I study at the library. I don't like coffee with sugar.",
+      "unit": 4,
+      "lesson": 1
+    },
+    {
+      "level": "Unidad 4",
+      "nameEs": "Nuevo en el campus",
+      "nameEn": "New on campus",
+      "scenarioFile": "M4_Nuevo_en_el_campus",
+      "showSubtitles": false,
+      "showChoiceTranslations": false,
+      "maxHints": 3,
+      "challengeEs": "Describe tu lugar favorito del campus: qué hay, dónde está, cómo es y por qué te gusta.",
+      "challengeEn": "Describe your favorite place on campus: what's there, where it is, what it's like and why you like it.",
+      "successEn": "Hay for what exists, estar for location, ser for description, and me gusta/gustan.",
+      "sampleAnswerEs": "Mi lugar favorito es la biblioteca. Está cerca del centro estudiantil. Es moderna y hay muchas mesas. Me gustan las ventanas grandes.",
+      "sampleAnswerEn": "My favorite place is the library. It's near the student center. It's modern and there are many tables. I like the big windows.",
+      "unit": 4,
+      "lesson": 2
     },
     {
       "level": "Unidad 5",
@@ -68,7 +140,25 @@
       "challengeEn": "Describe a friend you admire: what they are like, what they do, and why they deserve an award.",
       "successEn": "Use two or three quality adjectives with correct agreement, -er/-ir verbs (vive, comparte, escribe), and merecer.",
       "sampleAnswerEs": "Admiro a mi amigo Daniel. Es honesto y creativo. Vive en Miami y escribe música. Merece un premio.",
-      "sampleAnswerEn": "I admire my friend Daniel. He is honest and creative. He lives in Miami and writes music. He deserves an award."
+      "sampleAnswerEn": "I admire my friend Daniel. He is honest and creative. He lives in Miami and writes music. He deserves an award.",
+      "unit": 5,
+      "lesson": 1
+    },
+    {
+      "level": "Unidad 5",
+      "nameEs": "La amiga de Mateo",
+      "nameEn": "Mateo's friend",
+      "scenarioFile": "M5_La_amiga_de_Mateo",
+      "showSubtitles": false,
+      "showChoiceTranslations": false,
+      "maxHints": 3,
+      "challengeEs": "Describe a un amigo o una amiga: qué sabe hacer, a quién conoce, dónde vive y cómo es.",
+      "challengeEn": "Describe a friend: what they know how to do, who they know, where they live and what they're like.",
+      "successEn": "Saber + infinitive for skills, conocer a + person, -er/-ir verbs (vive, escribe) and quality adjectives with agreement.",
+      "sampleAnswerEs": "Mi amiga Sara sabe bailar salsa y conoce a muchos artistas. Vive en Miami. Es creativa y muy alegre.",
+      "sampleAnswerEn": "My friend Sara knows how to dance salsa and knows many artists. She lives in Miami. She's creative and very cheerful.",
+      "unit": 5,
+      "lesson": 2
     },
     {
       "level": "Unidad 6",
@@ -82,7 +172,25 @@
       "challengeEn": "Your cousin is arriving later. Describe him for Lupita and say what he prefers to drink.",
       "successEn": "Use a possessive (mi primo), two physical adjectives with agreement, and a stem-changing verb (prefiere, quiere).",
       "sampleAnswerEs": "Mi primo es alto y moreno, y tiene el pelo corto. Prefiere el agua de jamaica.",
-      "sampleAnswerEn": "My cousin is tall and dark-skinned, and he has short hair. He prefers the hibiscus water."
+      "sampleAnswerEn": "My cousin is tall and dark-skinned, and he has short hair. He prefers the hibiscus water.",
+      "unit": 6,
+      "lesson": 1
+    },
+    {
+      "level": "Unidad 6",
+      "nameEs": "La familia anfitriona",
+      "nameEn": "The host family",
+      "scenarioFile": "M6_La_familia_anfitriona",
+      "showSubtitles": false,
+      "showChoiceTranslations": false,
+      "maxHints": 3,
+      "challengeEs": "Muestra una foto imaginaria de tu familia: quién es cada persona, cómo es y qué prefiere hacer.",
+      "challengeEn": "Show an imaginary photo of your family: who each person is, what they look like and what they prefer to do.",
+      "successEn": "Possessives (mi/mis, su/sus), physical adjectives with agreement and stem-changing verbs (prefiere, quiere, puede).",
+      "sampleAnswerEs": "Esta es mi madre. Es baja y tiene el pelo rizado. Prefiere leer. Estos son mis primos: quieren jugar fútbol.",
+      "sampleAnswerEn": "This is my mother. She's short and has curly hair. She prefers to read. These are my cousins: they want to play soccer.",
+      "unit": 6,
+      "lesson": 2
     }
   ]
 }

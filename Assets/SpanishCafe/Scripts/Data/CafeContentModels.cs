@@ -131,6 +131,14 @@ namespace SpanishCafe
         public string successEn;
         public string sampleAnswerEs;
         public string sampleAnswerEn;
+
+        // Matches Ben's main menu: unit 1-6, lesson 1 = counter with Lupita, lesson 2 = table with Mateo
+        public int unit;
+        public int lesson;
+
+        // Same "unit-lesson" format the main menu save uses, like "3-2"
+        public string ProgressKey => unit > 0 ? unit + "-" + lesson : level;
+        public string Label => lesson > 0 ? $"{level} · Lección {lesson}" : level;
     }
 
     [Serializable]

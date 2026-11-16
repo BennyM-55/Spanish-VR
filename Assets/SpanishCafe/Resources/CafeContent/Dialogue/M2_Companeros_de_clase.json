@@ -1,0 +1,190 @@
+{
+  "scenarioId": "M2",
+  "level": "Unidad 2",
+  "staffName": "Mateo",
+  "titleEs": "¿Qué estudias?",
+  "goalEs": "Saludar, hablar de tus clases y profesores, y hacer preguntas con ¿verdad? y cuál.",
+  "turns": [
+    {
+      "id": "M2.01",
+      "speaker": "staff",
+      "es": "¡Hola otra vez! ¿Qué tal? ¿Cómo estás?",
+      "repeatEs": "Hola. ¿Cómo estás?",
+      "next": "M2.02"
+    },
+    {
+      "id": "M2.02",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M2.02a",
+          "es": "¡Hola, Mateo! Muy bien, ¿y tú? Esperas a Valeria otra vez, ¿verdad?",
+          "result": "correct",
+          "next": "M2.03"
+        },
+        {
+          "id": "M2.02b",
+          "es": "¡Hola, Mateo! Estamos bien, ¿y tú? Esperas a Valeria otra vez, ¿verdad?",
+          "result": "awkward",
+          "next": "M2.03"
+        },
+        {
+          "id": "M2.02c",
+          "es": "¡Adiós, Mateo! ¡Hasta mañana!",
+          "result": "wrong"
+        },
+        {
+          "id": "M2.02r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M2.03",
+      "speaker": "staff",
+      "es": "Sí, ¡otra vez tarde! Valeria y yo estamos en el mismo programa. Somos compañeros de clase. Tú estudias aquí, ¿verdad?",
+      "repeatEs": "Tú estudias aquí, ¿verdad?",
+      "next": "M2.04"
+    },
+    {
+      "id": "M2.04",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M2.04a",
+          "es": "Sí, estudio aquí. Mi especialización es psicología.",
+          "result": "correct",
+          "next": "M2.05"
+        },
+        {
+          "id": "M2.04b",
+          "es": "Sí, estoy estudiante aquí. Mi especialización es psicología.",
+          "result": "awkward",
+          "next": "M2.05"
+        },
+        {
+          "id": "M2.04c",
+          "es": "No sé. ¿Qué hora es?",
+          "result": "wrong"
+        },
+        {
+          "id": "M2.04r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M2.05",
+      "speaker": "staff",
+      "es": "¡Qué interesante! Nosotros estudiamos español y comunicación. ¿Qué clases tienes este semestre?",
+      "repeatEs": "¿Qué clases tienes?",
+      "next": "M2.06"
+    },
+    {
+      "id": "M2.06",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M2.06a",
+          "es": "Tengo biología, historia y matemáticas. ¿Y ustedes? ¿Cuál es su clase favorita?",
+          "result": "correct",
+          "next": "M2.07"
+        },
+        {
+          "id": "M2.06b",
+          "es": "Tengo biología, historia y matemáticas. ¿Qué es su clase favorita?",
+          "result": "awkward",
+          "next": "M2.07"
+        },
+        {
+          "id": "M2.06c",
+          "es": "Tengo veinte años.",
+          "result": "wrong"
+        },
+        {
+          "id": "M2.06r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M2.07",
+      "speaker": "staff",
+      "es": "¡La clase de literatura! Es difícil, pero los profesores son muy buenos. ¿Cómo son tus profesores?",
+      "repeatEs": "¿Cómo son tus profesores?",
+      "next": "M2.08"
+    },
+    {
+      "id": "M2.08",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M2.08a",
+          "es": "Mis profesores son muy simpáticos, pero los exámenes son difíciles.",
+          "result": "correct",
+          "next": "M2.09"
+        },
+        {
+          "id": "M2.08b",
+          "es": "Mis profesores están muy simpáticos, pero los exámenes son difíciles.",
+          "result": "awkward",
+          "next": "M2.09"
+        },
+        {
+          "id": "M2.08c",
+          "es": "Mis profesores están en la universidad.",
+          "result": "wrong"
+        },
+        {
+          "id": "M2.08r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M2.09",
+      "speaker": "staff",
+      "es": "Valeria y yo estamos muy cansados esta semana. ¿Y tus amigos y tú? ¿Están cansados también?",
+      "repeatEs": "¿Ustedes están cansados también?",
+      "next": "M2.10"
+    },
+    {
+      "id": "M2.10",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M2.10a",
+          "es": "Sí, estamos muy cansados. ¡Tenemos muchos exámenes!",
+          "result": "correct",
+          "next": "M2.11"
+        },
+        {
+          "id": "M2.10b",
+          "es": "Sí, somos muy cansados. ¡Tenemos muchos exámenes!",
+          "result": "awkward",
+          "next": "M2.11"
+        },
+        {
+          "id": "M2.10c",
+          "es": "Sí, somos de Texas.",
+          "result": "wrong"
+        },
+        {
+          "id": "M2.10r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M2.11",
+      "speaker": "staff",
+      "es": "¡Ánimo! Ah, ¡por fin, ahí está Valeria! ¡Valeria, aquí! Bueno, ¡nos vemos pronto!",
+      "end": true
+    }
+  ]
+}

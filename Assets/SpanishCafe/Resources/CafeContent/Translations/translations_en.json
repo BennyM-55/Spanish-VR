@@ -816,6 +816,798 @@
     {
       "id": "U6.11",
       "en": "Welcome! Come in, your table is ready. I'll bring everything right away. It's one hundred sixty-five pesos, but you pay at the end."
+    },
+    {
+      "id": "M1.title",
+      "en": "Who are you?"
+    },
+    {
+      "id": "M1.goal",
+      "en": "Introduce yourself to a classmate, say where you're from, how you are and what you're like."
+    },
+    {
+      "id": "M1.01",
+      "en": "Hi! Sit down, sit down. I'm waiting for my friend Valeria, but she's always late. My name is Mateo. And you, what's your name?"
+    },
+    {
+      "id": "M1.01.repeat",
+      "en": "Hi, I'm Mateo. What's your name?"
+    },
+    {
+      "id": "M1.02a",
+      "en": "My name is Alex. Nice to meet you, Mateo."
+    },
+    {
+      "id": "M1.02b",
+      "en": "I am (estar) Alex. Nice to meet you."
+    },
+    {
+      "id": "M1.02c",
+      "en": "I'm fine, thanks."
+    },
+    {
+      "id": "M1.02r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M1.03",
+      "en": "Likewise. I'm from Sevilla, in Spain. I'm here on an exchange program. Are you from here?"
+    },
+    {
+      "id": "M1.03.repeat",
+      "en": "I'm from Spain. Are you from here?"
+    },
+    {
+      "id": "M1.04a",
+      "en": "No, I'm not from here. I'm from Florida, in the United States."
+    },
+    {
+      "id": "M1.04b",
+      "en": "No, I'm not from here. I'm from Florida. (with estar)"
+    },
+    {
+      "id": "M1.04c",
+      "en": "I'm twenty years old."
+    },
+    {
+      "id": "M1.04r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M1.05",
+      "en": "Cool! Hey, how are you today? I'm a bit nervous: tomorrow I have my first exam."
+    },
+    {
+      "id": "M1.05.repeat",
+      "en": "I'm nervous about my exam. And you, how are you?"
+    },
+    {
+      "id": "M1.06a",
+      "en": "I'm fine, but I'm very sleepy."
+    },
+    {
+      "id": "M1.06b",
+      "en": "I'm fine, but I am (estar) very sleepy."
+    },
+    {
+      "id": "M1.06c",
+      "en": "It's a very pretty café."
+    },
+    {
+      "id": "M1.06r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M1.07",
+      "en": "I'm sleepy too! Hey, and what are you like? I'm a bit shy, but very adventurous. And your friends? What are they like?"
+    },
+    {
+      "id": "M1.07.repeat",
+      "en": "I'm shy. What are you like?"
+    },
+    {
+      "id": "M1.08a",
+      "en": "I'm very smart, ha ha! My friends are a lot of fun."
+    },
+    {
+      "id": "M1.08b",
+      "en": "I'm very smart, ha ha! My friends are a lot of fun (singular)."
+    },
+    {
+      "id": "M1.08c",
+      "en": "I'm here in the café."
+    },
+    {
+      "id": "M1.08r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M1.09",
+      "en": "Ha ha! Hey, can you give me your number? That way we can meet up another day with Valeria."
+    },
+    {
+      "id": "M1.09.repeat",
+      "en": "What's your phone number?"
+    },
+    {
+      "id": "M1.10a",
+      "en": "Sure. My number is forty-two, fifteen, seventy-eight, thirty, sixty-one."
+    },
+    {
+      "id": "M1.10b",
+      "en": "Sure. My number is (estar) forty-two, fifteen, seventy-eight..."
+    },
+    {
+      "id": "M1.10c",
+      "en": "I'm forty-two years old."
+    },
+    {
+      "id": "M1.10r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M1.11",
+      "en": "Perfect! Oh, look, here comes Valeria! Finally! Great to meet you. See you later!"
+    },
+    {
+      "id": "M2.title",
+      "en": "What do you study?"
+    },
+    {
+      "id": "M2.goal",
+      "en": "Greet, talk about your classes and professors, and ask questions with ¿verdad? and cuál."
+    },
+    {
+      "id": "M2.01",
+      "en": "Hi again! How's it going? How are you?"
+    },
+    {
+      "id": "M2.01.repeat",
+      "en": "Hi. How are you?"
+    },
+    {
+      "id": "M2.02a",
+      "en": "Hi, Mateo! Very well, and you? You're waiting for Valeria again, right?"
+    },
+    {
+      "id": "M2.02b",
+      "en": "Hi, Mateo! We are fine, and you? You're waiting for Valeria again, right?"
+    },
+    {
+      "id": "M2.02c",
+      "en": "Bye, Mateo! See you tomorrow!"
+    },
+    {
+      "id": "M2.02r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M2.03",
+      "en": "Yes, late again! Valeria and I are in the same program. We're classmates. You study here, right?"
+    },
+    {
+      "id": "M2.03.repeat",
+      "en": "You study here, right?"
+    },
+    {
+      "id": "M2.04a",
+      "en": "Yes, I study here. My major is psychology."
+    },
+    {
+      "id": "M2.04b",
+      "en": "Yes, I am (estar) a student here. My major is psychology."
+    },
+    {
+      "id": "M2.04c",
+      "en": "I don't know. What time is it?"
+    },
+    {
+      "id": "M2.04r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M2.05",
+      "en": "How interesting! We study Spanish and communication. What classes do you have this semester?"
+    },
+    {
+      "id": "M2.05.repeat",
+      "en": "What classes do you have?"
+    },
+    {
+      "id": "M2.06a",
+      "en": "I have biology, history and math. And you all? Which is your favorite class?"
+    },
+    {
+      "id": "M2.06b",
+      "en": "I have biology, history and math. What (qué) is your favorite class?"
+    },
+    {
+      "id": "M2.06c",
+      "en": "I'm twenty years old."
+    },
+    {
+      "id": "M2.06r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M2.07",
+      "en": "Literature class! It's hard, but the professors are very good. What are your professors like?"
+    },
+    {
+      "id": "M2.07.repeat",
+      "en": "What are your professors like?"
+    },
+    {
+      "id": "M2.08a",
+      "en": "My professors are very nice, but the exams are hard."
+    },
+    {
+      "id": "M2.08b",
+      "en": "My professors are (estar) very nice, but the exams are hard."
+    },
+    {
+      "id": "M2.08c",
+      "en": "My professors are at the university."
+    },
+    {
+      "id": "M2.08r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M2.09",
+      "en": "Valeria and I are very tired this week. And you and your friends? Are you all tired too?"
+    },
+    {
+      "id": "M2.09.repeat",
+      "en": "Are you all tired too?"
+    },
+    {
+      "id": "M2.10a",
+      "en": "Yes, we're very tired. We have lots of exams!"
+    },
+    {
+      "id": "M2.10b",
+      "en": "Yes, we are (ser) very tired. We have lots of exams!"
+    },
+    {
+      "id": "M2.10c",
+      "en": "Yes, we're from Texas."
+    },
+    {
+      "id": "M2.10r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M2.11",
+      "en": "Hang in there! Oh, finally, there's Valeria! Valeria, over here! Well, see you soon!"
+    },
+    {
+      "id": "M3.title",
+      "en": "What are you going to do on Saturday?"
+    },
+    {
+      "id": "M3.goal",
+      "en": "Tell the time, talk about plans with ir a and obligations with tener que, and accept an invitation."
+    },
+    {
+      "id": "M3.01",
+      "en": "Hi! What time is it? Valeria says she's arriving at a quarter past one."
+    },
+    {
+      "id": "M3.01.repeat",
+      "en": "What time is it, please?"
+    },
+    {
+      "id": "M3.02a",
+      "en": "It's one thirty."
+    },
+    {
+      "id": "M3.02b",
+      "en": "They are (plural) one thirty."
+    },
+    {
+      "id": "M3.02c",
+      "en": "It's Tuesday."
+    },
+    {
+      "id": "M3.02r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M3.03",
+      "en": "Oh, she's always late! Hey, what are you going to do this weekend?"
+    },
+    {
+      "id": "M3.03.repeat",
+      "en": "What are you going to do on Saturday and Sunday?"
+    },
+    {
+      "id": "M3.04a",
+      "en": "On Saturday afternoon I'm going to go to the movies, but on Sunday I have to study."
+    },
+    {
+      "id": "M3.04b",
+      "en": "On Saturday afternoon I'm going go to the movies, but on Sunday I have to study."
+    },
+    {
+      "id": "M3.04c",
+      "en": "My birthday is in March."
+    },
+    {
+      "id": "M3.04r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M3.05",
+      "en": "Great! We're going to a concert on Saturday at nine at night. Do you want to come with us?"
+    },
+    {
+      "id": "M3.05.repeat",
+      "en": "Are you coming to the concert on Saturday at nine?"
+    },
+    {
+      "id": "M3.06a",
+      "en": "Yes, of course! What time does it end?"
+    },
+    {
+      "id": "M3.06b",
+      "en": "Yes, of course! What time does it end? (missing 'a')"
+    },
+    {
+      "id": "M3.06c",
+      "en": "It's nine at night."
+    },
+    {
+      "id": "M3.06r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M3.07",
+      "en": "It ends at eleven thirty. Afterwards we're going to have tacos for dinner. Do you have plans Sunday morning?"
+    },
+    {
+      "id": "M3.07.repeat",
+      "en": "What are you going to do Sunday morning?"
+    },
+    {
+      "id": "M3.08a",
+      "en": "Yes, I have to wash my clothes and clean the house. How boring!"
+    },
+    {
+      "id": "M3.08b",
+      "en": "Yes, I have to I-wash my clothes and clean the house."
+    },
+    {
+      "id": "M3.08c",
+      "en": "It's in winter."
+    },
+    {
+      "id": "M3.08r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M3.09",
+      "en": "Ugh, me too! Well, how about we meet here on Saturday at eight thirty?"
+    },
+    {
+      "id": "M3.09.repeat",
+      "en": "Shall we meet here on Saturday at eight thirty?"
+    },
+    {
+      "id": "M3.10a",
+      "en": "Perfect! See you here on Saturday at eight thirty."
+    },
+    {
+      "id": "M3.10b",
+      "en": "Perfect! See you here on Saturday at eight half (medio)."
+    },
+    {
+      "id": "M3.10c",
+      "en": "I have to work on Wednesday."
+    },
+    {
+      "id": "M3.10r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M3.11",
+      "en": "Great! Look, here comes Valeria... at a quarter to two! Half an hour late, as always. See you Saturday!"
+    },
+    {
+      "id": "M4.title",
+      "en": "Where is the gym?"
+    },
+    {
+      "id": "M4.goal",
+      "en": "Help Mateo with campus places using hay, ser and estar, talk about your routine and what you like."
+    },
+    {
+      "id": "M4.01",
+      "en": "Hi! Hey, can you help me? I still don't know the campus well. Is there a library near here?"
+    },
+    {
+      "id": "M4.01.repeat",
+      "en": "Is there a library around here?"
+    },
+    {
+      "id": "M4.02a",
+      "en": "Yes, there's a very big library. It's next to the student center."
+    },
+    {
+      "id": "M4.02b",
+      "en": "Yes, a very big library is (estar) next to the student center."
+    },
+    {
+      "id": "M4.02c",
+      "en": "Yes, the bookstore sells textbooks."
+    },
+    {
+      "id": "M4.02r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M4.03",
+      "en": "Thanks! And where is the gym? I really like to exercise."
+    },
+    {
+      "id": "M4.03.repeat",
+      "en": "Where is the gym?"
+    },
+    {
+      "id": "M4.04a",
+      "en": "The gym is far, near the dorm."
+    },
+    {
+      "id": "M4.04b",
+      "en": "The gym is (ser) far, near the dorm."
+    },
+    {
+      "id": "M4.04c",
+      "en": "There's a gym."
+    },
+    {
+      "id": "M4.04r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M4.05",
+      "en": "Perfect. Hey, do you work or just study?"
+    },
+    {
+      "id": "M4.05.repeat",
+      "en": "Do you work or just study?"
+    },
+    {
+      "id": "M4.06a",
+      "en": "I study and I also work at the library on Tuesdays and Thursdays."
+    },
+    {
+      "id": "M4.06b",
+      "en": "I study and he/she also works at the library on Tuesdays and Thursdays."
+    },
+    {
+      "id": "M4.06c",
+      "en": "I like the library."
+    },
+    {
+      "id": "M4.06r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M4.07",
+      "en": "Nice! I take four subjects and spend a lot of time here at the café. Do you like this café?"
+    },
+    {
+      "id": "M4.07.repeat",
+      "en": "Do you like this café?"
+    },
+    {
+      "id": "M4.08a",
+      "en": "Yes, I like it a lot. It's a very quiet place."
+    },
+    {
+      "id": "M4.08b",
+      "en": "Yes, I like it a lot. It is (estar) a very quiet place."
+    },
+    {
+      "id": "M4.08c",
+      "en": "Yes, there's a café."
+    },
+    {
+      "id": "M4.08r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M4.09",
+      "en": "Me too. Well, and what don't you like about campus?"
+    },
+    {
+      "id": "M4.09.repeat",
+      "en": "What things don't you like about campus?"
+    },
+    {
+      "id": "M4.10a",
+      "en": "I don't like dirty, messy classrooms."
+    },
+    {
+      "id": "M4.10b",
+      "en": "I don't like (singular) dirty, messy classrooms."
+    },
+    {
+      "id": "M4.10c",
+      "en": "I like the cafeteria."
+    },
+    {
+      "id": "M4.10r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M4.11",
+      "en": "Ha ha, you're right! Oh, look, there's Valeria. Thanks for everything! See you on campus!"
+    },
+    {
+      "id": "M5.title",
+      "en": "Do you know Valeria?"
+    },
+    {
+      "id": "M5.goal",
+      "en": "Tell saber from conocer, use -er/-ir verbs and describe personal qualities."
+    },
+    {
+      "id": "M5.01",
+      "en": "Hi! Today you're finally going to meet Valeria... if she arrives. Do you know a lot of people at the university?"
+    },
+    {
+      "id": "M5.01.repeat",
+      "en": "Do you know many people here?"
+    },
+    {
+      "id": "M5.02a",
+      "en": "Yes, I know many classmates, but I don't know Valeria."
+    },
+    {
+      "id": "M5.02b",
+      "en": "Yes, I know (saber) many classmates, but I don't know Valeria."
+    },
+    {
+      "id": "M5.02c",
+      "en": "Yes, I know how to speak Spanish."
+    },
+    {
+      "id": "M5.02r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M5.03",
+      "en": "Valeria is very nice and creative. She writes poems, paints and always shares her food."
+    },
+    {
+      "id": "M5.03.repeat",
+      "en": "Valeria is nice and creative. She writes poems."
+    },
+    {
+      "id": "M5.04a",
+      "en": "How nice! And where does Valeria live?"
+    },
+    {
+      "id": "M5.04b",
+      "en": "How nice! And where do I-live Valeria?"
+    },
+    {
+      "id": "M5.04c",
+      "en": "I write a letter."
+    },
+    {
+      "id": "M5.04r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M5.05",
+      "en": "She lives in a dorm near campus. We eat together on Fridays. Hey, do you know how to cook?"
+    },
+    {
+      "id": "M5.05.repeat",
+      "en": "Do you know how to cook?"
+    },
+    {
+      "id": "M5.06a",
+      "en": "Yes, I know how to cook a little. I eat at home almost every day."
+    },
+    {
+      "id": "M5.06b",
+      "en": "Yes, I know (conocer) how to cook a little. I eat at home almost every day."
+    },
+    {
+      "id": "M5.06c",
+      "en": "Yes, I know the restaurant."
+    },
+    {
+      "id": "M5.06r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M5.07",
+      "en": "Nice! I don't know how to cook at all. Valeria says I'm hopeless, ha ha! And you? What are your best qualities?"
+    },
+    {
+      "id": "M5.07.repeat",
+      "en": "What are you like? What qualities do you have?"
+    },
+    {
+      "id": "M5.08a",
+      "en": "I'm patient, responsible and very cheerful."
+    },
+    {
+      "id": "M5.08b",
+      "en": "I am (estar) patient, responsible and very cheerful."
+    },
+    {
+      "id": "M5.08c",
+      "en": "I'm from Florida."
+    },
+    {
+      "id": "M5.08r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M5.09",
+      "en": "So you're like Valeria! Well... she isn't very punctual. Do you think she's coming today?"
+    },
+    {
+      "id": "M5.09.repeat",
+      "en": "Do you think Valeria is coming today?"
+    },
+    {
+      "id": "M5.10a",
+      "en": "Yes, I think she's arriving soon. I don't know when, but she's coming!"
+    },
+    {
+      "id": "M5.10b",
+      "en": "Yes, you think she's arriving soon. I don't know when, but she's coming!"
+    },
+    {
+      "id": "M5.10c",
+      "en": "Yes, I eat sweet bread."
+    },
+    {
+      "id": "M5.10r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M5.11",
+      "en": "Ha ha! Look, there she is! Valeria, come here, I want you to meet someone very special!"
+    },
+    {
+      "id": "M6.title",
+      "en": "My family in Mexico"
+    },
+    {
+      "id": "M6.goal",
+      "en": "Talk about families with possessives, describe people and use stem-changing verbs."
+    },
+    {
+      "id": "M6.01",
+      "en": "Hi! Look, this is a photo of my host family here in Mexico. Do you want to see it?"
+    },
+    {
+      "id": "M6.01.repeat",
+      "en": "Do you want to see the photo of my host family?"
+    },
+    {
+      "id": "M6.02a",
+      "en": "Sure, I want to see the photo! Who are they?"
+    },
+    {
+      "id": "M6.02b",
+      "en": "Sure, I want to see the photo! Who are they? (no stem change)"
+    },
+    {
+      "id": "M6.02c",
+      "en": "Yes, I'm twenty years old."
+    },
+    {
+      "id": "M6.02r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M6.03",
+      "en": "She's my host mother, Carmen, and he's her husband, Jorge. These are their kids, Ana and Luis. And your family? What's it like?"
+    },
+    {
+      "id": "M6.03.repeat",
+      "en": "What's your family like?"
+    },
+    {
+      "id": "M6.04a",
+      "en": "My family is small. I have a sister and my parents are divorced."
+    },
+    {
+      "id": "M6.04b",
+      "en": "My family is small. I have a sister and my (singular) parents are divorced."
+    },
+    {
+      "id": "M6.04c",
+      "en": "His/your family is very nice."
+    },
+    {
+      "id": "M6.04r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M6.05",
+      "en": "Oh, and what's your sister like? Do you look alike?"
+    },
+    {
+      "id": "M6.05.repeat",
+      "en": "What's your sister like? Do you look alike?"
+    },
+    {
+      "id": "M6.06a",
+      "en": "She's tall and dark-haired, and she has long hair. We don't look much alike."
+    },
+    {
+      "id": "M6.06b",
+      "en": "She's tall and dark-haired (masculine), and she has long hair. We don't look much alike."
+    },
+    {
+      "id": "M6.06c",
+      "en": "My sister prefers coffee."
+    },
+    {
+      "id": "M6.06r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M6.07",
+      "en": "How interesting! Hey, my host family is having a family lunch on Sunday. Can you come?"
+    },
+    {
+      "id": "M6.07.repeat",
+      "en": "Can you come to the lunch on Sunday?"
+    },
+    {
+      "id": "M6.08a",
+      "en": "Yes, I can! What do they prefer to eat: tacos or enchiladas?"
+    },
+    {
+      "id": "M6.08b",
+      "en": "Yes, I can! What do they prefer to eat: tacos or enchiladas? (no stem change)"
+    },
+    {
+      "id": "M6.08c",
+      "en": "My cousin plays soccer."
+    },
+    {
+      "id": "M6.08r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M6.09",
+      "en": "They prefer tacos, of course! Hey, and do you dream of visiting Spain someday?"
+    },
+    {
+      "id": "M6.09.repeat",
+      "en": "Do you dream of going to Spain?"
+    },
+    {
+      "id": "M6.10a",
+      "en": "Yes! I dream of visiting Sevilla and meeting your family."
+    },
+    {
+      "id": "M6.10b",
+      "en": "Yes! I dream of visiting Sevilla and meeting your family. (no stem change)"
+    },
+    {
+      "id": "M6.10c",
+      "en": "Yes, my grandparents are from Texas."
+    },
+    {
+      "id": "M6.10r",
+      "en": "Could you repeat that more slowly, please?"
+    },
+    {
+      "id": "M6.11",
+      "en": "Of course! Oh, look, here comes Valeria with Luis, my host brother. Valeria, Luis, over here! See you Sunday!"
     }
   ]
 }

@@ -30,6 +30,9 @@ namespace SpanishCafe
         {
             foreach (var level in CafeContent.Levels)
             {
+                PlayerPrefs.DeleteKey(Prefix + "done." + level.ProgressKey);
+                PlayerPrefs.DeleteKey(Prefix + "best." + level.ProgressKey);
+                // Older versions saved by the unidad name, clear those too
                 PlayerPrefs.DeleteKey(Prefix + "done." + level.level);
                 PlayerPrefs.DeleteKey(Prefix + "best." + level.level);
             }

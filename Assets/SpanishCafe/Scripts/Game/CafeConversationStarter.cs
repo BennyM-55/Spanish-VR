@@ -26,6 +26,12 @@ namespace SpanishCafe
         [Tooltip("Auto = floating panel with a headset, flat screen without one. Pick World to test the VR panel on a computer.")]
         public CafeDialogueUI.PanelMode panelMode = CafeDialogueUI.PanelMode.Auto;
 
+        [Tooltip("1 = order at the counter (Lupita), 2 = talk at the table (Mateo). Matches the lessons in the main menu.")]
+        public int lesson = 1;
+
+        [Tooltip("Turn this on for Mateo: the student has to sit in the chair first, then press E.")]
+        public bool needsToSit;
+
         [Tooltip("Extra scripts to pause while talking, like a camera controller.")]
         public Behaviour[] pauseWhileTalking;
 
@@ -38,6 +44,11 @@ namespace SpanishCafe
         };
 
         readonly List<Behaviour> paused = new List<Behaviour>();
+
+        // For needsToSit: found once, then reused every frame
+        Animator playerAnimator;
+        bool checkedAnimator, hasSitParam;
+        float sittingSince = -1f;
         CafeDialogueUI ui;
         bool talking;
         CursorLockMode savedLockState;
@@ -85,7 +96,13 @@ namespace SpanishCafe
 
             ui.SetPanelMode(panelMode);
             bool near = FlatDistance(player.position, transform.position) <= talkDistance;
-            ui.ShowPrompt(this, near ? $"Presiona E o A para hablar con {staffName}  ·  Press E or A to talk" : null);
+            if (near && needsToSit && !PlayerIsSitting())
+            {
+                // James's chair sets IsSitting on the student, so Mateo waits until you sit down
+                ui.ShowPrompt(this, $"Siéntate para hablar con {staffName}");
+                return;
+            }
+            ui.ShowPrompt(this, near ? $"Presiona E o A para hablar con {staffName}" : null);
 
             if (near && CafeInput.TalkPressed) StartTalking();
         }
@@ -114,7 +131,7 @@ namespace SpanishCafe
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
 
-            ui.Open(staffName, voice, transform, player);
+            ui.Open(staffName, voice, transform, player, lesson);
         }
 
         void StopTalking()
@@ -150,6 +167,33 @@ namespace SpanishCafe
             foreach (var name in AutoPauseScripts)
                 if (typeName == name) return true;
             return false;
+        }
+
+        bool PlayerIsSitting()
+        {
+            if (!checkedAnimator)
+            {
+                checkedAnimator = true;
+                // Look for the animator that has IsSitting (the student might have more than one)
+                foreach (var animator in player.GetComponentsInChildren<Animator>())
+                    if (animator.runtimeAnimatorController != null && HasBool(animator, "IsSitting"))
+                    {
+                        playerAnimator = animator;
+                        hasSitParam = true;
+                        break;
+                    }
+            }
+            if (!hasSitParam) return true; // no chair setup, let them talk
+
+            if (!playerAnimator.GetBool("IsSitting"))
+            {
+                sittingSince = -1f;
+                return false;
+            }
+
+            // Wait a moment after sitting, so the key that sat them down doesn't also start the talk
+            if (sittingSince < 0f) sittingSince = Time.time;
+            return Time.time - sittingSince > 0.3f;
         }
 
         static bool HasBool(Animator animator, string name)

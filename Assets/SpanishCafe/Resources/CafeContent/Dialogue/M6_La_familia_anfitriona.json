@@ -1,0 +1,190 @@
+{
+  "scenarioId": "M6",
+  "level": "Unidad 6",
+  "staffName": "Mateo",
+  "titleEs": "Mi familia en México",
+  "goalEs": "Hablar de familias con posesivos, describir a las personas y usar verbos con cambio de raíz.",
+  "turns": [
+    {
+      "id": "M6.01",
+      "speaker": "staff",
+      "es": "¡Hola! Mira, esta es una foto de mi familia anfitriona aquí en México. ¿Quieres verla?",
+      "repeatEs": "¿Quieres ver la foto de mi familia anfitriona?",
+      "next": "M6.02"
+    },
+    {
+      "id": "M6.02",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M6.02a",
+          "es": "¡Claro, quiero ver la foto! ¿Quiénes son?",
+          "result": "correct",
+          "next": "M6.03"
+        },
+        {
+          "id": "M6.02b",
+          "es": "¡Claro, quero ver la foto! ¿Quiénes son?",
+          "result": "awkward",
+          "next": "M6.03"
+        },
+        {
+          "id": "M6.02c",
+          "es": "Sí, tengo veinte años.",
+          "result": "wrong"
+        },
+        {
+          "id": "M6.02r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M6.03",
+      "speaker": "staff",
+      "es": "Esta es mi madre anfitriona, Carmen, y este es su esposo, Jorge. Estos son sus hijos, Ana y Luis. ¿Y tu familia? ¿Cómo es?",
+      "repeatEs": "¿Cómo es tu familia?",
+      "next": "M6.04"
+    },
+    {
+      "id": "M6.04",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M6.04a",
+          "es": "Mi familia es pequeña. Tengo una hermana y mis padres están divorciados.",
+          "result": "correct",
+          "next": "M6.05"
+        },
+        {
+          "id": "M6.04b",
+          "es": "Mi familia es pequeña. Tengo una hermana y mi padres están divorciados.",
+          "result": "awkward",
+          "next": "M6.05"
+        },
+        {
+          "id": "M6.04c",
+          "es": "Su familia es muy bonita.",
+          "result": "wrong"
+        },
+        {
+          "id": "M6.04r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M6.05",
+      "speaker": "staff",
+      "es": "Ah, ¿y cómo es tu hermana? ¿Se parecen?",
+      "repeatEs": "¿Cómo es tu hermana? ¿Se parecen?",
+      "next": "M6.06"
+    },
+    {
+      "id": "M6.06",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M6.06a",
+          "es": "Es alta y morena, y tiene el pelo largo. No nos parecemos mucho.",
+          "result": "correct",
+          "next": "M6.07"
+        },
+        {
+          "id": "M6.06b",
+          "es": "Es alta y moreno, y tiene el pelo largo. No nos parecemos mucho.",
+          "result": "awkward",
+          "next": "M6.07"
+        },
+        {
+          "id": "M6.06c",
+          "es": "Mi hermana prefiere el café.",
+          "result": "wrong"
+        },
+        {
+          "id": "M6.06r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M6.07",
+      "speaker": "staff",
+      "es": "¡Qué interesante! Oye, mi familia anfitriona hace una comida el domingo. ¿Puedes venir?",
+      "repeatEs": "¿Puedes venir a la comida del domingo?",
+      "next": "M6.08"
+    },
+    {
+      "id": "M6.08",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M6.08a",
+          "es": "¡Sí, puedo! ¿Qué prefieren comer: tacos o enchiladas?",
+          "result": "correct",
+          "next": "M6.09"
+        },
+        {
+          "id": "M6.08b",
+          "es": "¡Sí, podo! ¿Qué prefieren comer: tacos o enchiladas?",
+          "result": "awkward",
+          "next": "M6.09"
+        },
+        {
+          "id": "M6.08c",
+          "es": "Mi primo juega fútbol.",
+          "result": "wrong"
+        },
+        {
+          "id": "M6.08r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M6.09",
+      "speaker": "staff",
+      "es": "¡Prefieren tacos, claro! Oye, ¿y tú sueñas con visitar España algún día?",
+      "repeatEs": "¿Sueñas con ir a España?",
+      "next": "M6.10"
+    },
+    {
+      "id": "M6.10",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M6.10a",
+          "es": "¡Sí! Sueño con visitar Sevilla y conocer a tu familia.",
+          "result": "correct",
+          "next": "M6.11"
+        },
+        {
+          "id": "M6.10b",
+          "es": "¡Sí! Soño con visitar Sevilla y conocer a tu familia.",
+          "result": "awkward",
+          "next": "M6.11"
+        },
+        {
+          "id": "M6.10c",
+          "es": "Sí, mis abuelos son de Texas.",
+          "result": "wrong"
+        },
+        {
+          "id": "M6.10r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M6.11",
+      "speaker": "staff",
+      "es": "¡Pues claro que sí! Ah, mira, ahí viene Valeria con Luis, mi hermano anfitrión. ¡Valeria, Luis, aquí! ¡Hasta el domingo!",
+      "end": true
+    }
+  ]
+}

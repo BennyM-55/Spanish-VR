@@ -13,7 +13,7 @@ namespace SpanishCafe
     
     public class CafeDialogueUI : MonoBehaviour
     {
-        enum Mode { Closed, LevelSelect, Talking, Summary }
+        enum Mode { Closed, LevelSelect, Talking, Summary, Notice }
 
         // Auto picks World when a headset is on, and Screen on a normal computer
         public enum PanelMode { Auto, Screen, World }
@@ -76,6 +76,10 @@ namespace SpanishCafe
         // Saved the first time the score screen shows, so redrawing it never loses the "¡Nuevo récord!"
         int summaryBestBefore;
         bool summaryNewBest;
+
+        // Which lesson this character runs (1 = Lupita at the counter, 2 = Mateo at the table)
+        int lessonHere = 1;
+        string noticeEs, noticeEn;
         string shuffledFor;
         string repeatShownFor;
 
@@ -150,7 +154,8 @@ namespace SpanishCafe
             UseWorld(wanted == PanelMode.World || (wanted == PanelMode.Auto && UnityEngine.XR.XRSettings.isDeviceActive));
         }
 
-public void Open(string workerName, AudioSource voiceSource, Transform worker = null, Transform student = null) {
+        public void Open(string workerName, AudioSource voiceSource, Transform worker = null, Transform student = null, int lesson = 1)
+        {
             staffName = string.IsNullOrEmpty(workerName) ? "Lupita" : workerName;
             voice = voiceSource;
             studentSpeech.Follow(student);
@@ -159,16 +164,20 @@ public void Open(string workerName, AudioSource voiceSource, Transform worker = 
             panel.SetActive(true);
             if (inWorld) PlaceInFront(worker);
             subtitlesOn = false; // the professor wants Spanish only to start, students can press T if they need English
-
+            lessonHere = Mathf.Clamp(lesson, 1, 2);
             CafeContent.EnsureLoaded();
 
-            int unit = GameManager.instance.currentUnit;
-
-            if (unit >= 1 && unit <= CafeContent.Levels.Length) {
-                StartLevel(CafeContent.Levels[unit - 1]);
-            } else {
+            // Coming from the main menu, the save decides the unit and lesson (Ben's unit selection)
+            // Without the main menu (just testing the café scene) you pick from the list like before
+            if (!CafeFlow.HasMenu)
+            {
                 ShowLevelSelect();
+                return;
             }
+
+            var current = CafeFlow.Current;
+            if (current != null && current.lesson == lessonHere) StartLevel(current);
+            else ShowWhereToGo(current, false);
         }
 
         public void Close()
@@ -188,7 +197,9 @@ public void Open(string workerName, AudioSource voiceSource, Transform worker = 
             StopTalkTurn(); // so a line that was still playing doesn't keep talking on the menu
             feedbackMaker = null;
             mode = Mode.LevelSelect;
-            var levels = CafeContent.Levels;
+            var levels = new List<LevelInfo>();
+            foreach (var level in CafeContent.Levels)
+                if (level.lesson == 0 || level.lesson == lessonHere) levels.Add(level);
 
             headerText.text = CafeContent.Menu?.cafeName ?? "Café La Esquina";
             // Each unidad matches a unit from the Contraseña textbook the class uses
@@ -196,24 +207,24 @@ public void Open(string workerName, AudioSource voiceSource, Transform worker = 
                          "Hi! Welcome to Café La Esquina. Which Contraseña unit do you want to practice today?", subtitlesOn);
 
             ClearChoices();
-            for (int i = 0; i < levels.Length; i++)
+            for (int i = 0; i < levels.Count; i++)
             {
                 var level = levels[i];
                 string title = CafeContent.GetScenario(level)?.titleEs ?? "";
 
                 // Green "Hecho" and best score next to levels they already finished
                 // (the default font doesn't have a check mark, it shows up as a box)
-                string done = CafeProgress.Finished(level.level)
-                    ? $"   <color={Green}><b>Hecho</b> · {Mathf.Max(0, CafeProgress.Best(level.level))}/8</color>"
+                string done = CafeProgress.Finished(level.ProgressKey)
+                    ? $"   <color={Green}><b>Hecho</b> · {Mathf.Max(0, CafeProgress.Best(level.ProgressKey))}/8</color>"
                     : "";
                 string english = subtitlesOn ? $" <color={Grey}>({level.nameEn})</color>" : "";
                 AddChoiceButton(i + 1, $"<b>{level.level}</b> · {level.nameEs}{english}{done}", title, () => StartLevel(level));
             }
 
-            feedbackText.text = levels.Length == 0
+            feedbackText.text = levels.Count == 0
                 ? Colored(Red, "No levels found. Check Resources/CafeContent/Levels/levels.json.")
                 : "";
-            int count = Mathf.Max(1, levels.Length);
+            int count = Mathf.Max(1, levels.Count);
             orderText.text = inWorld
                 ? $"Apunta y aprieta el gatillo, o usa 1–{count}" + En(" · Point and pull the trigger, or keys 1–" + count, true)
                 : $"Usa el ratón o las teclas 1–{count}" + En(" · Use the mouse or number keys", true);
@@ -255,7 +266,7 @@ public void Open(string workerName, AudioSource voiceSource, Transform worker = 
             }
 
             var level = manager.Level;
-            headerText.text = $"{staffName} · {level.level} {level.nameEs} · {manager.Scenario.titleEs}";
+            headerText.text = $"{staffName} · {level.Label} · {manager.Scenario.titleEs}";
 
             var staff = manager.StaffTurn;
             if (staff != null)
@@ -283,13 +294,14 @@ public void Open(string workerName, AudioSource voiceSource, Transform worker = 
             var staff = manager.StaffTurn;
             if (firstTime)
             {
-                summaryBestBefore = CafeProgress.Best(level.level);
-                summaryNewBest = CafeProgress.Record(level.level, score.Total);
+                summaryBestBefore = CafeProgress.Best(level.ProgressKey);
+                summaryNewBest = CafeProgress.Record(level.ProgressKey, score.Total);
+                CafeFlow.Complete(level); // tells the main menu save this lesson is done
             }
             int bestBefore = summaryBestBefore;
             bool newBest = summaryNewBest;
 
-            headerText.text = $"¡Terminaste! · {level.level} {level.nameEs} · {manager.Scenario.titleEs}";
+            headerText.text = $"¡Terminaste! · {level.Label} · {manager.Scenario.titleEs}";
             if (staff != null)
                 SetStaffLine($"<b>{staffName}:</b> {staff.es}", CafeContent.English(staff.id), subtitlesOn);
 
@@ -313,9 +325,72 @@ public void Open(string workerName, AudioSource voiceSource, Transform worker = 
             orderText.text = OrderSummary();
 
             ClearChoices();
-            AddChoiceButton(1, "Jugar otra vez", En("Play again"), () => StartLevel(level));
-            AddChoiceButton(2, "Elegir otra unidad", En("Choose another unit"), ShowLevelSelect);
-            AddChoiceButton(3, "Cerrar", En("Close"), Close);
+            if (CafeFlow.HasMenu)
+            {
+                // Main menu game: keep going, try again, or save and go back to the menu
+                var next = CafeFlow.Next(level);
+                if (next != null)
+                    AddChoiceButton(1, next.lesson == 2 ? "Siguiente: hablar con Mateo" : $"Siguiente: {next.level}",
+                        En(next.lesson == 2 ? "Next: talk with Mateo" : "Next: unit " + next.unit), () => GoNext(level));
+                AddChoiceButton(numberActions.Count + 1, "Repetir", En("Try again"), () => StartLevel(level));
+                AddChoiceButton(numberActions.Count + 1, "Guardar y salir", En("Save and quit"), SaveAndQuit);
+            }
+            else
+            {
+                AddChoiceButton(1, "Jugar otra vez", En("Play again"), () => StartLevel(level));
+                AddChoiceButton(2, "Elegir otra unidad", En("Choose another unit"), ShowLevelSelect);
+                AddChoiceButton(3, "Cerrar", En("Close"), Close);
+            }
+            hintButton.gameObject.SetActive(false);
+            subtitleButton.gameObject.SetActive(true);
+            RefreshButtons();
+        }
+
+        // Flow between lessons
+
+        void GoNext(LevelInfo level)
+        {
+            var next = CafeFlow.Next(level);
+            CafeFlow.MoveTo(next);
+            if (next != null && next.lesson == lessonHere) StartLevel(next);
+            else ShowWhereToGo(next, true);
+        }
+
+        void SaveAndQuit()
+        {
+            Close();
+            CafeFlow.SaveAndQuit();
+        }
+
+        // Tells the student where their next lesson is when they talk to the other character
+        void ShowWhereToGo(LevelInfo target, bool justFinished)
+        {
+            string start = justFinished ? "¡Muy bien! " : "¡Hola otra vez! ";
+            string startEn = justFinished ? "Nice job! " : "Hi again! ";
+            if (target == null)
+                ShowNotice("¡Felicidades! Terminaste todas las unidades de Contraseña. Puedes repasarlas desde el menú principal.",
+                           "Congratulations! You finished all the Contraseña units. You can review them from the main menu.");
+            else if (target.lesson == 2)
+                ShowNotice(start + "Mateo te está esperando en la mesa. Siéntate con él y presiona E.",
+                           startEn + "Mateo is waiting for you at the table. Sit with him and press E.");
+            else
+                ShowNotice(start + $"Ahora ve al mostrador: Lupita te espera para la {target.level}.",
+                           startEn + $"Now go to the counter: Lupita is waiting for you for unit {target.unit}.");
+        }
+
+        void ShowNotice(string spanish, string english)
+        {
+            StopTalkTurn();
+            mode = Mode.Notice;
+            noticeEs = spanish;
+            noticeEn = english;
+            feedbackMaker = null;
+            headerText.text = CafeContent.Menu?.cafeName ?? "Café La Esquina";
+            SetStaffLine($"<b>{staffName}:</b> {spanish}", english, subtitlesOn);
+            ClearChoices();
+            AddChoiceButton(1, "Cerrar", En("Close"), Close);
+            feedbackText.text = "";
+            orderText.text = "";
             hintButton.gameObject.SetActive(false);
             subtitleButton.gameObject.SetActive(true);
             RefreshButtons();
@@ -469,6 +544,7 @@ public void Open(string workerName, AudioSource voiceSource, Transform worker = 
 
             // Redraw the buttons so the English under each answer shows up or goes away right now
             if (mode == Mode.LevelSelect) ShowLevelSelect();
+            else if (mode == Mode.Notice) ShowNotice(noticeEs, noticeEn);
             else if (mode == Mode.Summary) ShowSummary(feedbackMaker?.Invoke() ?? "");
             else if (mode == Mode.Talking)
             {

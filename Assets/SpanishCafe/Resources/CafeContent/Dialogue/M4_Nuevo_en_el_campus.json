@@ -1,0 +1,190 @@
+{
+  "scenarioId": "M4",
+  "level": "Unidad 4",
+  "staffName": "Mateo",
+  "titleEs": "¿Dónde está el gimnasio?",
+  "goalEs": "Ayudar a Mateo con lugares del campus usando hay, ser y estar, hablar de tu rutina y de lo que te gusta.",
+  "turns": [
+    {
+      "id": "M4.01",
+      "speaker": "staff",
+      "es": "¡Hola! Oye, ¿me ayudas? Todavía no conozco bien el campus. ¿Hay una biblioteca cerca de aquí?",
+      "repeatEs": "¿Hay una biblioteca por aquí?",
+      "next": "M4.02"
+    },
+    {
+      "id": "M4.02",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M4.02a",
+          "es": "Sí, hay una biblioteca muy grande. Está al lado del centro estudiantil.",
+          "result": "correct",
+          "next": "M4.03"
+        },
+        {
+          "id": "M4.02b",
+          "es": "Sí, está una biblioteca muy grande al lado del centro estudiantil.",
+          "result": "awkward",
+          "next": "M4.03"
+        },
+        {
+          "id": "M4.02c",
+          "es": "Sí, la librería vende libros de texto.",
+          "result": "wrong"
+        },
+        {
+          "id": "M4.02r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M4.03",
+      "speaker": "staff",
+      "es": "¡Gracias! ¿Y dónde está el gimnasio? Me gusta mucho hacer ejercicio.",
+      "repeatEs": "¿Dónde está el gimnasio?",
+      "next": "M4.04"
+    },
+    {
+      "id": "M4.04",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M4.04a",
+          "es": "El gimnasio está lejos, cerca de la residencia estudiantil.",
+          "result": "correct",
+          "next": "M4.05"
+        },
+        {
+          "id": "M4.04b",
+          "es": "El gimnasio es lejos, cerca de la residencia estudiantil.",
+          "result": "awkward",
+          "next": "M4.05"
+        },
+        {
+          "id": "M4.04c",
+          "es": "Hay un gimnasio.",
+          "result": "wrong"
+        },
+        {
+          "id": "M4.04r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M4.05",
+      "speaker": "staff",
+      "es": "Perfecto. Oye, ¿tú trabajas o solo estudias?",
+      "repeatEs": "¿Trabajas o solo estudias?",
+      "next": "M4.06"
+    },
+    {
+      "id": "M4.06",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M4.06a",
+          "es": "Estudio y también trabajo en la biblioteca los martes y jueves.",
+          "result": "correct",
+          "next": "M4.07"
+        },
+        {
+          "id": "M4.06b",
+          "es": "Estudio y también trabaja en la biblioteca los martes y jueves.",
+          "result": "awkward",
+          "next": "M4.07"
+        },
+        {
+          "id": "M4.06c",
+          "es": "Me gusta la biblioteca.",
+          "result": "wrong"
+        },
+        {
+          "id": "M4.06r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M4.07",
+      "speaker": "staff",
+      "es": "¡Qué bien! Yo llevo cuatro asignaturas y paso mucho tiempo aquí en el café. ¿Te gusta este café?",
+      "repeatEs": "¿Te gusta este café?",
+      "next": "M4.08"
+    },
+    {
+      "id": "M4.08",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M4.08a",
+          "es": "Sí, me gusta mucho. Es un lugar muy tranquilo.",
+          "result": "correct",
+          "next": "M4.09"
+        },
+        {
+          "id": "M4.08b",
+          "es": "Sí, me gusta mucho. Está un lugar muy tranquilo.",
+          "result": "awkward",
+          "next": "M4.09"
+        },
+        {
+          "id": "M4.08c",
+          "es": "Sí, hay un café.",
+          "result": "wrong"
+        },
+        {
+          "id": "M4.08r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M4.09",
+      "speaker": "staff",
+      "es": "A mí también. Bueno, ¿y qué no te gusta del campus?",
+      "repeatEs": "¿Qué cosas no te gustan del campus?",
+      "next": "M4.10"
+    },
+    {
+      "id": "M4.10",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M4.10a",
+          "es": "No me gustan los salones sucios y desordenados.",
+          "result": "correct",
+          "next": "M4.11"
+        },
+        {
+          "id": "M4.10b",
+          "es": "No me gusta los salones sucios y desordenados.",
+          "result": "awkward",
+          "next": "M4.11"
+        },
+        {
+          "id": "M4.10c",
+          "es": "Me gusta la cafetería.",
+          "result": "wrong"
+        },
+        {
+          "id": "M4.10r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M4.11",
+      "speaker": "staff",
+      "es": "¡Ja, ja, tienes razón! Ah, mira, ahí está Valeria. ¡Gracias por todo! ¡Nos vemos en el campus!",
+      "end": true
+    }
+  ]
+}
