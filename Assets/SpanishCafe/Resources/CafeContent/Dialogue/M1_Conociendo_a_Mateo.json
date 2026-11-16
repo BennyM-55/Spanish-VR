@@ -1,0 +1,190 @@
+{
+  "scenarioId": "M1",
+  "level": "Unidad 1",
+  "staffName": "Mateo",
+  "titleEs": "¿Quién eres?",
+  "goalEs": "Presentarte a un compañero, decir de dónde eres, cómo estás y cómo eres.",
+  "turns": [
+    {
+      "id": "M1.01",
+      "speaker": "staff",
+      "es": "¡Hola! Siéntate, siéntate. Estoy esperando a mi amiga Valeria, pero siempre llega tarde. Me llamo Mateo. ¿Y tú, cómo te llamas?",
+      "repeatEs": "Hola, soy Mateo. ¿Cómo te llamas?",
+      "next": "M1.02"
+    },
+    {
+      "id": "M1.02",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M1.02a",
+          "es": "Me llamo Alex. Mucho gusto, Mateo.",
+          "result": "correct",
+          "next": "M1.03"
+        },
+        {
+          "id": "M1.02b",
+          "es": "Estoy Alex. Mucho gusto.",
+          "result": "awkward",
+          "next": "M1.03"
+        },
+        {
+          "id": "M1.02c",
+          "es": "Estoy bien, gracias.",
+          "result": "wrong"
+        },
+        {
+          "id": "M1.02r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M1.03",
+      "speaker": "staff",
+      "es": "Igualmente. Yo soy de Sevilla, en España. Estoy aquí en un programa de intercambio. ¿Tú eres de aquí?",
+      "repeatEs": "Soy de España. ¿Tú eres de aquí?",
+      "next": "M1.04"
+    },
+    {
+      "id": "M1.04",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M1.04a",
+          "es": "No, no soy de aquí. Soy de Florida, en Estados Unidos.",
+          "result": "correct",
+          "next": "M1.05"
+        },
+        {
+          "id": "M1.04b",
+          "es": "No, no soy de aquí. Estoy de Florida.",
+          "result": "awkward",
+          "next": "M1.05"
+        },
+        {
+          "id": "M1.04c",
+          "es": "Tengo veinte años.",
+          "result": "wrong"
+        },
+        {
+          "id": "M1.04r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M1.05",
+      "speaker": "staff",
+      "es": "¡Qué guay! Oye, ¿cómo estás hoy? Yo estoy un poco nervioso: mañana tengo mi primer examen.",
+      "repeatEs": "Estoy nervioso por mi examen. ¿Y tú, cómo estás?",
+      "next": "M1.06"
+    },
+    {
+      "id": "M1.06",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M1.06a",
+          "es": "Estoy bien, pero tengo mucho sueño.",
+          "result": "correct",
+          "next": "M1.07"
+        },
+        {
+          "id": "M1.06b",
+          "es": "Estoy bien, pero estoy mucho sueño.",
+          "result": "awkward",
+          "next": "M1.07"
+        },
+        {
+          "id": "M1.06c",
+          "es": "Es un café muy bonito.",
+          "result": "wrong"
+        },
+        {
+          "id": "M1.06r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M1.07",
+      "speaker": "staff",
+      "es": "¡Yo también tengo sueño! Oye, ¿y tú cómo eres? Yo soy un poco tímido, pero muy aventurero. ¿Y tus amigos? ¿Cómo son?",
+      "repeatEs": "Yo soy tímido. ¿Cómo eres tú?",
+      "next": "M1.08"
+    },
+    {
+      "id": "M1.08",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M1.08a",
+          "es": "Soy muy inteligente, ¡ja, ja! Mis amigos son muy divertidos.",
+          "result": "correct",
+          "next": "M1.09"
+        },
+        {
+          "id": "M1.08b",
+          "es": "Soy muy inteligente, ¡ja, ja! Mis amigos son muy divertido.",
+          "result": "awkward",
+          "next": "M1.09"
+        },
+        {
+          "id": "M1.08c",
+          "es": "Estoy aquí en el café.",
+          "result": "wrong"
+        },
+        {
+          "id": "M1.08r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M1.09",
+      "speaker": "staff",
+      "es": "¡Ja, ja! Oye, ¿me das tu número? Así nos vemos otro día con Valeria.",
+      "repeatEs": "¿Cuál es tu número de teléfono?",
+      "next": "M1.10"
+    },
+    {
+      "id": "M1.10",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M1.10a",
+          "es": "Claro. Mi número es el cuarenta y dos, quince, setenta y ocho, treinta, sesenta y uno.",
+          "result": "correct",
+          "next": "M1.11"
+        },
+        {
+          "id": "M1.10b",
+          "es": "Claro. Mi número está el cuarenta y dos, quince, setenta y ocho...",
+          "result": "awkward",
+          "next": "M1.11"
+        },
+        {
+          "id": "M1.10c",
+          "es": "Tengo cuarenta y dos años.",
+          "result": "wrong"
+        },
+        {
+          "id": "M1.10r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M1.11",
+      "speaker": "staff",
+      "es": "¡Perfecto! Ah, ¡mira, ahí viene Valeria! ¡Por fin! Encantado de conocerte. ¡Hasta luego!",
+      "end": true
+    }
+  ]
+}

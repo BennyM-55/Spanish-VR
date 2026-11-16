@@ -1,0 +1,190 @@
+{
+  "scenarioId": "M3",
+  "level": "Unidad 3",
+  "staffName": "Mateo",
+  "titleEs": "¿Qué vas a hacer el sábado?",
+  "goalEs": "Decir la hora, hablar de planes con ir a y de obligaciones con tener que, y aceptar una invitación.",
+  "turns": [
+    {
+      "id": "M3.01",
+      "speaker": "staff",
+      "es": "¡Hola! ¿Qué hora es? Valeria dice que llega a la una y cuarto.",
+      "repeatEs": "¿Qué hora es, por favor?",
+      "next": "M3.02"
+    },
+    {
+      "id": "M3.02",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M3.02a",
+          "es": "Es la una y media.",
+          "result": "correct",
+          "next": "M3.03"
+        },
+        {
+          "id": "M3.02b",
+          "es": "Son la una y media.",
+          "result": "awkward",
+          "next": "M3.03"
+        },
+        {
+          "id": "M3.02c",
+          "es": "Es martes.",
+          "result": "wrong"
+        },
+        {
+          "id": "M3.02r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M3.03",
+      "speaker": "staff",
+      "es": "¡Ay, ella siempre llega tarde! Oye, ¿qué vas a hacer este fin de semana?",
+      "repeatEs": "¿Qué vas a hacer el sábado y el domingo?",
+      "next": "M3.04"
+    },
+    {
+      "id": "M3.04",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M3.04a",
+          "es": "El sábado por la tarde voy a ir al cine, pero el domingo tengo que estudiar.",
+          "result": "correct",
+          "next": "M3.05"
+        },
+        {
+          "id": "M3.04b",
+          "es": "El sábado por la tarde voy ir al cine, pero el domingo tengo que estudiar.",
+          "result": "awkward",
+          "next": "M3.05"
+        },
+        {
+          "id": "M3.04c",
+          "es": "Mi cumpleaños es en marzo.",
+          "result": "wrong"
+        },
+        {
+          "id": "M3.04r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M3.05",
+      "speaker": "staff",
+      "es": "¡Qué bien! Nosotros vamos a un concierto el sábado a las nueve de la noche. ¿Quieres venir con nosotros?",
+      "repeatEs": "¿Vienes al concierto el sábado a las nueve?",
+      "next": "M3.06"
+    },
+    {
+      "id": "M3.06",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M3.06a",
+          "es": "¡Sí, claro! ¿A qué hora termina?",
+          "result": "correct",
+          "next": "M3.07"
+        },
+        {
+          "id": "M3.06b",
+          "es": "¡Sí, claro! ¿Qué hora termina?",
+          "result": "awkward",
+          "next": "M3.07"
+        },
+        {
+          "id": "M3.06c",
+          "es": "Son las nueve de la noche.",
+          "result": "wrong"
+        },
+        {
+          "id": "M3.06r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M3.07",
+      "speaker": "staff",
+      "es": "Termina a las once y media. Después vamos a cenar tacos. ¿Tienes planes el domingo por la mañana?",
+      "repeatEs": "¿Qué vas a hacer el domingo por la mañana?",
+      "next": "M3.08"
+    },
+    {
+      "id": "M3.08",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M3.08a",
+          "es": "Sí, tengo que lavar la ropa y limpiar la casa. ¡Qué aburrido!",
+          "result": "correct",
+          "next": "M3.09"
+        },
+        {
+          "id": "M3.08b",
+          "es": "Sí, tengo que lavo la ropa y limpiar la casa.",
+          "result": "awkward",
+          "next": "M3.09"
+        },
+        {
+          "id": "M3.08c",
+          "es": "Es en invierno.",
+          "result": "wrong"
+        },
+        {
+          "id": "M3.08r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M3.09",
+      "speaker": "staff",
+      "es": "¡Uf, yo también! Bueno, ¿qué tal si quedamos aquí el sábado a las ocho y media?",
+      "repeatEs": "¿Nos vemos aquí el sábado a las ocho y media?",
+      "next": "M3.10"
+    },
+    {
+      "id": "M3.10",
+      "speaker": "student",
+      "choices": [
+        {
+          "id": "M3.10a",
+          "es": "¡Perfecto! Nos vemos aquí el sábado a las ocho y media.",
+          "result": "correct",
+          "next": "M3.11"
+        },
+        {
+          "id": "M3.10b",
+          "es": "¡Perfecto! Nos vemos aquí el sábado a las ocho y medio.",
+          "result": "awkward",
+          "next": "M3.11"
+        },
+        {
+          "id": "M3.10c",
+          "es": "Tengo que trabajar el miércoles.",
+          "result": "wrong"
+        },
+        {
+          "id": "M3.10r",
+          "es": "¿Puedes repetir más despacio, por favor?",
+          "result": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "M3.11",
+      "speaker": "staff",
+      "es": "¡Genial! Mira, ahí viene Valeria... ¡a las dos menos cuarto! Media hora tarde, como siempre. ¡Hasta el sábado!",
+      "end": true
+    }
+  ]
+}

@@ -41,13 +41,34 @@ namespace SpanishCafe.EditorTools
                 PlayWrongThenCorrect(level, problems);
                 CheckRepeatAndHints(level, problems);
             }
+            CheckFlow(problems);
             CheckPanel(problems);
 
             foreach (var problem in problems) Debug.LogError("[SpanishCafe QA] " + problem);
             Debug.Log(problems.Count == 0
-                ? $"[SpanishCafe QA] PASS: {CafeContent.Levels.Length} unidades played on every path, panel checks passed."
+                ? $"[SpanishCafe QA] PASS: {CafeContent.Levels.Length} lessons played on every path, flow and panel checks passed."
                 : $"[SpanishCafe QA] FAIL: {problems.Count} problems.");
             return problems;
+        }
+
+        // Every unidad has the counter lesson and the table lesson, and Siguiente goes 1-1, 1-2, 2-1... 6-2, then done
+        static void CheckFlow(List<string> problems)
+        {
+            var path = new List<string>();
+            var level = CafeFlow.Find(1, 1);
+            int guard = 0;
+            while (level != null && guard++ < 50)
+            {
+                path.Add(level.ProgressKey);
+                level = CafeFlow.Next(level);
+            }
+
+            var expected = new List<string>();
+            for (int unit = 1; unit <= 6; unit++)
+                for (int lesson = 1; lesson <= 2; lesson++) expected.Add(unit + "-" + lesson);
+
+            if (string.Join(",", path) != string.Join(",", expected))
+                problems.Add($"Flow: Siguiente goes {string.Join(" > ", path)}, expected {string.Join(" > ", expected)}.");
         }
 
         // Every line has its English, feedback, hint and voice clip
@@ -216,7 +237,7 @@ namespace SpanishCafe.EditorTools
         static void CheckPanel(List<string> problems)
         {
             // Finishing a unidad saves progress, so remember the real progress and put it back after
-            string level = CafeContent.Levels[0].level;
+            string level = CafeContent.Levels[0].ProgressKey;
             string doneKey = "SpanishCafe.done." + level, bestKey = "SpanishCafe.best." + level;
             bool hadDone = PlayerPrefs.HasKey(doneKey), hadBest = PlayerPrefs.HasKey(bestKey);
             int done = PlayerPrefs.GetInt(doneKey), best = PlayerPrefs.GetInt(bestKey);

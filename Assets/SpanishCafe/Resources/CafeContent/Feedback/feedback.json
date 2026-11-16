@@ -533,6 +533,456 @@
       "id": "U6.10.hint",
       "es": "Son tus padres, no los de Lupita. ¿Qué posesivo usas?",
       "en": "They're your parents, not Lupita's. Which possessive do you use?"
+    },
+    {
+      "id": "M1.02b",
+      "es": "Se entiende. Para tu nombre usa llamarse o ser: «Me llamo Alex» o «Soy Alex».",
+      "en": "Understandable. For your name, use llamarse or ser: 'Me llamo Alex' or 'Soy Alex'."
+    },
+    {
+      "id": "M1.02c",
+      "es": "Mateo preguntó tu nombre, no cómo estás.",
+      "en": "Mateo asked your name, not how you are."
+    },
+    {
+      "id": "M1.02.hint",
+      "es": "Él quiere saber tu nombre. ¿Qué verbo usas para presentarte?",
+      "en": "He wants to know your name. Which verb do you use to introduce yourself?"
+    },
+    {
+      "id": "M1.04b",
+      "es": "Casi. El origen va con ser: «Soy de Florida».",
+      "en": "Almost. Origin goes with ser: 'Soy de Florida'."
+    },
+    {
+      "id": "M1.04c",
+      "es": "Él preguntó de dónde eres, no tu edad.",
+      "en": "He asked where you're from, not your age."
+    },
+    {
+      "id": "M1.04.hint",
+      "es": "Habla de tu origen. ¿Qué verbo usamos para el origen?",
+      "en": "Talk about your origin. Which verb do we use for origin?"
+    },
+    {
+      "id": "M1.06b",
+      "es": "Se entiende. Sueño va con tener: «tengo mucho sueño».",
+      "en": "Understandable. Sueño goes with tener: 'tengo mucho sueño'."
+    },
+    {
+      "id": "M1.06c",
+      "es": "Mateo preguntó cómo estás tú hoy.",
+      "en": "Mateo asked how you are today."
+    },
+    {
+      "id": "M1.06.hint",
+      "es": "¿Cómo te sientes hoy? Piensa en estar y en las expresiones con tener.",
+      "en": "How do you feel today? Think of estar and the tener expressions."
+    },
+    {
+      "id": "M1.08b",
+      "es": "Se entiende. Amigos es plural: «divertidos».",
+      "en": "Understandable. Amigos is plural: 'divertidos'."
+    },
+    {
+      "id": "M1.08c",
+      "es": "Él preguntó cómo eres, no dónde estás.",
+      "en": "He asked what you're like, not where you are."
+    },
+    {
+      "id": "M1.08.hint",
+      "es": "Describe tu personalidad y a tus amigos. ¿Amigos es singular o plural?",
+      "en": "Describe your personality and your friends. Is amigos singular or plural?"
+    },
+    {
+      "id": "M1.10b",
+      "es": "Se entiende. Para decir qué es algo usa ser: «Mi número es...».",
+      "en": "Understandable. To say what something is, use ser: 'Mi número es...'."
+    },
+    {
+      "id": "M1.10c",
+      "es": "Él pidió tu número de teléfono, no tu edad.",
+      "en": "He asked for your phone number, not your age."
+    },
+    {
+      "id": "M1.10.hint",
+      "es": "Di tu número en pares. ¿Ser o estar?",
+      "en": "Say your number in pairs. Ser or estar?"
+    },
+    {
+      "id": "M2.02b",
+      "es": "Te entendió, pero hablas solo de ti: «Estoy bien».",
+      "en": "He understood, but you're only talking about yourself: 'Estoy bien'."
+    },
+    {
+      "id": "M2.02c",
+      "es": "¡Acabas de llegar! Saluda en vez de despedirte.",
+      "en": "You just arrived! Say hello instead of goodbye."
+    },
+    {
+      "id": "M2.02.hint",
+      "es": "Saluda y di cómo estás. ¿Hola o adiós?",
+      "en": "Say hi and how you are. Hello or goodbye?"
+    },
+    {
+      "id": "M2.04b",
+      "es": "Casi. Para lo que eres (estudiante) usa ser: «Soy estudiante».",
+      "en": "Almost. For what you are (a student), use ser: 'Soy estudiante'."
+    },
+    {
+      "id": "M2.04c",
+      "es": "Mateo preguntó si estudias aquí. Contesta sí o no.",
+      "en": "Mateo asked if you study here. Answer yes or no."
+    },
+    {
+      "id": "M2.04.hint",
+      "es": "Contesta sí o no y di tu especialización.",
+      "en": "Answer yes or no and say your major."
+    },
+    {
+      "id": "M2.06b",
+      "es": "Se entiende. Para elegir entre opciones usa cuál: «¿Cuál es su clase favorita?».",
+      "en": "Understandable. To choose among options, use cuál: '¿Cuál es su clase favorita?'."
+    },
+    {
+      "id": "M2.06c",
+      "es": "Él preguntó qué clases tienes.",
+      "en": "He asked what classes you have."
+    },
+    {
+      "id": "M2.06.hint",
+      "es": "Di tus clases y pregunta por su favorita. ¿Qué o cuál?",
+      "en": "Say your classes and ask about their favorite. Qué or cuál?"
+    },
+    {
+      "id": "M2.08b",
+      "es": "Casi. Para cómo son las personas usa ser: «son simpáticos».",
+      "en": "Almost. For what people are like, use ser: 'son simpáticos'."
+    },
+    {
+      "id": "M2.08c",
+      "es": "Él preguntó cómo son, no dónde están.",
+      "en": "He asked what they're like, not where they are."
+    },
+    {
+      "id": "M2.08.hint",
+      "es": "Describe a los profesores (plural). ¿Ser o estar para cómo son?",
+      "en": "Describe the professors (plural). Ser or estar for what they're like?"
+    },
+    {
+      "id": "M2.10b",
+      "es": "Te entendió. Cansado es un estado, entonces usa estar: «estamos cansados».",
+      "en": "He understood. Tired is a state, so use estar: 'estamos cansados'."
+    },
+    {
+      "id": "M2.10c",
+      "es": "Él preguntó si están cansados, no de dónde son.",
+      "en": "He asked if you're tired, not where you're from."
+    },
+    {
+      "id": "M2.10.hint",
+      "es": "Hablas por tus amigos y por ti. ¿Ser o estar para cómo se sienten?",
+      "en": "You speak for your friends and yourself. Ser or estar for how you feel?"
+    },
+    {
+      "id": "M3.02b",
+      "es": "Casi. La una es singular: «Es la una y media».",
+      "en": "Almost. One o'clock is singular: 'Es la una y media'."
+    },
+    {
+      "id": "M3.02c",
+      "es": "Mateo preguntó la hora, no el día.",
+      "en": "Mateo asked the time, not the day."
+    },
+    {
+      "id": "M3.02.hint",
+      "es": "Mira el reloj: 1:30. ¿Es o son?",
+      "en": "Look at the clock: 1:30. Es or son?"
+    },
+    {
+      "id": "M3.04b",
+      "es": "Casi. Para planes no olvides la a: «voy a ir».",
+      "en": "Almost. For plans, don't forget the a: 'voy a ir'."
+    },
+    {
+      "id": "M3.04c",
+      "es": "Él preguntó por tus planes de este fin de semana.",
+      "en": "He asked about your plans for this weekend."
+    },
+    {
+      "id": "M3.04.hint",
+      "es": "Para planes usa ir + ___ + infinitivo; para obligaciones, tener + ___ + infinitivo.",
+      "en": "For plans use ir + ___ + infinitive; for obligations, tener + ___ + infinitive."
+    },
+    {
+      "id": "M3.06b",
+      "es": "Se entiende. Para cuándo pasa algo di «¿A qué hora...?».",
+      "en": "Understandable. For when something happens, say '¿A qué hora...?'."
+    },
+    {
+      "id": "M3.06c",
+      "es": "Él te invitó. Acepta o rechaza la invitación.",
+      "en": "He invited you. Accept or decline the invitation."
+    },
+    {
+      "id": "M3.06.hint",
+      "es": "Acepta la invitación y pregunta cuándo termina.",
+      "en": "Accept the invitation and ask when it ends."
+    },
+    {
+      "id": "M3.08b",
+      "es": "Casi. Después de tener que va el infinitivo: «tengo que lavar».",
+      "en": "Almost. After tener que comes the infinitive: 'tengo que lavar'."
+    },
+    {
+      "id": "M3.08c",
+      "es": "Él preguntó por tus planes del domingo.",
+      "en": "He asked about your plans for Sunday."
+    },
+    {
+      "id": "M3.08.hint",
+      "es": "Después de tener que, ¿el verbo se conjuga o no?",
+      "en": "After tener que, is the verb conjugated or not?"
+    },
+    {
+      "id": "M3.10b",
+      "es": "Casi. Media concuerda con hora (femenino): «y media».",
+      "en": "Almost. Media agrees with hora (feminine): 'y media'."
+    },
+    {
+      "id": "M3.10c",
+      "es": "Él propone el sábado. Confirma el día y la hora.",
+      "en": "He's suggesting Saturday. Confirm the day and time."
+    },
+    {
+      "id": "M3.10.hint",
+      "es": "Confirma el día y la hora del plan.",
+      "en": "Confirm the day and time of the plan."
+    },
+    {
+      "id": "M4.02b",
+      "es": "Casi. Para decir que algo existe usa hay: «Hay una biblioteca».",
+      "en": "Almost. To say something exists, use hay: 'Hay una biblioteca'."
+    },
+    {
+      "id": "M4.02c",
+      "es": "¡Ojo! Él busca la biblioteca (library), no la librería (bookstore).",
+      "en": "Careful! He's looking for the biblioteca (library), not the librería (bookstore)."
+    },
+    {
+      "id": "M4.02.hint",
+      "es": "Primero di si existe; después, dónde. ¿Qué verbo usas para cada cosa?",
+      "en": "First say whether it exists; then where. Which verb do you use for each?"
+    },
+    {
+      "id": "M4.04b",
+      "es": "Casi. Para la ubicación usa estar: «está lejos».",
+      "en": "Almost. For location, use estar: 'está lejos'."
+    },
+    {
+      "id": "M4.04c",
+      "es": "Él ya sabe que hay un gimnasio. Di dónde está.",
+      "en": "He already knows there's a gym. Say where it is."
+    },
+    {
+      "id": "M4.04.hint",
+      "es": "Ubicación de un lugar específico: ¿hay, ser o estar?",
+      "en": "Location of a specific place: hay, ser or estar?"
+    },
+    {
+      "id": "M4.06b",
+      "es": "Casi. Hablas de ti: «trabajo». Con yo, los verbos -ar terminan en -o.",
+      "en": "Almost. You're talking about yourself: 'trabajo'. With yo, -ar verbs end in -o."
+    },
+    {
+      "id": "M4.06c",
+      "es": "Él preguntó si trabajas o solo estudias.",
+      "en": "He asked if you work or just study."
+    },
+    {
+      "id": "M4.06.hint",
+      "es": "Habla de ti con verbos -ar en la forma yo.",
+      "en": "Talk about yourself with -ar verbs in the yo form."
+    },
+    {
+      "id": "M4.08b",
+      "es": "Casi. Para describir o identificar usa ser: «Es un lugar...».",
+      "en": "Almost. To describe or identify, use ser: 'Es un lugar...'."
+    },
+    {
+      "id": "M4.08c",
+      "es": "Él preguntó si te gusta este café.",
+      "en": "He asked if you like this café."
+    },
+    {
+      "id": "M4.08.hint",
+      "es": "Describe el café. ¿Qué verbo usamos para describir?",
+      "en": "Describe the café. Which verb do we use to describe?"
+    },
+    {
+      "id": "M4.10b",
+      "es": "Casi. Los salones son varios: «no me gustan».",
+      "en": "Almost. Classrooms are several: 'no me gustan'."
+    },
+    {
+      "id": "M4.10c",
+      "es": "Él preguntó qué no te gusta.",
+      "en": "He asked what you don't like."
+    },
+    {
+      "id": "M4.10.hint",
+      "es": "Di qué no te gusta. Los salones son varios: ¿gusta o gustan?",
+      "en": "Say what you don't like. Classrooms are several: gusta or gustan?"
+    },
+    {
+      "id": "M5.02b",
+      "es": "Casi. Para personas usa conocer: «conozco a muchos compañeros».",
+      "en": "Almost. For people, use conocer: 'conozco a muchos compañeros'."
+    },
+    {
+      "id": "M5.02c",
+      "es": "Él preguntó si conoces a mucha gente.",
+      "en": "He asked if you know a lot of people."
+    },
+    {
+      "id": "M5.02.hint",
+      "es": "Hablas de personas. ¿Saber o conocer?",
+      "en": "You're talking about people. Saber or conocer?"
+    },
+    {
+      "id": "M5.04b",
+      "es": "Casi. Hablas de Valeria (ella): «¿Dónde vive?».",
+      "en": "Almost. You're talking about Valeria (she): '¿Dónde vive?'."
+    },
+    {
+      "id": "M5.04c",
+      "es": "Responde a lo que dice Mateo o pregúntale algo sobre Valeria.",
+      "en": "Respond to what Mateo said or ask him something about Valeria."
+    },
+    {
+      "id": "M5.04.hint",
+      "es": "Pregunta algo sobre Valeria con un verbo -ir.",
+      "en": "Ask something about Valeria with an -ir verb."
+    },
+    {
+      "id": "M5.06b",
+      "es": "Casi. Para una habilidad usa saber + infinitivo: «sé cocinar».",
+      "en": "Almost. For a skill, use saber + infinitive: 'sé cocinar'."
+    },
+    {
+      "id": "M5.06c",
+      "es": "Él preguntó si sabes cocinar.",
+      "en": "He asked if you know how to cook."
+    },
+    {
+      "id": "M5.06.hint",
+      "es": "Cocinar es una habilidad. ¿Qué verbo usas para habilidades?",
+      "en": "Cooking is a skill. Which verb do you use for skills?"
+    },
+    {
+      "id": "M5.08b",
+      "es": "Casi. Las cualidades van con ser: «Soy paciente».",
+      "en": "Almost. Qualities go with ser: 'Soy paciente'."
+    },
+    {
+      "id": "M5.08c",
+      "es": "Él preguntó cómo eres, no de dónde eres.",
+      "en": "He asked what you're like, not where you're from."
+    },
+    {
+      "id": "M5.08.hint",
+      "es": "Describe tu personalidad con ser y tus mejores cualidades.",
+      "en": "Describe your personality with ser and your best qualities."
+    },
+    {
+      "id": "M5.10b",
+      "es": "Casi. Hablas de ti: «creo». Con yo, los verbos -er terminan en -o.",
+      "en": "Almost. You're talking about yourself: 'creo'. With yo, -er verbs end in -o."
+    },
+    {
+      "id": "M5.10c",
+      "es": "Él preguntó si crees que Valeria llega hoy.",
+      "en": "He asked if you think Valeria is coming today."
+    },
+    {
+      "id": "M5.10.hint",
+      "es": "Responde con creer en la forma yo.",
+      "en": "Answer with creer in the yo form."
+    },
+    {
+      "id": "M6.02b",
+      "es": "Casi. Querer cambia e>ie: «quiero».",
+      "en": "Almost. Querer changes e>ie: 'quiero'."
+    },
+    {
+      "id": "M6.02c",
+      "es": "Él preguntó si quieres ver la foto.",
+      "en": "He asked if you want to see the photo."
+    },
+    {
+      "id": "M6.02.hint",
+      "es": "Acepta con querer en la forma yo. ¿Recuerdas el cambio e>ie?",
+      "en": "Accept with querer in the yo form. Remember the e>ie change?"
+    },
+    {
+      "id": "M6.04b",
+      "es": "Te entendió. Padres es plural: «mis padres».",
+      "en": "He understood. Padres is plural: 'mis padres'."
+    },
+    {
+      "id": "M6.04c",
+      "es": "Él preguntó por tu familia, no por la suya. Usa mi/mis.",
+      "en": "He asked about your family, not his. Use mi/mis."
+    },
+    {
+      "id": "M6.04.hint",
+      "es": "Habla de tu familia con mi/mis. Padres es plural.",
+      "en": "Talk about your family with mi/mis. Padres is plural."
+    },
+    {
+      "id": "M6.06b",
+      "es": "Casi. Hermana es femenino: «alta y morena».",
+      "en": "Almost. Hermana is feminine: 'alta y morena'."
+    },
+    {
+      "id": "M6.06c",
+      "es": "Él preguntó cómo es tu hermana físicamente.",
+      "en": "He asked what your sister looks like."
+    },
+    {
+      "id": "M6.06.hint",
+      "es": "Describe a tu hermana con ser y tener. Hermana es femenino.",
+      "en": "Describe your sister with ser and tener. Hermana is feminine."
+    },
+    {
+      "id": "M6.08b",
+      "es": "Casi. Poder cambia o>ue: «puedo».",
+      "en": "Almost. Poder changes o>ue: 'puedo'."
+    },
+    {
+      "id": "M6.08c",
+      "es": "Él preguntó si puedes venir el domingo.",
+      "en": "He asked if you can come on Sunday."
+    },
+    {
+      "id": "M6.08.hint",
+      "es": "Contesta con poder en la forma yo (o>ue).",
+      "en": "Answer with poder in the yo form (o>ue)."
+    },
+    {
+      "id": "M6.10b",
+      "es": "Casi. Soñar cambia o>ue: «sueño».",
+      "en": "Almost. Soñar changes o>ue: 'sueño'."
+    },
+    {
+      "id": "M6.10c",
+      "es": "Él preguntó si sueñas con visitar España.",
+      "en": "He asked if you dream of visiting Spain."
+    },
+    {
+      "id": "M6.10.hint",
+      "es": "Usa soñar con en la forma yo (o>ue).",
+      "en": "Use soñar con in the yo form (o>ue)."
     }
   ]
 }
