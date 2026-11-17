@@ -56,6 +56,7 @@ public class MainMenuManager : MonoBehaviour {
 
     public void SelectUnit(int unit) {
         LessonManager.instance.SelectUnit(unit);
+        LessonManager.instance.SelectUnit(1);
     }
 
     public void SelectLesson(int lesson) {

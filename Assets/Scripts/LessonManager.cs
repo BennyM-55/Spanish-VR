@@ -5,7 +5,7 @@ public class LessonManager : MonoBehaviour {
     public static LessonManager instance;
 
     public int totalUnits = 6;
-    public int lessonsPerUnit = 5;
+    public int lessonsPerUnit = 2;
 
     void Awake() {
         if (instance == null) {
